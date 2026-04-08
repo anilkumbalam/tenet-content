@@ -1,0 +1,51 @@
+[
+  {
+    "id": "iot-gateway-basics",
+    "title": "Understanding Industrial IoT Gateways: A Comprehensive Guide",
+    "summary": "Explore the fundamentals of industrial IoT gateways, their role in M2M communication, and how they enable secure connectivity between field devices and cloud platforms.",
+    "author": "Tenet Networks Team",
+    "credential": "Industrial IoT Experts",
+    "date": "2024-03-15",
+    "file": "iot-gateway-basics.md"
+  },
+  {
+    "id": "sdwan-benefits",
+    "title": "SD-WAN vs Traditional WAN: Why Enterprises Are Making the Switch",
+    "summary": "Discover the key advantages of SD-WAN technology over traditional WAN infrastructure, including cost savings, improved performance, and centralized management.",
+    "author": "Tenet Networks Team",
+    "credential": "Network Engineering Specialists",
+    "date": "2024-03-20",
+    "file": "sdwan-benefits.md"
+  },
+  {
+    "id": "5g-industrial-iot-part1",
+    "title": "5G and Industrial IoT: Transforming Manufacturing (Part 1)",
+    "summary": "The first part of our series exploring how 5G technology is revolutionizing industrial IoT deployments, with focus on ultra-low latency and massive connectivity.",
+    "author": "Anil Joseph",
+    "credential": "Managing Director",
+    "date": "2024-04-01",
+    "series": "5G in Industrial IoT",
+    "series_part": 1,
+    "file": "5g-industrial-iot-part1.md"
+  },
+  {
+    "id": "5g-industrial-iot-part2",
+    "title": "5G and Industrial IoT: Edge Computing Applications (Part 2)",
+    "summary": "Part 2 explores how 5G enables edge computing in industrial environments, reducing latency and enabling real-time decision-making at the network edge.",
+    "author": "Anil Joseph",
+    "credential": "Managing Director",
+    "date": "2024-04-15",
+    "series": "5G in Industrial IoT",
+    "series_part": 2,
+    "file": "5g-industrial-iot-part2.md"
+  },
+  {
+    "id": "scada-connectivity",
+    "title": "Modernizing SCADA Systems with Cellular Connectivity",
+    "summary": "Learn how cellular M2M gateways are helping utilities and industrial operators modernize legacy SCADA infrastructure for better reliability and remote access.",
+    "author": "Zahid Hussain",
+    "credential": "Director – Technology",
+    "date": "2024-05-10",
+    "file": "scada-connectivity.md"
+  }
+]
