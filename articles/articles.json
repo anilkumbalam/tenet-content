@@ -6,6 +6,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-01-01",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 0,
     "file": "series-intro.md"
@@ -17,6 +18,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-01-15",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 1,
     "file": "wp1-emergency-locator-transmitters.md"
@@ -28,6 +30,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-02-01",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 2,
     "file": "wp2-doppler-time-geometry.md"
@@ -39,6 +42,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-02-15",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 3,
     "file": "wp3-gnss-positioning.md"
@@ -50,6 +54,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-03-01",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 4,
     "file": "wp4-link-budgets.md"
@@ -61,6 +66,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-03-15",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 5,
     "file": "wp5-bursty-vs-continuous.md"
@@ -72,6 +78,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-04-01",
+    "category": "wireless-series",
     "series": "How Wireless Systems Actually Work",
     "series_part": 6,
     "file": "wp6-ai-physical-layer.md"
@@ -83,6 +90,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-05-01",
+    "category": "foundations",
     "file": "logarithmic-thinking-decibel.md"
   },
   {
@@ -92,6 +100,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-05-15",
+    "category": "foundations",
     "file": "shannon-capacity.md"
   },
   {
@@ -101,6 +110,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-06-01",
+    "category": "foundations",
     "file": "wavelength-range.md"
   },
   {
@@ -110,6 +120,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-06-15",
+    "category": "plain-sight",
     "file": "power-grid-india.md"
   },
   {
@@ -119,6 +130,7 @@
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE, Managing Director",
     "date": "2024-07-01",
+    "category": "plain-sight",
     "file": "sun-earths-power-supply.md"
   }
 ]
