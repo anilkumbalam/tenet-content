@@ -1,0 +1,34 @@
+[
+  {
+    "key": "wireless-series",
+    "title": "How Wireless Systems Actually Work",
+    "icon": "📚",
+    "description": "A comprehensive series exploring fundamental constraints in wireless communication",
+    "label": "Featured Series",
+    "order": 1
+  },
+  {
+    "key": "foundations",
+    "title": "Foundation Concepts",
+    "icon": "🎓",
+    "description": "Core mathematical and theoretical principles for all engineering",
+    "label": "Foundation Concepts",
+    "order": 2
+  },
+  {
+    "key": "plain-sight",
+    "title": "Engineering in Plain Sight",
+    "icon": "🔍",
+    "description": "Learning to see and understand engineering in everyday infrastructure",
+    "label": "Engineering in Plain Sight",
+    "order": 3
+  },
+  {
+    "key": "case-studies",
+    "title": "Industry Case Studies",
+    "icon": "📊",
+    "description": "Real-world deployments and customer success stories",
+    "label": "Case Studies",
+    "order": 4
+  }
+]
