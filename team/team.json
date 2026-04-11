@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Anil Joseph",
+    "role": "Managing Director",
+    "bio": "Over two decades of experience in designing and engineering critical solutions for India and Asia-Pacific. Former Solution Architect at Lucent Technologies and researcher at premier organisations like DRDO and C-DOT.",
+    "icon": "🏛️",
+    "photo": "anil-joseph.jpg",
+    "tagline": "Engineering that works in reality, not just in theory",
+    "linkedin": "https://linkedin.com/in/anilijoseph",
+    "email": "anil@tenetnetworks.com",
+    "quickFacts": [
+      "20+ years in industrial IoT",
+      "Former Lucent Technologies",
+      "DRDO researcher",
+      "Critical systems specialist"
+    ],
+    "expertise": [
+      "Critical infrastructure design",
+      "IoT architecture & deployment",
+      "System integration",
+      "Technology leadership"
+    ],
+    "background": [
+      "Solution Architect at Lucent Technologies",
+      "Researcher at DRDO (Defence Research and Development Organisation)",
+      "C-DOT (Centre for Development of Telematics)",
+      "Led enterprise deployments across India and Asia-Pacific"
+    ],
+    "currently": {
+      "reading": "📚 \"Scale\" by Geoffrey West",
+      "podcast": "🎙️ Lex Fridman Podcast"
+    }
+  },
+  {
+    "name": "Zahid Hussain",
+    "role": "Director – Technology",
+    "bio": "With 30+ years of experience introducing new technologies and managing global support centres, Zahid has led support for multi-billion USD infrastructures. Previously with NOKIA, AT&T, and Alcatel-Lucent.",
+    "icon": "⚙️",
+    "photo": "zahid-hussain.jpg",
+    "tagline": "Three decades of turning complexity into reliability",
+    "linkedin": "https://linkedin.com/in/zahidhussain",
+    "email": "zahid@tenetnetworks.com",
+    "quickFacts": [
+      "30+ years in technology",
+      "Former NOKIA & AT&T",
+      "Global support leader",
+      "Multi-billion USD projects"
+    ],
+    "expertise": [
+      "Technology deployment & operations",
+      "Global technical support",
+      "Large-scale infrastructure management",
+      "Vendor & partner management"
+    ],
+    "background": [
+      "NOKIA – Technology Integration",
+      "AT&T – Global Support Operations",
+      "Alcatel-Lucent – Technical Leadership",
+      "Multi-billion USD infrastructure support"
+    ],
+    "currently": {
+      "reading": "📚 \"The Phoenix Project\"",
+      "podcast": "🎙️ Software Engineering Daily"
+    }
+  },
+  {
+    "name": "Shrikant Gupta",
+    "role": "Director – Sales",
+    "bio": "Nearly 20 years of sales leadership, driving businesses to achieve multi-million-dollar growth. Formerly Country Manager for Cambium Networks in India and South East Asia.",
+    "icon": "📈",
+    "photo": "shrikant-gupta.jpg",
+    "tagline": "Building partnerships that scale from millions to billions",
+    "linkedin": "https://linkedin.com/in/shrikantgupta",
+    "email": "shrikant@tenetnetworks.com",
+    "quickFacts": [
+      "20 years sales leadership",
+      "Former Cambium Networks",
+      "Multi-million USD growth",
+      "India & SEA markets"
+    ],
+    "expertise": [
+      "Enterprise sales & strategy",
+      "Channel development",
+      "Business growth & expansion",
+      "Market development"
+    ],
+    "background": [
+      "Country Manager at Cambium Networks (India & SE Asia)",
+      "Led businesses to multi-million dollar growth",
+      "Built channel networks across emerging markets",
+      "Strategic partnerships with telcos & enterprises"
+    ],
+    "currently": {
+      "reading": "📚 \"The Challenger Sale\"",
+      "podcast": "🎙️ Masters of Scale"
+    }
+  },
+  {
+    "name": "Naresh Chandra",
+    "role": "Director – Projects",
+    "bio": "A veteran in managing large-scale projects worth $100M+, with leadership roles in Lucent Technologies, Reliance Communications, and Globacom-Nigeria.",
+    "icon": "🗂️",
+    "photo": "naresh-chandra.jpg",
+    "tagline": "Delivering billion-dollar projects on time, on budget",
+    "linkedin": "https://linkedin.com/in/nareshchandra",
+    "email": "naresh@tenetnetworks.com",
+    "quickFacts": [
+      "$100M+ project experience",
+      "Former Lucent & Reliance",
+      "International deployments",
+      "Complex project delivery"
+    ],
+    "expertise": [
+      "Large-scale project management",
+      "Cross-functional team leadership",
+      "Vendor & stakeholder management",
+      "Risk mitigation & delivery"
+    ],
+    "background": [
+      "Lucent Technologies – Project Leadership",
+      "Reliance Communications – Major infrastructure deployments",
+      "Globacom Nigeria – International projects",
+      "Managed $100M+ projects across continents"
+    ],
+    "currently": {
+      "reading": "📚 \"The Goal\" by Eliyahu Goldratt",
+      "podcast": "🎙️ Project Management Podcast"
+    }
+  },
+  {
+    "name": "Rajeev Singh",
+    "role": "Director – Operations",
+    "bio": "Expert in deploying and operationalising solutions globally, including implementing Number Portability in India and Russia.",
+    "icon": "🔧",
+    "photo": "rajeev-singh.jpg",
+    "tagline": "From deployment to uptime: making systems work globally",
+    "linkedin": "https://linkedin.com/in/rajeevsingh",
+    "email": "rajeev@tenetnetworks.com",
+    "quickFacts": [
+      "Global operations expert",
+      "Implemented Number Portability",
+      "India & Russia deployments",
+      "Operational excellence"
+    ],
+    "expertise": [
+      "Operations & deployment",
+      "System implementation",
+      "Process optimization",
+      "Global rollout management"
+    ],
+    "background": [
+      "Led Number Portability implementation in India",
+      "Russia deployment & operations",
+      "Telecom infrastructure operations",
+      "Multi-country operational leadership"
+    ],
+    "currently": {
+      "reading": "📚 \"Lean Thinking\"",
+      "podcast": "🎙️ The Tim Ferriss Show"
+    }
+  },
+  {
+    "name": "Shalini Lal",
+    "role": "Director – HR & Administration",
+    "bio": "Specialist in managing data-centric networks with experience at Indian Telephone Industries and Idea Cellular.",
+    "icon": "🤝",
+    "photo": "shalini-lal.jpg",
+    "tagline": "Building the culture that builds the technology",
+    "linkedin": "https://linkedin.com/in/shalinilal",
+    "email": "shalini@tenetnetworks.com",
+    "quickFacts": [
+      "HR & operations specialist",
+      "Former ITI & Idea Cellular",
+      "Culture & talent development",
+      "Organizational excellence"
+    ],
+    "expertise": [
+      "Human resources & talent",
+      "Organizational development",
+      "Culture building",
+      "Administrative excellence"
+    ],
+    "background": [
+      "Indian Telephone Industries – HR & Administration",
+      "Idea Cellular – Talent Management",
+      "Data-centric network operations",
+      "Building high-performance teams"
+    ],
+    "currently": {
+      "reading": "📚 \"Good to Great\"",
+      "podcast": "🎙️ WorkLife with Adam Grant"
+    }
+  }
+]
