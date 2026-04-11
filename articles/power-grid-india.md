@@ -2,8 +2,6 @@
 
 *A guide to seeing engineering in plain sight*
 
-**Anil Joseph, Senior Member IEEE**
-
 Most people walk past electric poles and transmission towers without noticing them. They see wires overhead, metal structures in the distance, and assume it is all simply "electricity."
 
 But if you pause and look carefully, the power grid begins to reveal itself.
