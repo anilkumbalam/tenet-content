@@ -274,13 +274,7 @@ In linear terms, these stages multiply or divide the signal power. For example:
 
 In linear mathematics, each of these effects would require multiplication or division. In decibels, however, the same effects become simple additions and subtractions.
 
-Transmit power (dBm)
-
-- Antenna gain (dB)
-
-> - Path loss (dB)
->
-> - Cable loss (dB)
+     Received Power (dBm) = Transmit Power (dBm) + Antenna Gain (dB) – Path Loss (dB) – Cable Loss (dB)
 
 This is why decibels are so powerful in engineering: cascading multiplicative effects become straightforward arithmetic.
 
