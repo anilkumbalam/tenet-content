@@ -59,7 +59,7 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 >
 > **Ambiguity and Resolution**
 >
-> A single Doppler pass does not uniquely determine the beacon's location. Instead, it produces two possible locations---one on each side of the satellite's ground track. This ambiguity arises because the Doppler measurement is symmetric about the satellite's path.
+> A single Doppler pass does not uniquely determine the beacon's location. Instead, it produces two possible locations, one on each side of the satellite's ground track. This ambiguity arises because the Doppler measurement is symmetric about the satellite's path.
 >
 > Resolving this requires additional observations with different geometry. This can be achieved through:
 
