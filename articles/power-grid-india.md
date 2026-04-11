@@ -155,7 +155,7 @@ transmission tower, count the discs. You can often estimate the voltage
 level just from that one detail. Each **porcelain or polymer insulator
 disc typically withstands 11--15 kV** under normal operating conditions.
 
-![](https://raw.githubusercontent.com/anilkumbalam/tenet-content/main/articles/images/media/image1.png){width="8.239583333333334in"
+![](images/media/image1.png){width="8.239583333333334in"
 height="5.493055555555555in"}
 
 **3. Why Are Some Towers so Tall?**
@@ -165,7 +165,7 @@ about clearance. As voltage increases, the electric field around the
 conductor becomes stronger. To prevent arcing to the ground or to nearby
 structures, the conductor must be kept at a safe distance.
 
-![](https://raw.githubusercontent.com/anilkumbalam/tenet-content/main/articles/images/media/image2.png){width="7.583333333333333in"
+![](/images/media/image2.png){width="7.583333333333333in"
 height="5.055555555555555in"}
 
 But electrical clearance is only part of the story.
