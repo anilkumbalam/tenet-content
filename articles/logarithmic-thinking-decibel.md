@@ -162,11 +162,11 @@ Even a perfectly engineered receiver at room temperature cannot avoid it.
 
 At the standard RF reference temperature of 290 K, the one-sided thermal noise density is:
 
-kT ≈ --174 dBm/Hz
+kT ≈ -174 dBm/Hz
 
 This represents the available noise power per hertz of bandwidth into a matched load.
 
-The value --174 dBm/Hz is a physical constant at 290 K. It forms the baseline of all receiver sensitivity calculations.
+The value -174 dBm/Hz is a physical constant at 290 K. It forms the baseline of all receiver sensitivity calculations.
 
 **Total Noise Power (kTB)**
 
@@ -176,7 +176,7 @@ N = kTB
 
 In decibel form:
 
-N(dBm) = --174 + 10 log₁₀ ( B )
+N(dBm) = -174 + 10 log₁₀ ( B )
 
 Each tenfold increase in bandwidth raises the noise floor by 10 dB. Bandwidth grows linearly; in decibels, the effect appears as simple addition.
 
@@ -184,15 +184,15 @@ Each tenfold increase in bandwidth raises the noise floor by 10 dB. Bandwidth gr
 
 At 290 K:
 
-- 1 kHz → --144 dBm
+- 1 kHz → -144 dBm
 
-- 1 MHz → --114 dBm
+- 1 MHz → -114 dBm
 
-- 10 MHz → --104 dBm
+- 10 MHz → -104 dBm
 
 Wider bandwidth enables higher data rates, but it also raises the noise floor. This trade-off is fundamental. In real receivers, the effective noise floor becomes:
 
-Noise Floor = --174 + 10 log₁₀ ( B ) + Noise Figure
+Noise Floor = -174 + 10 log₁₀ ( B ) + Noise Figure
 
 **Noise as the Lower Bound of Dynamic Range**
 
@@ -202,7 +202,7 @@ Dynamic Range = Maximum Power − Noise Floor
 
 The upper bound is set by saturation or compression. The lower bound is set by kTB. Shielding removes external interference, but it does not remove intrinsic thermal noise. Only lowering physical temperature reduces it, and even then, it scales directly with T.
 
-At room temperature, --174 dBm/Hz represents the quiet thermodynamic background against which every detectable signal must rise.
+At room temperature, -174 dBm/Hz represents the quiet thermodynamic background against which every detectable signal must rise.
 
 **4.3 Signal-to-Noise Ratio (SNR)**
 
@@ -214,12 +214,12 @@ SNR (dB) = Signal level (dBm) − Noise level (dBm)
 
 If:
 
-Noise floor = --100 dBm  
-Signal = --90 dBm
+Noise floor = -100 dBm  
+Signal = -90 dBm
 
 Then:
 
-SNR = (--90) − (--100) = 10 dB
+SNR = (-90) − (-100) = 10 dB
 
 That 10 dB is the **vertical separation** between the signal and the noise floor on a dB scale.
 
@@ -249,10 +249,10 @@ Receiver sensitivity = Noise floor + Required SNR
 
 **Example**
 
-Noise floor = --100 dBm  
+Noise floor = -100 dBm  
 Required SNR = 8 dB
 
-Sensitivity = --92 dBm
+Sensitivity = -92 dBm
 
 This means that any received signal weaker than --92 dBm will likely result in decoding errors.
 
@@ -278,9 +278,9 @@ Transmit power (dBm)
 
 - Antenna gain (dB)
 
-> -- Path loss (dB)
+> - Path loss (dB)
 >
-> -- Cable loss (dB)
+> - Cable loss (dB)
 
 This is why decibels are so powerful in engineering: cascading multiplicative effects become straightforward arithmetic.
 
@@ -357,7 +357,7 @@ Difference between a Whisper and Jet Engine Sound: 90 dB → 1,000,000,000 x int
 
 Now consider RF:
 
-GNSS received signal ≈ --130 dBm
+GNSS received signal ≈ -130 dBm
 
 Base station transmit ≈ +40 dBm
 
@@ -373,7 +373,7 @@ In linear terms, a 170 dB difference corresponds to a power ratio of 10¹⁷, a 
 
 - 0 dB does not mean zero.
 
-- --100 dBm is still positive power.
+- -100 dBm is still positive power.
 
 - +3 dB is not "small", it is doubling.
 
