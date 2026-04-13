@@ -1,36 +1,37 @@
 [
-  {
-    "name": "Anil Joseph",
-    "role": "Managing Director",
-    "bio": "Over two decades of experience in designing and engineering critical solutions for India and Asia-Pacific. Former Solution Architect at Lucent Technologies and researcher at premier organisations like DRDO and C-DOT.",
-    "icon": "🏛️",
-    "photo": "anil-joseph.jpg",
-    "tagline": "Engineering that works in reality, not just in theory",
-    "linkedin": "https://linkedin.com/in/anilijoseph",
-    "email": "anil@tenetnetworks.com",
-    "quickFacts": [
-      "20+ years in industrial IoT",
-      "Former Lucent Technologies",
-      "DRDO researcher",
-      "Critical systems specialist"
-    ],
-    "expertise": [
-      "Critical infrastructure design",
-      "IoT architecture & deployment",
-      "System integration",
-      "Technology leadership"
-    ],
-    "background": [
-      "Solution Architect at Lucent Technologies",
-      "Researcher at DRDO (Defence Research and Development Organisation)",
-      "C-DOT (Centre for Development of Telematics)",
-      "Led enterprise deployments across India and Asia-Pacific"
-    ],
-    "currently": {
-      "reading": "📚 \"Scale\" by Geoffrey West",
-      "podcast": "🎙️ Lex Fridman Podcast"
-    }
-  },
+ {
+  "name": "Anil Joseph",
+  "role": "Managing Director",
+  "bio": "Telecom architect with 30+ years of experience building and scaling real-world networks across India's evolution—from legacy switching systems to nationwide Number Portability and modern LTE/VoLTE/IMS cores. As Managing Director of Tenet Networks and Credo Networks, he leads the design of rugged connectivity solutions deployed in mission-critical environments globally.",
+  "icon": "🏛️",
+  "photo": "anil-joseph.jpg",
+  "tagline": "Designing networks that survive the real world",
+  "linkedin": "https://linkedin.com/in/anilijoseph",
+  "email": "anil@tenetnetworks.com",
+  "quickFacts": [
+    "30+ years across telecom evolution (DSS → 5G)",
+    "Senior Member, IEEE",
+    "Core networks & wireless systems expert",
+    "Background in telecom research and standards"
+  ],
+  "expertise": [
+    "4G/5G M2M gateway and edge architecture",
+    "LTE EPC, VoLTE and IMS core networks",
+    "Telecom, IP and SCADA protocol integration",
+    "Industrial IoT and critical infrastructure connectivity",
+    "End-to-end system design for harsh environments"
+  ],
+  "background": [
+    "Led architecture and deployment of LTE/VoLTE/IMS solutions",
+    "Senior Member of Technical Staff at Oracle/Tekelec",
+    "Researcher at DRDO (Defence Research and Development Organisation)",
+    "Worked at C-DOT on indigenous telecom systems"
+  ],
+  "currently": {
+    "reading": "📚 \"Scale\" by Geoffrey West",
+    "podcast": "🎙️ Dwarkesh Podcast"
+  }
+},
   {
     "name": "Zahid Hussain",
     "role": "Director – Technology",
