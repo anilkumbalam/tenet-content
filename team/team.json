@@ -2,11 +2,11 @@
  {
   "name": "Anil Joseph",
   "role": "Managing Director",
-  "bio": "Telecom architect with 30+ years of experience building and scaling real-world networks across India's evolution—from legacy switching systems to nationwide Number Portability and modern LTE/VoLTE/IMS cores. As Managing Director of Tenet Networks and Credo Networks, he leads the design of rugged connectivity solutions deployed in mission-critical environments globally.",
+  "bio": "Telecom architect with 30+ years of experience building and scaling real-world networks across India's telecon evolution, from legacy switching systems to nationwide Number Portability and modern LTE/VoLTE/IMS cores. As Managing Director of Tenet Networks, he leads the design of rugged connectivity solutions deployed in mission-critical environments.",
   "icon": "🏛️",
   "photo": "anil-joseph.jpg",
   "tagline": "Designing networks that survive the real world",
-  "linkedin": "https://linkedin.com/in/anilijoseph",
+  "linkedin": "https://www.linkedin.com/in/anil-joseph-9751573/",
   "email": "anil@tenetnetworks.com",
   "quickFacts": [
     "30+ years across telecom evolution (DSS → 5G)",
@@ -22,10 +22,10 @@
     "End-to-end system design for harsh environments"
   ],
   "background": [
-    "Led architecture and deployment of LTE/VoLTE/IMS solutions",
-    "Senior Member of Technical Staff at Oracle/Tekelec",
-    "Researcher at DRDO (Defence Research and Development Organisation)",
-    "Worked at C-DOT on indigenous telecom systems"
+    "Formerly Led architecture and deployment of LTE/VoLTE/IMS solutions",
+    "Former Senior Member of Technical Staff at Oracle/Tekelec/Lucent Technologies",
+    "Former Researcher at DRDO (Defence Research and Development Organisation)",
+    "and at C-DOT (Centre for Development of Telematics)"
   ],
   "currently": {
     "reading": "📚 \"The Gene\" by Siddhartha Mukherjee",
