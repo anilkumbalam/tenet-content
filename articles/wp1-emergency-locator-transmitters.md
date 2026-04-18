@@ -201,7 +201,7 @@ Modern beacons often include GNSS coordinates, which eliminate this ambiguity en
 The final position is obtained by combining these geometric constraints.
 
 
-## ^1^
+## ^2^
 
 ELT(DT) technology, which detects anomalies (e.g., unusual attitudes, rapid descent, loss of control) in aircrafts and transmits distress alerts **while still airborne** did not exist in certified form for commercial aircrafts in 2014 when MH370 disappeared. The concept of **Autonomous Distress Tracking (ADT)** under ICAO\'s **Global Aeronautical Distress and Safety System (GADSS)** was developed largely **in response to MH370** (and earlier incidents like Air France 447).
 
