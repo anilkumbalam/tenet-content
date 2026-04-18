@@ -4,7 +4,7 @@ Modern wireless and satellite systems derive far more than data bits from radio 
 
 This white paper explains how motion and time become information in RF systems, tracing the underlying physics and showing how these principles appear across **satellite navigation (GNSS)**, **search and rescue systems**, **radar**, **aviation surveillance** and **emerging autonomous platforms**. Rather than treating Doppler, Time of Arrival (ToA) and geometry as isolated techniques, we discuss them as manifestations of a unified idea: **space, time and frequency form the true information bearing dimensions of wireless systems**.
 
-**Introduction**
+## Introduction
 
 When a satellite determines your location or tracks a moving object, it is not just decoding data, it is measuring time, motion and geometry.
 
