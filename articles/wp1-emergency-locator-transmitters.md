@@ -26,9 +26,9 @@ In most cases, the beacon does not transmit its position. Instead, the system in
 
 > - frequency changes caused by motion (Doppler) \
 \
-- signal timing \
+> - signal timing \
 \
-- and geometric relationships between satellites and the beacon
+> - and geometric relationships between satellites and the beacon
 
 This makes ELT systems an excellent real-world example of how wireless signals inherently carry information about space and motion, not just data.
 
