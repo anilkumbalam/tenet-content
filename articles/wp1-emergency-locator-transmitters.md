@@ -144,9 +144,11 @@ The evolution from unreliable local 121.5 MHz analogue beacons to a robust, mult
 
 These systems are a practical demonstration of the core idea that wireless signals inherently carry information about space, time, and motion. System design is fundamentally about extracting that information under real-world constraints.
 
-## Footer
 
-## 1  {#section}
+## Footnotes
+
+## ^1^
+
 
 ## Doppler-Based Location: How Motion Reveals Position
 
