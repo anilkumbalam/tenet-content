@@ -16,7 +16,7 @@ Some RF systems transmit continuously at relatively constant power. Others emit 
 
 - Regulatory constraints
 
-While energy limits wireless systems, this paper shows how the time-structuring of energy determines whether those limits become constraints or performance enhancing.
+While energy limits wireless systems, we discuss how the time-structuring of energy determines whether those limits become constraints or performance enhancing.
 
 This paper extends the energy perspective by showing that not just how much energy is transmitted, but when it is transmitted, determines system performance.
 
@@ -46,7 +46,7 @@ In realistic fading and interference-limited environments, how transmission ener
 
 Power is energy per unit time. If a transmitter emits constant power $P$, the transmitted energy increases proportionally with time. If the same total energy is instead redistributed into bursts, system behaviour changes.
 
-Average power ( $P_{avg})\ $:
+Average power ( $P_{avg}) $:
 
 $$P_{avg} = P_{peak} \times D
 $$Where:
@@ -85,7 +85,7 @@ That design reflects three realities:
 
 The ELT architecture embodies burst-based energy concentration.
 
-## Continuous Transmission**
+## Continuous Transmission
 
 Continuous systems emit energy steadily.
 
