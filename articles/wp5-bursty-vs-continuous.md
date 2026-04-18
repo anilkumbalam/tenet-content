@@ -283,7 +283,7 @@ Time structuring interacts directly with compliance.
 
 ## Conclusion
 
-Continuous transmission favours stability and low latency. Bursty transmission favours energy efficiency and threshold exceedance. ELTs (WP1) illustrate how burst-based architectures can convert limited battery energy into reliable satellite detection.
+Continuous transmission favours stability and low latency. Bursty transmission favours energy efficiency and threshold exceedance. ELTs illustrate how burst-based architectures can convert limited battery energy into reliable satellite detection.
 
 Wireless system design is not simply about transmitting power; it is about structuring constrained energy intelligently across space and time.
 
