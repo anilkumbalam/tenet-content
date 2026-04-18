@@ -1,7 +1,3 @@
-# Doppler, Time and Geometry in RF
-
-# Extracting Location, Motion and Truth from Radio Signals
-
 ## Executive Summary
 
 Modern wireless and satellite systems derive far more than data bits from radio signals. By exploiting **Doppler shift**, **signal timing** and **geometric relationships** between transmitters and receivers, RF systems can estimate **location, velocity, synchronization and system state**, often under severe power, bandwidth and noise constraints.
@@ -28,24 +24,23 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 ### Physical Basis
 
-> Doppler shift arises from relative motion between a transmitter and a receiver. If the distance between them changes over time, the observed frequency differs from the transmitted frequency.
->
-> For a carrier frequency $f_{0}$, the Doppler shift $\Delta f$is approximately: $\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}
-> $
->
-> where:
+Doppler shift arises from relative motion between a transmitter and a receiver. If the distance between them changes over time, the observed frequency differs from the transmitted frequency.
+
+For a carrier frequency $f_{0}$, the Doppler shift $\Delta f$is approximately: $\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}$
+
+where:
 
 - $v_{r}$= relative radial velocity ^C^
 
 - $c$ = speed of light
 
-> At RF and microwave frequencies, even modest velocities produce **measurable frequency shifts**.
+At RF and microwave frequencies, even modest velocities produce **measurable frequency shifts**.
 
 ### Doppler in Satellite Systems
 
-> Low Earth orbit (LEO) satellites travel at \~7--8 km/s, producing Doppler shifts of several kHz at L-band (1--2 GHz, commonly used for satellite communications) frequencies. This effect is not a problem; it is used to extract information about motion.
->
-> In the **LEOSAR** (Low Earth orbit Search and Rescue) component of the COSPAS-SARSAT system:
+Low Earth orbit (LEO) satellites travel at \~7--8 km/s, producing Doppler shifts of several kHz at L-band (1--2 GHz, commonly used for satellite communications) frequencies. This effect is not a problem; it is used to extract information about motion.
+
+In the **LEOSAR** (Low Earth orbit Search and Rescue) component of the COSPAS-SARSAT system:
 
 - A stationary distress beacon transmits short bursts at 406.025 MHz
 
@@ -53,13 +48,13 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - The curve shape encodes the beacon's position relative to the satellite's ground track
 
-> Doppler thus becomes a **fundamental tool for geolocation**, even without GPS data from the beacon.
+Doppler thus becomes a **fundamental tool for geolocation**, even without GPS data from the beacon.
 
 ### Ambiguity and Resolution
 
-> A single Doppler pass does not uniquely determine the beacon's location. Instead, it produces two possible locations, one on each side of the satellite's ground track. This ambiguity arises because the Doppler measurement is symmetric about the satellite's path.
->
-> Resolving this requires additional observations with different geometry. This can be achieved through:
+A single Doppler pass does not uniquely determine the beacon's location. Instead, it produces two possible locations, one on each side of the satellite's ground track. This ambiguity arises because the Doppler measurement is symmetric about the satellite's path.
+
+Resolving this requires additional observations with different geometry. This can be achieved through:
 
 - A subsequent satellite pass with a different ground track
 
@@ -67,30 +62,31 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - Embedded GNSS coordinates, which eliminate the ambiguity entirely
 
-> If the geometry remains unchanged, the ambiguity persists.
->
-> This illustrates a recurring principle: **Physics provides constraints; geometry resolves ambiguity.**
+If the geometry remains unchanged, the ambiguity persists.
+
+This illustrates a recurring principle: **Physics provides constraints; geometry resolves ambiguity.**
 
 ## **T**ime as Information: Time of Arrival (ToA) and Time Difference of Arrival (TDoA)
 
 ### Time of Arrival (ToA)
 
-> The propagation delay of an RF signal encodes distance:
->
-> $$d = c \cdot \Delta t
-> $$In simple terms, the longer a signal takes to arrive, the farther it has travelled.
->
-> However, precise ToA measurement requires:
+The propagation delay of an RF signal encodes distance:
+
+$$d = c \cdot \Delta t$$
+
+In simple terms, the longer a signal takes to arrive, the farther it has travelled.
+
+However, precise ToA measurement requires:
 
 - Extremely accurate clocks
 
 - Calibration of clock bias and drift
 
-> This is why timing, not bandwidth, is often the **hardest resource** in RF systems.
+This is why timing, not bandwidth, is often the **hardest resource** in RF systems.
 
 ### GNSS Pseudorange
 
-> In Global Navigation Satellite Systems such as **GPS** and **Galileo**:
+In Global Navigation Satellite Systems such as **GPS** and **Galileo**:
 
 - Satellites continuously transmit signals with precise timestamps
 
@@ -98,11 +94,11 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - The time delay is used to estimate distance to each satellite
 
-> In simple terms: **Distance = speed of light × time delay**
->
-> **The complication arises** as the receiver's clock is not perfectly synchronized with the satellites. This means each measured distance is slightly incorrect. These are called **pseudoranges**.
->
-> Each measurement forms a **sphere of possible locations**. The receiver must lie somewhere on that sphere.
+In simple terms: **Distance = speed of light × time delay**
+
+**The complication arises** as the receiver's clock is not perfectly synchronized with the satellites. This means each measured distance is slightly incorrect. These are called **pseudoranges**.
+
+Each measurement forms a **sphere of possible locations**. The receiver must lie somewhere on that sphere.
 
 - 1 satellite → sphere (many possible positions)
 
@@ -112,17 +108,17 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - 4 satellites → unique position + clock correction
 
-> Intersection of four or more spheres yields:
+Intersection of four or more spheres yields:
 
 - 3D position
 
 - Receiver clock offset
 
-> GNSS positioning is thus **a time synchronization problem disguised as navigation**.
+GNSS positioning is thus **a time synchronization problem disguised as navigation**.
 
 ### Time Difference of Arrival (TDoA)
 
-> In TDoA systems, location is found by comparing when a signal reaches different receivers. Unlike ToA, the transmitter does not need to be synchronized.
+In TDoA systems, location is found by comparing when a signal reaches different receivers. Unlike ToA, the transmitter does not need to be synchronized.
 
 - Multiple receivers detect the same signal
 
@@ -130,11 +126,11 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - The differences in arrival times are used to estimate position
 
-> TDoA does not measure distance. It measures **how much closer the signal is to one receiver than another**
->
-> Each time difference gives one constraint on where the transmitter could be. Position is found by combining multiple such constraints from different receiver pairs.
->
-> This principle underlies:
+TDoA does not measure distance. It measures **how much closer the signal is to one receiver than another**
+
+Each time difference gives one constraint on where the transmitter could be. Position is found by combining multiple such constraints from different receiver pairs.
+
+This principle underlies:
 
 - Passive RF localization
 
@@ -142,27 +138,27 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - Cellular positioning (OTDOA)
 
-> TDoA does not directly tell you where something is. It tells you where it cannot be and position emerges from combining multiple constraints.
->
-> Here again, **geometry dominates accuracy** more than raw signal strength.
+TDoA does not directly tell you where something is. It tells you where it cannot be and position emerges from combining multiple constraints.
+
+Here again, **geometry dominates accuracy** more than raw signal strength.
 
 ## Geometry: The Silent Determinant of Accuracy
 
 ### Geometric Dilution of Precision (GDOP)
 
-> Even perfect measurements can yield poor location estimates if geometry is unfavourable. For example, imagine trying to locate a point using three satellites that are all close together in the same part of the sky.
->
-> Even if the distance to each satellite is measured perfectly, the intersection of those measurements is poorly defined. Small errors or uncertainties spread out into a large region of possible positions. Now consider the same measurements with satellites spread widely across the sky. The intersections become much sharper and the position can be determined much more precisely.
->
-> The measurements have not changed, only the geometry has. GDOP quantifies how the geometry of satellites or receivers amplifies small measurement errors into position errors.
->
-> Key insight:
->
-> **Measurement quality matters less than measurement geometry.** ^D^
->
-> A common misconception is that poor geometry can be compensated by higher power, bandwidth, or more advanced algorithms; this is discussed explicitly in Appendix D.
->
-> This explains why:
+Even perfect measurements can yield poor location estimates if geometry is unfavourable. For example, imagine trying to locate a point using three satellites that are all close together in the same part of the sky.
+
+Even if the distance to each satellite is measured perfectly, the intersection of those measurements is poorly defined. Small errors or uncertainties spread out into a large region of possible positions. Now consider the same measurements with satellites spread widely across the sky. The intersections become much sharper and the position can be determined much more precisely.
+
+The measurements have not changed, only the geometry has. GDOP quantifies how the geometry of satellites or receivers amplifies small measurement errors into position errors.
+
+Key insight:
+
+ **Measurement quality matters less than measurement geometry.** ^D^
+
+A common misconception is that poor geometry can be compensated by higher power, bandwidth, or more advanced algorithms; this is discussed explicitly in Appendix D.
+
+This explains why:
 
 - MEOSAR outperforms LEOSAR
 
@@ -172,7 +168,7 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 ### MEOSAR as a Geometric Revolution
 
-> By placing SAR payloads on multiple GNSS constellations, **MEOSAR** achieves:
+By placing SAR payloads on multiple GNSS constellations, **MEOSAR** achieves:
 
 - Continuous global coverage
 
@@ -180,9 +176,9 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 - Faster and more accurate solutions
 
-> This improvement stems primarily from **geometry**, not higher transmit power or bandwidth.
->
-> **Unifying View: One Physics, Many Systems**
+This improvement stems primarily from **geometry**, not higher transmit power or bandwidth.
+
+**Unifying View: One Physics, Many Systems**
 
 | **System**         | **Uses Doppler** | **Uses Time** | **Uses Geometry** |
 |--------------------|------------------|---------------|-------------------|
@@ -192,9 +188,9 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 | ADS-B MLAT         | ✗                | ✓             | ✓                 |
 | Passive RF sensing | ✓                | ✓             | ✓                 |
 
-> Despite different applications, these systems share the same core idea:
->
-> **RF signals are probes of spacetime, not just carriers of data.**
+Despite different applications, these systems share the same core idea:
+
+**RF signals are probes of spacetime, not just carriers of data.**
 
 ## Conclusion
 
@@ -222,8 +218,7 @@ The clock offset is therefore **+120 microseconds**.
 
 Formally,
 
-$$\text{Clock Offset} = t_{\text{local clock}} - t_{\text{reference clock}}
-$$
+$$\text{Clock Offset} = t_{\text{local clock}} - t_{\text{reference clock}}$$
 
 In RF systems, clock offsets are not abstract timing discrepancies. Because electromagnetic waves propagate at the speed of light, even very small timing offsets translate directly into **physical errors in distance, velocity, or position**.
 
@@ -231,8 +226,7 @@ In RF systems, clock offsets are not abstract timing discrepancies. Because elec
 
 Radio waves propagate at approximately:
 
-$$c \approx 3 \times 10^{8}\text{ m/s}
-$$
+$$c \approx 3 \times 10^{8}\text{ m/s}$$
 
 As a result, time error maps directly into distance error:
 
@@ -265,13 +259,11 @@ The receiver records the arrival time of the signal using its local clock:
 
 Because the receiver's clock is not synchronized to satellite time, it contains an unknown offset $\Delta t$. As a result, the measured range, known as the **pseudo range** is given by:
 
-$$\rho_{i} = c(T_{r} - T_{s} + \Delta t)
-$$
+$$\rho_{i} = c(T_{r} - T_{s} + \Delta t)$$
 
 The true geometric relationship for satellite $i$can be written as:
 
-$$\rho_{i} = \sqrt{\left( x - x_{i})^{2} + (y - y_{i})^{2} + (z - z_{i})^{2} \right.\ } + c\text{ }\Delta t
-$$
+$$\rho_{i} = \sqrt{\left( x - x_{i})^{2} + (y - y_{i})^{2} + (z - z_{i})^{2} \right.\ } + c\text{ }\Delta t$$
 
 Here:
 
@@ -614,8 +606,7 @@ If:
 
 then the relative velocity of B with respect to A is:
 
-$$\mathbf{v}_{\text{rel}} = \mathbf{v}_{B} - \mathbf{v}_{A}
-$$
+$$\mathbf{v}_{\text{rel}} = \mathbf{v}_{B} - \mathbf{v}_{A}$$
 
 Relative velocity is a **vector quantity**:
 
@@ -653,8 +644,7 @@ Mathematically, if:
 
 then the relative radial velocity is:
 
-$$v_{\text{radial}}\  = \ \mathbf{v}_{\text{rel}} \cdot \mathbf{r}
-$$
+$$v_{\text{radial}}\  = \ \mathbf{v}_{\text{rel}} \cdot \mathbf{r}$$
 
 This operation is a **projection** of the relative velocity onto the line of sight.
 
@@ -678,8 +668,9 @@ Example interpretations:
 
 The Doppler shift in RF systems is approximately:
 
-$$\Delta f\  \approx \ \frac{v_{\text{radial}}}{c}\text{ }f_{0}
-$$where:
+$$\Delta f\  \approx \ \frac{v_{\text{radial}}}{c}\text{ }f_{0}$$
+
+where:
 
 - $v_{\text{radial}}$ = relative radial velocity
 
