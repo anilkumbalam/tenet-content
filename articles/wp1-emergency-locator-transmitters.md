@@ -25,9 +25,9 @@ What makes these systems particularly interesting from an engineering perspectiv
 In most cases, the beacon does not transmit its position. Instead, the system infers location using:
 
 > - frequency changes caused by motion (Doppler) \
-\
+> 
 > - signal timing \
-\
+> 
 > - and geometric relationships between satellites and the beacon
 
 This makes ELT systems an excellent real-world example of how wireless signals inherently carry information about space and motion, not just data.
