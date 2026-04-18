@@ -14,9 +14,9 @@ A single RF transmission inherently carries:
 
 - **Frequency information** → altered by relative motion (Doppler)
 
-- **Time information** → altered by propagation delay and clock offsets ^A^
+- **Time information** → altered by propagation delay and clock offsets ^1^
 
-- **Spatial information** → constrained by geometry between nodes ^B^
+- **Spatial information** → constrained by geometry between nodes ^2^
 
 Systems that exploit these properties can locate aircraft, synchronize global clocks, track vehicles and rescue people in distress, sometimes with **no bidirectional communication at all**.
 
@@ -34,7 +34,7 @@ the Doppler shift $\Delta f$is approximately:
 
 > where:
 
-> - $v_{r}$= relative radial velocity ^C^
+> - $v_{r}$= relative radial velocity ^3^
 
 > - $c$ = speed of light
 
@@ -158,9 +158,9 @@ The measurements have not changed, only the geometry has. GDOP quantifies how th
 
 Key insight:
 
- **Measurement quality matters less than measurement geometry.** ^D^
+ **Measurement quality matters less than measurement geometry.** ^4^
 
-A common misconception is that poor geometry can be compensated by higher power, bandwidth, or more advanced algorithms; this is discussed explicitly in Appendix D.
+A common misconception is that poor geometry can be compensated by higher power, bandwidth, or more advanced algorithms; this is discussed explicitly in footnote 4.
 
 This explains why:
 
@@ -204,7 +204,10 @@ Doppler shift, signal timing and geometry are not secondary effects in RF system
 
 As wireless systems move toward greater autonomy and resilience, engineers who understand how **space and time are encoded in RF** will remain indispensable.
 
-^Appendix A^
+
+##Footnotes:**
+
+##^1^
 
 ## Clock Offsets in RF Systems
 
@@ -414,7 +417,7 @@ GNSS is therefore a rare example of **relativistic physics being engineered dire
 
 Understanding clock offsets from this perspective transforms how engineers think about navigation, Doppler localization, radar, multilateration and resilient wireless systems. This insight remains valid regardless of modulation scheme, protocol, or application domain.
 
-^Appendix B^
+##^2^
 
 ## Spatial Information and Geometry in RF Systems
 
@@ -593,7 +596,7 @@ This represents a shift from component level optimization to **system level spat
 
 **Spatial information in RF systems does not come from knowing where something is, it comes from knowing where it cannot be.** Each RF measurement eliminates regions of space. Position emerges where all constraints are simultaneously satisfied. Understanding spatial information as a geometric constraint problem unifies Doppler, timing, angle and multilateration methods under a single conceptual framework.
 
-^Appendix C^
+##^3^
 
 ## Relative Velocity and Relative Radial Velocity in RF Systems
 
@@ -731,7 +734,7 @@ This distinction is essential for understanding:
 
 **Relative radial velocity is the line of sight component of relative motion and it is the only part of motion that produces Doppler shift in RF systems.**
 
-^Appendix D^
+##^4^
 
 ## Why Power, Bandwidth, and Algorithms Cannot Fix Poor Geometry
 
