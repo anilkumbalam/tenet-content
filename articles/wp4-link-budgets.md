@@ -295,7 +295,7 @@ Across the series, we now see three coupled limits:
 
 - *Time precision (clock accuracy)*
 
-- *Energy (link budget &* $E_{b}/N_{0}$*)*
+- *Energy (link budget &* $E_{b}/N_{0}$)
 
 Wireless systems succeed only when all three are satisfied simultaneously. Failure in any one dimension collapses the solution.
 
@@ -345,20 +345,18 @@ Energy per bit equals received power divided by bit rate. Increasing bit rate (w
 
 **Noise Spectral Density (**$\mathbf{\ }\mathbf{N}_{\mathbf{0}\mathbf{\ }}$**)**
 
-Thermal noise power over bandwidth $B\ $is given by:
+Thermal noise power over bandwidth $B$ is given by:
 
 $$N = kTB
 $$
 
 Where:
 
-- $k\ $*= Boltzmann's constant*
+- $k$* = Boltzmann's constant*
 
-- $T\ $*= absolute temperature (Kelvin)*
+- $T$* = absolute temperature (Kelvin)*
 
-<!-- -->
-
-- $B\ $*=* bandwidth
+- $B$* = bandwidth*
 
 Noise power **per unit bandwidth** is:
 
@@ -367,8 +365,7 @@ $$
 
 At room temperature ( ≈ 290 K):
 
-$$N_{0} \approx - 174\text{ dBm/Hz}
-$$
+$$N_{0} \approx - 174\text{ dBm/Hz}$$
 
 This represents the fundamental thermal noise floor.
 
@@ -376,8 +373,7 @@ This represents the fundamental thermal noise floor.
 
 Combining the two results:
 
-$$\frac{E_{b}}{N_{0}}\  = \ \frac{P_{r}\ /{\ R}_{b}}{kT}
-$$
+$$\frac{E_{b}}{N_{0}}\  = \ \frac{P_{r}\ /{\ R}_{b}}{kT}$$
 
 This shows that communication reliability depends on:
 
@@ -387,7 +383,7 @@ This shows that communication reliability depends on:
 
 - *Temperature (noise floor)*
 
-Each modulation and coding scheme requires a minimum $E_{b}/N_{0}\ $ to achieve an acceptable bit error rate. Thus, a link budget ultimately determines whether the receiver can achieve the required energy per bit relative to noise.
+Each modulation and coding scheme requires a minimum $E_{b}/N_{0}$ to achieve an acceptable bit error rate. Thus, a link budget ultimately determines whether the receiver can achieve the required energy per bit relative to noise.
 
 $E_{b}/N_{0}$ is not an abstract communications parameter.
 
