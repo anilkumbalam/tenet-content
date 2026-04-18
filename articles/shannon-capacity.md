@@ -240,7 +240,7 @@ To understand the true behaviour, consider what happens as bandwidth becomes ver
 
 **What Happens as** $\mathbf{B \rightarrow}\mathbf{\infty}$ **?**
 
-As $B$increases, the term
+As $B$ increases, the term
 
 $$\frac{P}{N_{0}B}
 $$
