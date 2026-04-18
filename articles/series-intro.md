@@ -48,9 +48,9 @@ Wireless systems are not defined by the technologies we invent; they are defined
 
 ## How to Think Like a Wireless Engineer
 
-Start with **physics**  
-Understand the **constraints  
-**Then design the system
+Start with **PHYSICS**  
+Understand the **CONSTRAINTS** 
+Then design the system
 
 Technology evolves.  
 **Constraints do not**.
