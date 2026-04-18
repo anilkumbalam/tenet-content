@@ -1,10 +1,5 @@
-**Shannon Capacity**
 
-**Why Bandwidth Is Not Enough**
-
-**Anil Joseph, Senior Member IEEE**
-
-**Executive Summary**
+## Executive Summary
 
 Modern communication systems often appear limited by hardware: antennas, amplifiers, coding schemes, or algorithms. Yet the ultimate limit is not technological but physical.
 
@@ -17,7 +12,7 @@ This expression defines the **capacity** of the channel.
 
 More bandwidth helps. More power helps. Better coding helps. But none of these can exceed the fundamental boundary imposed by noise. Perhaps most counterintuitive of all, infinite bandwidth does not yield infinite data rate when energy is finite. Understanding this limit changes how engineers think about wireless systems. It shifts focus from "what can I build?" to "what does physics allow?"
 
-**1. The Question**
+## The Question
 
 Suppose we want to increase data rate.
 
@@ -43,7 +38,7 @@ Intuition suggests that with enough engineering effort, data rate can grow indef
 
 That relationship defines a boundary.
 
-**2. The Shannon Capacity Formula**
+## The Shannon Capacity Formula
 
 For a channel with:
 
@@ -76,7 +71,7 @@ C ≈ 4.39 Mbps
 
 Doubling SNR does **not** double capacity. Doubling SNR increases capacity only marginally.
 
-**3. What the Equation Really Says**
+## What the Equation Really Says
 
 The formula contains two key ideas:
 
@@ -119,7 +114,7 @@ In this analogy:
 
 - Diminishing return → log behaviour
 
-**3.1 When SNR Is Large**
+### When SNR Is Large
 
 When the signal-to-noise ratio is much greater than one (SNR ≫ 1), the Shannon expression simplifies:
 
@@ -146,7 +141,7 @@ $$
 
 Thus, power does not scale capacity proportionally. Each additional increase in SNR contributes less than the previous one. Once the signal is already strong relative to noise, further power increases offer only incremental benefit.
 
-**3.2 When SNR Is Small**
+### When SNR Is Small
 
 When the signal-to-noise ratio is much less than one (SNR ≪ 1), the Shannon expression simplifies differently:
 
@@ -171,7 +166,7 @@ In these systems, reliable communication is achieved not through high transmit p
 
 So far, bandwidth has been held constant while signal-to-noise ratio varied. We now shift perspective and examine what happens when transmit power is fixed and bandwidth increases.
 
-**4. Bandwidth Alone Is Not Enough**
+## Bandwidth Alone Is Not Enough
 
 At first glance, Shannon's formula suggests that increasing bandwidth should directly increase capacity. Since capacity is proportional to $B$, doubling bandwidth appears to double the achievable data rate.
 
@@ -202,7 +197,7 @@ This is why:
 
 Bandwidth is necessary for high data rates. But without adequate energy per bit, it is not sufficient.
 
-**4.1 The Wideband Limit (Fixed Power Case)**
+### The Wideband Limit (Fixed Power Case)
 
 So far, we noted that if transmit power is fixed, increasing bandwidth also increases noise power. This reduces the signal-to-noise ratio. We can now make that statement precise.
 
@@ -287,7 +282,7 @@ Infinite bandwidth cannot compensate for finite energy.
 
 This is the wideband limit. It reveals that ultimate communication performance is governed not by bandwidth alone, but by available energy per bit relative to noise.
 
-**5. Energy per Bit: The Deeper Limit**
+## Energy per Bit: The Deeper Limit
 
 A more revealing quantity than SNR alone is the ratio:
 
@@ -323,7 +318,7 @@ Ultimately, what determines feasibility is not raw transmit power, but energy pe
 
 Energy, not just power, governs whether communication succeeds.
 
-**Conclusion**
+## Conclusion
 
 Shannon's capacity formula answers a simple but profound question: How much information can be transmitted reliably over a noisy channel?
 
