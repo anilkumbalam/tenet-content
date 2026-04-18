@@ -56,7 +56,7 @@ However, this also means:
 
 Timing is not just one error source among many; it is the **dominant sensitivity axis** of GNSS.
 
-**2.1 Multilateration and the Fourth Unknown**
+### Multilateration and the Fourth Unknown
 
 GNSS positioning is often described as trilateration --- the intersection of spheres whose radii are equal to measured distances from satellites.
 
@@ -121,7 +121,7 @@ Geometry is not a secondary detail; it is a first-order design variable.
 
 GNSS theory assumes signals propagate through free space at the speed of light. Real environments violate this assumption in multiple ways.
 
-**4.1 Ionospheric Delay**
+### Ionospheric Delay
 
 - Frequency-dependent delay caused by charged particles
 
@@ -129,7 +129,7 @@ GNSS theory assumes signals propagate through free space at the speed of light. 
 
 - Mitigated (but not eliminated) by dual-frequency receivers
 
-**4.2 Tropospheric Delay**
+### Tropospheric Delay
 
 - Caused by water vapor and atmospheric pressure
 
@@ -286,37 +286,37 @@ This perspective is essential for designing resilient systems that rely on GNSS,
 
 ## ^1^
 
-**Why GNSS Accuracy Varies with Time of Day**
+## Why GNSS Accuracy Varies with Time of Day**
 
 GNSS accuracy at a fixed location is not constant over time. Even with the same receiver and environment, position accuracy can vary significantly throughout the day. This variation arises from several time-dependent factors.
 
-**Time-Varying Satellite Geometry**
+### Time-Varying Satellite Geometry
 
 GNSS satellites move continuously in their orbits. As a result, the number of visible satellites and their relative placement in the sky change with time. This alters the **geometric dilution of precision (GDOP)**. Periods of widely spaced satellites yield stronger geometric constraints, while clustered satellite configurations amplify errors.
 
-**Diurnal Ionospheric Behaviour**
+### Diurnal Ionospheric Behaviour
 
 The ionosphere is driven by solar radiation and exhibits strong day--night variation. During daytime, increased ionization introduces larger and more variable signal delays. At night, ionospheric conditions are typically calmer, often resulting in improved positioning accuracy.
 
-**Tropospheric Variability**
+### Tropospheric Variability
 
 Tropospheric delay depends on temperature, pressure, and water vapor content, all of which vary diurnally and with weather. These variations introduce slowly changing biases that affect timing measurements.
 
-**Time-Varying Multipath**
+### Time-Varying Multipath
 
 In urban and semi-urban environments, multipath conditions change with traffic patterns, moving reflectors, and human activity. As reflective surfaces move or appear, the multipath error profile changes over time.
 
-**System-Level Effects**
+### System-Level Effects
 
 Satellite health status, ephemeris freshness, and constellation maintenance activities can also vary over time, contributing to subtle accuracy changes.
 
-**Key Insight**
+### Key Insight
 
 **GNSS accuracy is time-dependent because the physical and geometric conditions that enable positioning are themselves time-dependent.** Understanding this variability is essential for interpreting GNSS performance and for designing systems that rely on GNSS but cannot assume uniform accuracy.
 
 ## ^2^
 
-**Bias vs Noise in Position Estimation**
+## Bias vs Noise in Position Estimation
 
 GNSS positioning errors do not all behave the same way. A critical distinction must be made between:
 
@@ -326,7 +326,7 @@ GNSS positioning errors do not all behave the same way. A critical distinction m
 
 Understanding this distinction is essential to interpreting GNSS performance and failure modes.
 
-**Random Noise**
+### Random Noise
 
 Random noise arises from:
 
@@ -358,7 +358,7 @@ In positioning terms:
 
 Noise degrades precision, but not necessarily correctness.
 
-**Systematic Bias**
+### Systematic Bias
 
 Bias is fundamentally different.
 
@@ -394,7 +394,7 @@ In positioning terms:
 
 Bias degrades correctness, even when precision appears good.
 
-**Why Geometry Amplifies Bias**
+### Why Geometry Amplifies Bias
 
 Earlier sections showed that GNSS solves for:
 
@@ -422,7 +422,7 @@ Thus:
 
 Geometry does not create bias. It amplifies it.
 
-**Why Bias Is Harder to Detect**
+### Why Bias Is Harder to Detect
 
 Random noise produces visible jitter.
 
@@ -444,7 +444,7 @@ This is especially dangerous when:
 
 A receiver may compute a geometrically valid solution that is physically incorrect. The system believes itself.
 
-**Precision vs Accuracy**
+### Precision vs Accuracy
 
 It is important to distinguish:
 
@@ -460,19 +460,19 @@ Noise primarily affects precision. Bias primarily affects accuracy. A GNSS recei
 
 In safety-critical systems, bias is typically more dangerous than noise.
 
-**Key Insight**
+### Key Insight
 
 GNSS is fundamentally an inference system. Inference systems are most vulnerable not to randomness, but to consistent misinformation. Noise causes uncertainty. Bias causes false certainty. Understanding this distinction is essential when evaluating GNSS reliability, especially in autonomous, aviation and critical infrastructure contexts.
 
 ## ^3^
 
-**Why GNSS Is Vulnerable to Jamming and Spoofing**
+## Why GNSS Is Vulnerable to Jamming and Spoofing
 
 GNSS is a remarkably precise positioning system. It is also structurally fragile. This fragility does not arise from poor engineering. It arises from fundamental physical and architectural choices.
 
 This appendix explains why GNSS signals are vulnerable to both **jamming** and **spoofing**, and why these vulnerabilities are difficult to eliminate completely.
 
-**Why GNSS Signals Are Extremely Weak**
+### Why GNSS Signals Are Extremely Weak
 
 GNSS satellites orbit at approximately 20,000 km altitude.
 
@@ -492,7 +492,7 @@ GNSS receivers recover signals by:
 
 This provides **processing gain**, allowing detection of signals that appear buried in noise. However, this also creates a vulnerability as any nearby transmitter that injects stronger interference can overwhelm the receiver front-end. The signal's weakness is a structural consequence of satellite distance.
 
-**Jamming: Overpowering the Receiver**
+### Jamming: Overpowering the Receiver
 
 **What Is Jamming?**
 
@@ -516,7 +516,7 @@ Jamming does not require knowledge of GNSS protocols. It only requires sufficien
 
 Thus, GNSS availability depends on a relatively quiet RF spectrum.
 
-**Spoofing: Manipulating Position Without Overpowering**
+### Spoofing: Manipulating Position Without Overpowering
 
 Spoofing is more subtle than jamming.
 
@@ -600,7 +600,7 @@ The vulnerability arises from:
 
 Not merely from signal weakness.
 
-**Mitigations (Brief Overview)**
+### Mitigations (Brief Overview)
 
 Modern systems introduce mitigations such as:
 
@@ -620,7 +620,7 @@ However:
 
 No passive satellite-based positioning system can be entirely immune to local RF manipulation.
 
-**Key Insight**
+### Key Insight
 
 GNSS fragility is not accidental.
 
