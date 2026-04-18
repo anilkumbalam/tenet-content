@@ -344,7 +344,7 @@ This geographic mismatch makes long-distance transmission essential.
 High-voltage corridors carry power across hundreds of kilometres,
 connecting resource-rich regions to cities and industries.
 
-## Learning See
+## Learning to See
 
 Engineering does not begin in textbooks. It begins with noticing. The
 world around us is full of quiet answers to physical questions, if we
