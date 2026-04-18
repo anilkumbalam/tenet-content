@@ -145,7 +145,7 @@ In spread-spectrum systems:
 
 ***Processing Gain Intuition***
 
-$$\text{Processing Gain} = \frac{B_{\text{spread}}}{R_{b}}
+$$\text{Processing Gain} = \frac{B_{\{spread}}}{R_{b}}
 $$
 
 $$\frac{1,023,000}{50} \approx 20,460
@@ -221,7 +221,7 @@ $$
 
 Where:
 
-- $P_{\min}$is the minimum power required for acceptable $E_{b}/N_{0}$.
+- $P_{\min}$ is the minimum power required for acceptable $E_{b}/N_{0}$.
 
 Margin does not guarantee reliability.
 
@@ -320,9 +320,9 @@ This appendix shows how this quantity emerges directly from basic power and nois
 
 Let:
 
-- $P_{r}$*= received signal power (Watts)*
+- $P_{r}$ = received signal power (Watts)
 
-- $R_{b}$*= bit rate (bits per second)*
+- $R_{b}$ = bit rate (bits per second)
 
 Each bit occupies a time duration:
 
