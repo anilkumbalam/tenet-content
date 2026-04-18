@@ -352,11 +352,11 @@ $$
 
 Where:
 
-- $k$* = Boltzmann's constant*
+- $k$ = Boltzmann's constant
 
-- $T$* = absolute temperature (Kelvin)*
+- $T$ = absolute temperature (Kelvin)
 
-- $B$* = bandwidth*
+- $B$ = bandwidth
 
 Noise power **per unit bandwidth** is:
 
