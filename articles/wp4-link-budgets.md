@@ -111,7 +111,7 @@ GNSS works because:
 
 - *Spread-spectrum processing gain redistributes energy*
 
-- *Long integration improves effective* ${\ E}_{b}/N_{0}$*, as it accumulates signal energy coherently while noise accumulates incoherently.*
+- *Long integration improves effective* ${\ E}_{b}/N_{0}$, as it accumulates signal energy coherently while noise accumulates incoherently.
 
 - *Correlation extracts structured signals from noise*
 
