@@ -52,11 +52,11 @@ The maximum achievable data rate is:
 \
 Where: \
 \
-$C\ $= capacity (bits per second) \
+    $C $= capacity (bits per second) \
 \
-$B\ $= bandwidth \
+    $B $= bandwidth \
 \
-SNR = signal power / noise power \
+    SNR = signal power / noise power \
 \
 This is not a design equation. **This is a limit**.
 
