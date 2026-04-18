@@ -34,9 +34,9 @@ the Doppler shift $\Delta f$is approximately:
 \
 where: \
 \
-- $v_{r}$= relative radial velocity ^3^ \
+$v_{r}$= relative radial velocity ^3^ \
 \
-- $c$ = speed of light \
+$c$ = speed of light \
 
 At RF and microwave frequencies, even modest velocities produce **measurable frequency shifts**.
 
