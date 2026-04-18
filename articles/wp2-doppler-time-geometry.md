@@ -30,13 +30,13 @@ For a carrier frequency $f_{0}$,
 
 the Doppler shift $\Delta f$is approximately:
 
-$\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}$
+> $\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}$
 
-where:
+> where:
 
-- $v_{r}$= relative radial velocity ^C^
+> - $v_{r}$= relative radial velocity ^C^
 
-- $c$ = speed of light
+> - $c$ = speed of light
 
 At RF and microwave frequencies, even modest velocities produce **measurable frequency shifts**.
 
@@ -76,9 +76,9 @@ This illustrates a recurring principle: **Physics provides constraints; geometry
 
 The propagation delay of an RF signal encodes distance:
 
-$$d = c \cdot \Delta t$$
+> $$d = c \cdot \Delta t$$
 
-In simple terms, the longer a signal takes to arrive, the farther it has travelled.
+> In simple terms, the longer a signal takes to arrive, the farther it has travelled.
 
 However, precise ToA measurement requires:
 
@@ -241,9 +241,9 @@ As a result, time error maps directly into distance error:
 | 1 microsecond  | 300 m              |
 | 1 nanosecond   | 0.3 m              |
 
-A **100 nano second clock offset corresponds to approximately 30 meters of position error**.
+> A **100 nano second clock offset corresponds to approximately 30 meters of position error**.
 
-This is why clock offsets are **not bookkeeping errors**, they are **physical errors** that fundamentally limit the performance of RF based navigation, localization, radar, and sensing systems.
+> This is why clock offsets are **not bookkeeping errors**, they are **physical errors** that fundamentally limit the performance of RF based navigation, localization, radar, and sensing systems.
 
 #### Example 1: GNSS (GPS and Galileo)
 
@@ -263,19 +263,19 @@ The receiver records the arrival time of the signal using its local clock:
 
 Because the receiver's clock is not synchronized to satellite time, it contains an unknown offset $\Delta t$. As a result, the measured range, known as the **pseudo range** is given by:
 
-$$\rho_{i} = c(T_{r} - T_{s} + \Delta t)$$
+> $$\rho_{i} = c(T_{r} - T_{s} + \Delta t)$$
 
 The true geometric relationship for satellite $i$can be written as:
 
-$$\rho_{i} = \sqrt{\left( x - x_{i})^{2} + (y - y_{i})^{2} + (z - z_{i})^{2} \right.\ } + c\text{ }\Delta t$$
+> $$\rho_{i} = \sqrt{\left( x - x_{i})^{2} + (y - y_{i})^{2} + (z - z_{i})^{2} \right.\ } + c\text{ }\Delta t$$
 
-Here:
+> Here:
 
-- $\left( x,y,z \right)$are the unknown receiver position coordinates
+> - $\left( x,y,z \right)$are the unknown receiver position coordinates
 
-- $\left( x_{i},y_{i},z_{i} \right)$are the **known satellite positions**, computed by the receiver from **ephemeris data broadcast within the satellite's navigation message**
+> - $\left( x_{i},y_{i},z_{i} \right)$are the **known satellite positions**, computed by the receiver from **ephemeris data broadcast within the satellite's navigation message**
 
-- $\Delta t$ is the unknown receiver clock offset
+> - $\Delta t$ is the unknown receiver clock offset
 
 Each satellite continuously broadcasts its own orbital parameters (ephemeris), allowing the receiver to compute the satellite's position at the exact time of signal transmission.
 
@@ -464,13 +464,12 @@ Consider a receiver measuring the propagation delay of a signal from one transmi
 
 - Direction is unknown
 
-- 
 
-The transmitter is constrained to lie on:
+> The transmitter is constrained to lie on:
 
-- A **circle** in two dimensions
+> - A **circle** in two dimensions
 
-- A **sphere** in three dimensions
+> - A **sphere** in three dimensions
 
 This provides spatial information, but it is **weak**: infinitely many positions satisfy the constraint.
 
@@ -480,11 +479,11 @@ No amount of transmit power, bandwidth, or signal processing can eliminate this 
 
 Adding more nodes strengthens spatial information:
 
-- **Two nodes** → two geometric constraints → two possible locations
+> - **Two nodes** → two geometric constraints → two possible locations
 
-- **Three nodes** → three constraints → unique solution (in ideal geometry)
+> - **Three nodes** → three constraints → unique solution (in ideal geometry)
 
-- **Four or more nodes** → redundancy and robustness
+> - **Four or more nodes** → redundancy and robustness
 
 This is the basis of:
 
@@ -610,7 +609,7 @@ If:
 
 then the relative velocity of B with respect to A is:
 
-$$\mathbf{v}_{\text{rel}} = \mathbf{v}_{B} - \mathbf{v}_{A}$$
+> $$\mathbf{v}_{\text{rel}} = \mathbf{v}_{B} - \mathbf{v}_{A}$$
 
 Relative velocity is a **vector quantity**:
 
@@ -648,7 +647,7 @@ Mathematically, if:
 
 then the relative radial velocity is:
 
-$$v_{\text{radial}}\  = \ \mathbf{v}_{\text{rel}} \cdot \mathbf{r}$$
+> $$v_{\text{radial}}\  = \ \mathbf{v}_{\text{rel}} \cdot \mathbf{r}$$
 
 This operation is a **projection** of the relative velocity onto the line of sight.
 
@@ -672,15 +671,15 @@ Example interpretations:
 
 The Doppler shift in RF systems is approximately:
 
-$$\Delta f\  \approx \ \frac{v_{\text{radial}}}{c}\text{ }f_{0}$$
+> $$\Delta f\  \approx \ \frac{v_{\text{radial}}}{c}\text{ }f_{0}$$
 
-where:
+> where:
 
-- $v_{\text{radial}}$ = relative radial velocity
+> - $v_{\text{radial}}$ = relative radial velocity
 
-- $c$ = speed of light
+> - $c$ = speed of light
 
-- $f_{0}$ = transmitted carrier frequency
+> - $f_{0}$ = transmitted carrier frequency
 
 Only motion **along the line of sight** compresses or stretches the electromagnetic wavefronts.
 
