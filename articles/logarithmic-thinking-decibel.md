@@ -86,9 +86,9 @@ $$
 
 Where:
 
-- $p\ $= measured sound pressure (in Pascals (Pa))
+- $p$ = measured sound pressure (in Pascals (Pa))
 
-- $p_{0}\ $= reference pressure (20 µPa)
+- $p_{0}$ = reference pressure (20 µPa)
 
 Typical values:
 
