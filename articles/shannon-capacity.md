@@ -52,9 +52,9 @@ The maximum achievable data rate is:
 \
 Where: \
 \
-    $C $= capacity (bits per second) \
+    $C$ = capacity (bits per second) \
 \
-    $B $= bandwidth \
+    $B$ = bandwidth \
 \
     SNR = signal power / noise power \
 \
