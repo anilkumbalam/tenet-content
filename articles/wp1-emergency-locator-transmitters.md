@@ -24,10 +24,10 @@ What makes these systems particularly interesting from an engineering perspectiv
 
 In most cases, the beacon does not transmit its position. Instead, the system infers location using:
 
-- frequency changes caused by motion (Doppler)
-
-- signal timing
-
+> - frequency changes caused by motion (Doppler) \
+\
+- signal timing \
+\
 - and geometric relationships between satellites and the beacon
 
 This makes ELT systems an excellent real-world example of how wireless signals inherently carry information about space and motion, not just data.
@@ -50,7 +50,7 @@ This makes ELT systems an excellent real-world example of how wireless signals i
 
 ## Technology Evolution
 
-### Early 121.5 MHz ELTs: {#early-121.5-mhz-elts}
+### Early 121.5 MHz ELTs:
 
 - Analog continuous tone.
 
@@ -156,7 +156,7 @@ Even if a distress beacon does not transmit its location, satellites can still e
 
 This is possible because of the **Doppler effect**. The same physics principle behind why a siren sounds higher-pitched when a train approaches you and lower-pitched as it moves away.
 
-### How It Works  {#how-it-works}
+### How It Works 
 
 In the COSPAS-SARSAT system, a fast-moving satellite observes the frequency of the beacon signal as it passes overhead.
 
