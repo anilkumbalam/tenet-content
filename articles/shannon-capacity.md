@@ -238,7 +238,7 @@ At first glance, capacity still appears to grow with bandwidth because of the le
 
 To understand the true behaviour, consider what happens as bandwidth becomes very large.
 
-**What Happens as** $\mathbf{B \rightarrow}\mathbf{\infty}$**?**
+**What Happens as** $\mathbf{B \rightarrow}\mathbf{\infty}$ **?**
 
 As $B$increases, the term
 
