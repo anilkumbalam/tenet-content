@@ -1,6 +1,4 @@
-**GNSS: Why Positioning Is Harder Than It Looks**
-
-**Executive Summary**
+## Executive Summary
 
 Global Navigation Satellite Systems (GNSS) such as **GPS** and **Galileo** are often perceived as mature, solved technologies that simply "work everywhere." In reality, GNSS positioning is a fragile inference problem that succeeds only when **time accuracy, geometry, signal environment and system assumptions align simultaneously**.
 
@@ -8,7 +6,7 @@ GNSS is one of the clearest real-world examples of how time, geometry and signal
 
 This white paper explains why GNSS positioning is fundamentally harder than it appears. Building on the concepts of Doppler, time, geometry, and clock offsets, it examines real-world error sources, multipath, atmospheric delay, satellite geometry, clock behaviour, and environmental blockage. This shows why more satellites or more processing power do not automatically lead to better position estimates. The goal is not to describe or study every error term, but to develop **engineering intuition** about why GNSS works when it does, and why it fails when conditions degrade.
 
-**1. The Illusion of Simplicity**
+## The Illusion of Simplicity
 
 At a high level, GNSS positioning appears straightforward:
 
@@ -36,7 +34,7 @@ Every GNSS position fix depends on assumptions about:
 
 When these assumptions are incorrect, even slightly, errors grow rapidly.
 
-**2. GNSS Is a Time Measurement Problem First**
+## GNSS Is a Time Measurement Problem First
 
 As established previously, GNSS pseudorange measurements are fundamentally **time measurements**.
 
@@ -91,7 +89,7 @@ This means GNSS positioning requires solving **four unknowns simultaneously**, w
 
 GNSS is therefore not pure trilateration. It is Multilateration with simultaneous clock estimation. This coupling between space and time is what makes positioning fundamentally sensitive.
 
-**3. Geometry Is a Silent but Dominant Constraint**
+## Geometry Is a Silent but Dominant Constraint
 
 The quality of this four-unknown solution depends not only on timing accuracy, but also on how the satellites are geometrically arranged relative to the receiver.
 
@@ -111,7 +109,7 @@ Key insight:
 
 This explains why:
 
-- Accuracy varies with time-of-day ^Appendix A^
+- Accuracy varies with time-of-day ^1^
 
 - Multi-constellation receivers are more robust
 
@@ -119,7 +117,7 @@ This explains why:
 
 Geometry is not a secondary detail; it is a first-order design variable.
 
-**4. The Environment Is Not Empty Space**
+## The Environment Is Not Empty Space
 
 GNSS theory assumes signals propagate through free space at the speed of light. Real environments violate this assumption in multiple ways.
 
@@ -139,9 +137,9 @@ GNSS theory assumes signals propagate through free space at the speed of light. 
 
 - Introduces slowly varying bias
 
-These effects do not add noise; they add **bias**, which is far more dangerous ^Appendix B^
+These effects do not add noise; they add **bias**, which is far more dangerous ^2^
 
-**5. Multipath: The Most Insidious Error Source**
+## Multipath: The Most Insidious Error Source
 
 Multipath occurs when GNSS signals:
 
@@ -169,7 +167,7 @@ Key insight:
 
 This is why GNSS can report "strong signal" yet produce poor position fixes.
 
-**6. "More Satellites" Is Not a Universal Fix**
+## "More Satellites" Is Not a Universal Fix
 
 A common intuition is that adding more satellites always improves accuracy. This is only conditionally true.
 
@@ -191,9 +189,9 @@ Thus:
 
 **Quantity of measurements does not replace quality of constraints.**
 
-This directly connects to the geometry limits discussed in White Paper 2.
+This directly connects to the geometry limits discussed earlier.
 
-**7. GNSS Is Fragile by Design**
+## GNSS Is Fragile by Design
 
 GNSS signals are:
 
@@ -201,7 +199,7 @@ GNSS signals are:
 
 - Easily blocked, reflected, or interfered with
 
-- Vulnerable to jamming and spoofing ^Appendix C^
+- Vulnerable to jamming and spoofing ^3^
 
 This fragility is not accidental. GNSS prioritizes:
 
@@ -225,7 +223,7 @@ Understanding this fragility is essential for engineers working on:
 
 - Safety-critical navigation
 
-**8. Why GNSS Often Fails Gracefully and Sometimes Doesn't**
+## Why GNSS Often Fails Gracefully and Sometimes Doesn't
 
 GNSS receivers apply:
 
@@ -257,7 +255,7 @@ This explains why:
 
 - Confidence estimates are as important as position estimates
 
-**9. The Engineering Takeaway**
+## The Engineering Takeaway
 
 GNSS success requires **simultaneous alignment** of:
 
@@ -275,7 +273,7 @@ The most important lesson is this:
 
 **GNSS positioning is not about computing where you are. It is about knowing when you can trust the answer.**
 
-**10. Conclusion**
+## Conclusion
 
 GNSS appears simple because decades of engineering have hidden its complexity. Beneath that surface lies a system that balances time, geometry, physics, and environment with remarkable precision, but limited margin.
 
@@ -283,7 +281,10 @@ For engineers, the value of understanding GNSS lies not in memorizing error budg
 
 This perspective is essential for designing resilient systems that rely on GNSS, but do not blindly trust it.
 
-**Appendix A**
+
+## Footer
+
+## ^1^
 
 **Why GNSS Accuracy Varies with Time of Day**
 
@@ -313,7 +314,7 @@ Satellite health status, ephemeris freshness, and constellation maintenance acti
 
 **GNSS accuracy is time-dependent because the physical and geometric conditions that enable positioning are themselves time-dependent.** Understanding this variability is essential for interpreting GNSS performance and for designing systems that rely on GNSS but cannot assume uniform accuracy.
 
-**Appendix B**
+## ^2^
 
 **Bias vs Noise in Position Estimation**
 
@@ -463,7 +464,7 @@ In safety-critical systems, bias is typically more dangerous than noise.
 
 GNSS is fundamentally an inference system. Inference systems are most vulnerable not to randomness, but to consistent misinformation. Noise causes uncertainty. Bias causes false certainty. Understanding this distinction is essential when evaluating GNSS reliability, especially in autonomous, aviation and critical infrastructure contexts.
 
-**Appendix C**
+## ^3^
 
 **Why GNSS Is Vulnerable to Jamming and Spoofing**
 
