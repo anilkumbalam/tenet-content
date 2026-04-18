@@ -1,8 +1,5 @@
-**Logarithmic Thinking and the Decibel: From Sound to Satellites**
 
-**Understanding Dynamic Range in Mechanical and Communication Systems**
-
-**Executive Summary**
+## Executive Summary
 
 Many engineering systems span enormous dynamic ranges.
 
@@ -26,7 +23,7 @@ This paper presents a unified view of decibels across:
 
 The goal is to develop intuition about dynamic range, amplification, attenuation, and detection thresholds.
 
-**1. Why Logarithmic Thinking Exists**
+## Why Logarithmic Thinking Exists
 
 Nature often exhibits exponential or power-law behaviour.
 
@@ -44,7 +41,7 @@ Examples:
 
 In these systems, small changes in one variable can produce very large changes in another. This is what makes exponential and power-law behaviour difficult to interpret on a linear scale. When systems span factors of 10, 100, 1000, or more, linear representation becomes unwieldy. Logarithms compress multiplicative change into additive steps.
 
-**2. What Is a Decibel?**
+## What Is a Decibel?
 
 A decibel (dB) is not a unit of power. It is a logarithmic way of expressing a **ratio** between two quantities. For power quantities, the decibel is defined as:
 
@@ -78,9 +75,9 @@ $$
 
 Each factor of 10 in power corresponds to +10 dB. Thus, the decibel provides a compact way to describe multiplicative relationships.
 
-**3. Decibels in Mechanical Engineering**
+## Decibels in Mechanical Engineering
 
-**3.1 Acoustics**
+### Acoustics
 
 Sound Pressure Level (SPL):
 
@@ -105,7 +102,7 @@ Typical values:
 
 A 90 dB difference corresponds to a billion-fold difference in intensity. Without logarithms, such ranges would be impractical to represent.
 
-**3.2 Vibration and Structural Dynamics**
+### Vibration and Structural Dynamics
 
 In vibration analysis, amplitude ratios are expressed in dB:
 
@@ -124,7 +121,7 @@ Used in:
 
 Near resonance, amplitude may increase by factors of 10 or 100. This occurs when the excitation frequency approaches the natural frequency of the structure, causing energy to accumulate rather than dissipate. In dB, this becomes +20 or +40 dB. Logarithmic representation makes resonance behaviour visually manageable.
 
-**3.3 Control Systems**
+### Control Systems
 
 Mechanical and electrical control systems both use Bode plots:
 
@@ -134,9 +131,9 @@ Mechanical and electrical control systems both use Bode plots:
 
 This is not accidental. Log scales linearize exponential growth and decay.
 
-**4. Decibels in Communication Engineering**
+## Decibels in Communication Engineering
 
-**4.1 Absolute Power: dBm**
+### Absolute Power: dBm
 
 dB is a ratio. dBm is absolute power referenced to 1 milliwatt.
 
@@ -150,7 +147,7 @@ dB is a ratio. dBm is absolute power referenced to 1 milliwatt.
 
 Negative dBm does not mean negative power, it means less than 1 mW.
 
-**4.2 Thermal Noise and the Noise Floor**
+### Thermal Noise and the Noise Floor
 
 Every communication system operates against a physical background limit: thermal noise.
 
@@ -204,7 +201,7 @@ The upper bound is set by saturation or compression. The lower bound is set by k
 
 At room temperature, -174 dBm/Hz represents the quiet thermodynamic background against which every detectable signal must rise.
 
-**4.3 Signal-to-Noise Ratio (SNR)**
+### Signal-to-Noise Ratio (SNR)
 
 Signal-to-noise ratio answers a simple question: **How far above the noise is the signal?**
 
@@ -233,7 +230,7 @@ SNR = P_signal / P_noise
 
 But in decibels, division becomes subtraction. This is one of the most powerful advantages of logarithmic thinking.
 
-**4.4 Receiver Sensitivity**
+### Receiver Sensitivity
 
 Receiver sensitivity defines the weakest signal level that can still be decoded reliably.
 
@@ -258,7 +255,7 @@ This means that any received signal weaker than --92 dBm will likely result in d
 
 In practice, wireless systems operating near their sensitivity limit behave like threshold devices: performance changes sharply once the signal drops below the required margin. Reliable communication is not gradual. It either meets the required SNR or it does not.
 
-**4.5 Link Budgets**
+### Link Budgets
 
 In a communication system, the signal does not travel directly from transmitter to receiver without change. Instead, it passes through multiple stages, each of which either increases or decreases its power.
 
@@ -278,7 +275,7 @@ In linear mathematics, each of these effects would require multiplication or div
 
 This is why decibels are so powerful in engineering: cascading multiplicative effects become straightforward arithmetic.
 
-**5. Why 10 log in Some Cases and 20 log in Others?**
+## Why 10 log in Some Cases and 20 log in Others?
 
 The decibel is fundamentally defined for power ratios:
 
@@ -315,7 +312,7 @@ This is why:
 
 The 20 is not a different definition, it arises naturally from the square relationship between amplitude and power.
 
-**6. Unified Insight: Dynamic Range**
+## Unified Insight: Dynamic Range
 
 Mechanical and communication systems share common characteristics:
 
@@ -339,7 +336,7 @@ Both domains involve:
 
 dB is the common mathematical language. In both domains, system behaviour is governed by transfer functions that describe how energy propagates and attenuates.
 
-**7. Visualizing Dynamic Range**
+## Visualizing Dynamic Range
 
 Consider:
 
@@ -359,7 +356,7 @@ Difference: 170 dB → 10¹⁷ power ratio.
 
 In linear terms, a 170 dB difference corresponds to a power ratio of 10¹⁷, a number so large it cannot be meaningfully visualized without logarithms. Both systems operate across enormous ranges. Without logarithms, engineering becomes unwieldy.
 
-**8. Common Misconceptions**
+## Common Misconceptions
 
 - dB is not power; it is a ratio.
 
@@ -373,7 +370,7 @@ In linear terms, a 170 dB difference corresponds to a power ratio of 10¹⁷, a 
 
 Understanding these prevents confusion in both acoustics and RF.
 
-**9. Why Humans Prefer Logarithms**
+## Why Humans Prefer Logarithms
 
 Human perception of sound is approximately logarithmic. A sound that is ten times more intense does not feel ten times louder. It feels like a manageable increase. We perceive changes in *ratio*, not in absolute difference.
 
@@ -383,7 +380,7 @@ Many physical processes exhibit similar multiplicative behaviour. Light intensit
 
 Human perception responds roughly logarithmically. Engineering adopts logarithmic scales such as the decibel to bridge these two worlds, translating extreme physical variation into manageable numerical form.
 
-**10. Engineering Perspective**
+## Engineering Perspective
 
 The decibel is not tied to any one discipline. It is a practical tool for managing systems in which effects multiply rather than add.
 
@@ -401,7 +398,7 @@ This is why decibels appear in:
 
 Different applications, shared mathematics. Understanding this unifies seemingly separate engineering domains under a common analytical framework.
 
-**Conclusion**
+## Conclusion
 
 The decibel provides a unified framework for understanding dynamic range across engineering disciplines. In mechanical systems, it describes sound levels, vibration amplitudes, and system gain. In communication systems, it describes signal strength, noise, and link margins.
 
