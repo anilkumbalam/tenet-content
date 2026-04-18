@@ -1,14 +1,11 @@
-**The Sun: Earth's External Power Supply**
 
-**How Solar Energy Sustains Life**
-
-**Executive Summary**
+## Executive Summary
 
 Earth is not a closed system. It does not run on its own internal energy. It is continuously powered by radiation from the Sun.
 
 Nearly everything that moves, grows, flows or lives on Earth ultimately depends on this incoming solar energy. Sunlight creates temperature differences that move air and oceans, powers the water cycle, drives photosynthesis in plants and sustains the biological systems that form the foundation of life.
 
-Life continues to exist because *[Earth constantly receives energy from the Sun and radiates energy out into very cold space]{.underline}*. Energy flows through the planet. That flow prevents Earth from settling into a uniform, motionless state.
+Life continues to exist because **Earth constantly receives energy from the Sun and radiates energy out into very cold space**. Energy flows through the planet. That flow prevents Earth from settling into a uniform, motionless state.
 
 Earth reaches a steady state not because energy stops flowing, but because incoming and outgoing energy balance on average. Energy is continuously passing through the system.
 
@@ -16,7 +13,7 @@ If the Sun stopped supplying energy, Earth would gradually cool, winds would sto
 
 The Sun is not merely a source of light. It is Earth's primary power supply.
 
-**Earth as an Open Thermodynamic System**
+## Earth as an Open Thermodynamic System
 
 As per thermodynamics, systems are classified based on how they exchange energy. A **closed system** does not exchange energy with its surroundings while an **open system** allows energy to flow in and out.
 
@@ -40,7 +37,7 @@ So, energy flows from the hot Sun to the cooler Earth and then from Earth to the
 
 This continuous temperature difference creates a steady flow of energy. And it is this energy flow that allows winds to move, oceans to circulate, plants to grow, and life to exist. Without this flow, Earth would eventually settle into uniform temperature and stillness.
 
-**Temperature Difference as the Planetary Engine**
+## Temperature Difference as the Planetary Engine
 
 No physical system can perform work without a difference driving it. In electrical systems, current flows only when there is a voltage difference. If both ends of a wire are at the same potential, nothing moves. In thermal systems, the same principle applies. Heat flows only when there is a temperature difference. If two objects are at the same temperature, there is no net heat flow between them.
 
@@ -54,7 +51,7 @@ In simple terms, energy enters Earth from the Sun and eventually leaves to cold 
 
 Earth is active because energy is flowing through it. Without the temperature difference between the hot Sun and cold space, there would be no sustained energy flow, no gradients, no large-scale motion, and no life. The continuous passage of energy through the planet is what makes Earth dynamic rather than static.
 
-**Photosynthesis: Converting Photons into Chemical Free Energy**
+## Photosynthesis: Converting Photons into Chemical Free Energy
 
 Photosynthesis is the primary mechanism by which solar energy enters the biological world. It is the process that links the physical energy of sunlight to the chemical energy that sustains life.
 
@@ -72,7 +69,7 @@ Nearly all food energy on Earth originates from photosynthesis. Without it, ther
 
 Photosynthesis does not violate thermodynamics. It does not create energy from nothing. It captures incoming solar energy and reorganizes matter into chemical structures, using the continuous flow of energy from the Sun to sustain that organization.
 
-**How Energy Moves Through Ecosystems**
+## How Energy Moves Through Ecosystems
 
 The energy captured by plants through photosynthesis does not remain stored in one place. It moves through ecosystem. Solar energy is first converted into chemical energy in plants. Herbivores eat plants and obtain that stored energy. Carnivores eat herbivores. Decomposers break down dead organisms and recycle nutrients back into the soil.
 
@@ -86,7 +83,7 @@ Because energy continually degrades as it moves through the food web, ecosystems
 
 Life persists because energy keeps entering the system.
 
-**Solar Energy and the Climate System**
+## Solar Energy and the Climate System
 
 Solar heating is not uniform across Earth's surface. Regions near the equator receive sunlight more directly, while regions near the poles receive sunlight at a shallow angle. As a result, the equator absorbs more energy per square meter than higher latitudes. This uneven distribution of solar energy creates temperature differences across the planet.
 
@@ -98,7 +95,7 @@ Wind energy also traces back to the Sun. Moving air is simply the atmosphere res
 
 Weather exists because sunlight does not heat Earth evenly. The imbalance created by unequal heating drives motion. If solar heating were perfectly uniform everywhere, temperature gradients would be minimal, pressure differences would weaken, and large-scale atmospheric and oceanic circulation would diminish significantly. Earth would be far less dynamic.
 
-**Fossil Fuels: Stored Solar Energy**
+## Fossil Fuels: Stored Solar Energy
 
 Coal, oil, and natural gas originate from ancient life. Millions of years ago, plants absorbed sunlight through photosynthesis and converted that energy into chemical form, storing it in their tissues as complex carbon-based molecules. These plants formed the base of entire ecosystems and over long periods of time, large amounts of organic material accumulated.
 
@@ -108,7 +105,7 @@ When we burn fossil fuels, we are not creating new energy. We are releasing sola
 
 In this sense, much of modern civilization is powered by ancient sunlight, energy that was captured by prehistoric plants and stored in geological form over vast timescales.
 
-**Conclusion**
+## Conclusion
 
 The Sun is Earth's external power supply. It sustains life not merely by warming the planet, but by maintaining a continuous flow of energy through the Earth system.
 
