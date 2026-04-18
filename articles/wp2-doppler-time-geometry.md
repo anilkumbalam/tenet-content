@@ -26,7 +26,11 @@ Systems that exploit these properties can locate aircraft, synchronize global cl
 
 Doppler shift arises from relative motion between a transmitter and a receiver. If the distance between them changes over time, the observed frequency differs from the transmitted frequency.
 
-For a carrier frequency $f_{0}$, the Doppler shift $\Delta f$is approximately: $\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}$
+For a carrier frequency $f_{0}$, 
+
+the Doppler shift $\Delta f$is approximately:
+
+$\Delta f\  = \ \frac{v_{r}}{c}\ f_{0}$
 
 where:
 
