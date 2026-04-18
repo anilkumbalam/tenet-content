@@ -24,9 +24,9 @@ What makes these systems particularly interesting from an engineering perspectiv
 
 In most cases, the beacon does not transmit its position. Instead, the system infers location using:
 
-> - frequency changes caused by motion (Doppler) \
+> - frequency changes caused by motion (Doppler) 
 > 
-> - signal timing \
+> - signal timing 
 > 
 > - and geometric relationships between satellites and the beacon
 
