@@ -139,13 +139,13 @@ In spread-spectrum systems:
 
 - *Data rate (*$R_{b})$* ≈ **50 bits/sec***
 
-- *Spreading (chip) rate (*$B_{text{spread}}) $* ≈ **1.023 MHz***
+- *Spreading (chip) rate (*$B_{{spread}}) $* ≈ **1.023 MHz***
 
 *The signal occupies roughly 1 MHz of bandwidth, even though the data rate is only 50 bps. That's enormous expansion.*
 
 ***Processing Gain Intuition***
 
-$$\text{Processing Gain} = \frac{B_{\{spread}}}{R_{b}}
+$$\text{Processing Gain} = \frac{B_{\text{spread}}}{R_{b}}
 $$
 
 $$\frac{1,023,000}{50} \approx 20,460
