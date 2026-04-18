@@ -46,15 +46,15 @@ $$
 
 Where:
 
-- $P_{r}$ *= received power*
+- $P_{r}$* = received power*
 
-- $P_{t}$ *= transmit power*
+- $P_{t}$* = transmit power*
 
-- $G_{t}\ $*= transmit antenna gain*
+- $G_{t}$* = transmit antenna gain*
 
-- $G_{r}\ $*= receive antenna gain*
+- $G_{r}$* = receive antenna gain*
 
-- $L_{p}\ $*= path loss*
+- $L_{p}$* = path loss*
 
 This equation describes power transfer. It does not describe communication success. Communication depends on how that received power compares to noise.
 
@@ -71,7 +71,7 @@ Where:
 
 - $N_{0}$*= noise power spectral density* ^1^
 
-Unlike raw SNR, $E_{b}/N_{0}\ $ normalizes performance to bit rate. Each modulation and coding scheme requires a minimum $E_{b}/N_{0}$ to achieve an acceptable bit error rate.
+Unlike raw SNR, $E_{b}/N_{0}$ normalizes performance to bit rate. Each modulation and coding scheme requires a minimum $E_{b}/N_{0}$ to achieve an acceptable bit error rate.
 
 If:
 
@@ -137,9 +137,9 @@ In spread-spectrum systems:
 
 *For GNSS (GPS L1 C/A)*
 
-- *Data rate (*$R_{b})$*≈ **50 bits/sec***
+- *Data rate (*$R_{b})$* ≈ **50 bits/sec***
 
-- *Spreading (chip) rate (*$B_{\text{spread}})\ $*≈ **1.023 MHz***
+- *Spreading (chip) rate (*$B_{text{spread}}) $* ≈ **1.023 MHz***
 
 *The signal occupies roughly 1 MHz of bandwidth, even though the data rate is only 50 bps. That's enormous expansion.*
 
