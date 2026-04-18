@@ -1,6 +1,4 @@
-**Reading the Indian Power Grid from the Streets**
-
-*A guide to seeing engineering in plain sight*
+## Executive Summary
 
 Most people walk past electric poles and transmission towers without
 noticing them. They see wires overhead, metal structures in the
@@ -20,7 +18,7 @@ insulators?
 None of these details are decorative. Every visible feature is a
 response to physics.
 
-Voltage.\
+> Voltage.\
 Electric field strength.\
 Mechanical vibration.\
 Wind loading.\
@@ -34,7 +32,7 @@ electromagnetics and mechanics stretched across thousands of kilometres.
 
 Once you learn how to read it, every street becomes a laboratory.
 
-**1. The Invisible Variable That Determines Everything: Voltage**
+## The Invisible Variable That Determines Everything: Voltage
 
 The most important quantity in the power grid is something we cannot
 see, "**Voltage**".
@@ -104,7 +102,7 @@ backbone of the national grid.
 If you learn to notice them, you can often estimate the voltage level of
 a line just by looking at its structure.
 
-**2. Why Do Insulator Discs Increase with Voltage?**
+## Why Do Insulator Discs Increase with Voltage
 
 If you look closely at transmission towers, one detail immediately
 stands out: the number of discs in the hanging insulator string changes.
@@ -158,7 +156,7 @@ disc typically withstands 11--15 kV** under normal operating conditions.
 ![](images/media/image1.png){width="8.239583333333334in"
 height="5.493055555555555in"}
 
-**3. Why Are Some Towers so Tall?**
+## Why Are Some Towers so Tall?
 
 If insulator length tells you about voltage, tower height tells you
 about clearance. As voltage increases, the electric field around the
@@ -199,7 +197,7 @@ constraints working together.
 
 The tower height is the answer to a question you cannot see.
 
-**4. Why Are Some Conductors Bundled?**
+## Why Are Some Conductors Bundled?
 
 At high voltage levels, you may notice that each phase does not consist
 of a single conductor. Instead, there may be two, four, or even six
@@ -238,7 +236,7 @@ engineering in action.
 
 It is electromagnetics made visible.
 
-**5. What Are Those Hanging Weights Near the Ends?**
+## What Are Those Handing Weights Near the Ends?
 
 Near the points where conductors attach to towers, you may notice small
 cylindrical or dumbbell-shaped weights clamped to the wire.
@@ -267,7 +265,7 @@ Mechanical engineering quietly protects electrical infrastructure.
 ![](images/media/image4.jpeg){width="6.447916666666667in"
 height="4.298611111111111in"}
 
-**6. Why Are There Circular Metal Rings Near Insulators?**
+## Why Are There Circular Rings Near Insulators?
 
 On very high-voltage towers, especially 400 kV and above, you may see
 circular metal rings near the ends of insulator strings.
@@ -289,7 +287,7 @@ They are Maxwell's equations implemented in steel.
 ![](images/media/image5.jpeg){width="6.145833333333333in"
 height="4.097222222222222in"}
 
-**7. Lightning, Shield Wires, and Surge Protection**
+## Lightning, Shield Wires and Surge Protection
 
 At the very top of many transmission towers, you may see a thinner wire
 running above the main conductors. This is the shield wire, or earth
@@ -313,7 +311,7 @@ conduction paths to manage them.
 ![](images/media/image6.jpeg){width="3.0520833333333335in"
 height="4.578125546806649in"}
 
-**8. The Sound of Electric Fields**
+## The Sound of Electric Fields
 
 If you stand near a high-voltage transmission line, especially on a
 humid or rainy day, you may hear a faint buzzing or crackling sound.
@@ -335,7 +333,7 @@ conductor surface.
 So, the next time you hear that faint hum, you are listening to air
 responding to high electric field intensity.
 
-**9. Why the Grid Must Be So Large**
+## Why the Grid Must Be So Large
 
 India's energy resources are unevenly distributed. Coal lies largely in
 eastern regions, hydropower in the Himalayas, and solar and wind
@@ -346,7 +344,7 @@ This geographic mismatch makes long-distance transmission essential.
 High-voltage corridors carry power across hundreds of kilometres,
 connecting resource-rich regions to cities and industries.
 
-**Learning to See**
+## Learning See
 
 Engineering does not begin in textbooks. It begins with noticing. The
 world around us is full of quiet answers to physical questions, if we
