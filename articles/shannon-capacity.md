@@ -48,15 +48,16 @@ For a channel with:
 
 The maximum achievable data rate is:
 
-$$C = B{\log}_{2}\ (1 + \text{SNR})
-$$Where:
-
-- $C\ $= capacity (bits per second)
-
-- $B\ $= bandwidth
-
-- SNR = signal power / noise power
-
+> $$C = B{\log}_{2}\ (1 + \text{SNR}) $$ \
+\
+Where: \
+\
+$C\ $= capacity (bits per second) \
+\
+$B\ $= bandwidth \
+\
+SNR = signal power / noise power \
+\
 This is not a design equation. **This is a limit**.
 
 **Example:**
