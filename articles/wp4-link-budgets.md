@@ -67,9 +67,9 @@ $$
 
 Where:
 
-- $E_{b}$*= energy per information bit* ^A^
+- $E_{b}$*= energy per information bit* ^1^
 
-- $N_{0}$*= noise power spectral density* ^A^
+- $N_{0}$*= noise power spectral density* ^1^
 
 Unlike raw SNR, $E_{b}/N_{0}\ $ normalizes performance to bit rate. Each modulation and coding scheme requires a minimum $E_{b}/N_{0}$ to achieve an acceptable bit error rate.
 
