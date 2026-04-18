@@ -406,4 +406,4 @@ In both domains, the underlying principle is the same: multiplicative effects be
 
 Once this intuition develops, decibels cease to be a formula to memorize and become a way to reason about systems. They reveal patterns that linear scales obscure.
 
-The decibel is not merely a unit. It is a disciplined way of thinking about energy, amplification, attenuation, and scale.
+> The decibel is not merely a unit. It is a disciplined way of thinking about energy, amplification, attenuation and scale.
