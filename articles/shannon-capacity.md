@@ -327,4 +327,4 @@ The answer depends on bandwidth and signal-to-noise ratio. Capacity increases li
 
 Modern systems approach Shannon's boundary through sophisticated coding and spatial processing. Advanced error-correcting codes such as LDPC, Turbo, and Polar codes operate within a small fraction of a decibel of theoretical capacity under ideal conditions. Multi-antenna techniques such as MIMO and massive MIMO further increase capacity by exploiting spatial degrees of freedom and array gain, effectively creating parallel channels and improving usable SNR. Yet none of these techniques violate Shannon's law. They operate within it. The fundamental relationship between bandwidth, power, noise, and reliable information rate remains unchanged.
 
-Shannon did not merely provide an equation. He revealed a boundary. Beyond that boundary, no architecture or algorithm can prevail. Physics defines the outer edge of communication.
+> Shannon did not merely provide an equation. He revealed a boundary. Beyond that boundary, no architecture or algorithm can prevail. Physics defines the outer edge of communication.
