@@ -46,15 +46,15 @@ $$
 
 Where:
 
-- $P_{r}$* = received power*
+- $P_{r}$ = received power
 
-- $P_{t}$* = transmit power*
+- $P_{t}$ = transmit power
 
-- $G_{t}$* = transmit antenna gain*
+- $G_{t}$ = transmit antenna gain
 
-- $G_{r}$* = receive antenna gain*
+- $G_{r}$ = receive antenna gain
 
-- $L_{p}$* = path loss*
+- $L_{p}$ = path loss
 
 This equation describes power transfer. It does not describe communication success. Communication depends on how that received power compares to noise.
 
