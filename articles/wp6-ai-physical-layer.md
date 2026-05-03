@@ -1,8 +1,5 @@
-**AI at the Physical Layer**
 
-***Learning within the Limits of Physics***
-
-**Executive Summary**
+## Executive Summary
 
 Across this series, we have seen that wireless systems are governed by a small set of physical constraints:
 
@@ -16,11 +13,11 @@ Across this series, we have seen that wireless systems are governed by a small s
 
 These are not design choices. They are physical limits.
 
-Artificial intelligence (AI) is increasingly applied at the physical layer: channel estimation, equalization, detection, beamforming, and resource allocation.
+Artificial intelligence (AI) is increasingly applied at the physical layer: channel estimation, equalization, detection, beamforming and resource allocation.
 
 This paper asks a simpler question:
 
-**Where does AI genuinely help, and where does physics still hold the line?**
+**Where does AI genuinely help and where does physics still hold the line?**
 
 AI is a powerful tool. But it operates within the same physical limits as every other signal processing technique.
 
@@ -38,7 +35,7 @@ It cannot:
 
 **Key insight:** AI is effective when signal and structure exist. It is ineffective when information is fundamentally absent.
 
-**1. What "AI at the Physical Layer" Means**
+## What "AI at the Physical Layer" Means
 
 The physical layer converts bits into electromagnetic signals and back. It includes:
 
@@ -64,7 +61,7 @@ Traditional design is model-driven:
 
 AI introduces data-driven inference. The key distinction is not between old and new, but between model-driven and data-driven inference. Both operate under the same physical constraints.
 
-**2. Why AI Entered the Physical Layer**
+## Why AI Entered the Physical Layer
 
 Modern wireless systems are increasingly complex:
 
@@ -96,7 +93,7 @@ It is most useful when:
 
 - The mapping is complex
 
-**3. Where AI Helps**
+## Where AI Helps
 
 AI provides value when:
 
@@ -106,7 +103,7 @@ AI provides value when:
 
 - The system requires adaptation beyond static models.
 
-**3.1 Compensating for Hardware Nonlinearities**
+### Compensating for Hardware Nonlinearities
 
 Real RF hardware is imperfect:
 
@@ -126,7 +123,7 @@ In this case, AI is not creating new information. The transmitted signal still e
 
 AI helps here because the signal is present and the distortion follows patterns. Learning captures those patterns without requiring a precise analytical model.
 
-**3.2 Complex and Non-Stationary Channels**
+### Complex and Non-Stationary Channels
 
 Real channels deviate from ideal assumptions:
 
@@ -144,7 +141,7 @@ Where model-based solutions become analytically cumbersome, learning can exploit
 
 The information is present in the received waveform. The challenge is not the absence of signal, but the complexity of the transformation required to recover it.
 
-**3.3 Joint Optimization and Resource Allocation**
+### Joint Optimization and Resource Allocation
 
 Modern systems require coordinated decisions across layers:
 
@@ -160,7 +157,7 @@ Reinforcement learning can discover adaptive policies that respond to traffic pa
 
 Physics defines the feasible region. AI optimizes within it. For example, reinforcement learning may discover better power-control policies, but it cannot increase total transmit power beyond regulatory limits.
 
-**3.4 Interference and Anomaly Detection**
+### Interference and Anomaly Detection
 
 In crowded spectrum environments:
 
@@ -170,13 +167,13 @@ In crowded spectrum environments:
 
 - Signal types may be unknown.
 
-AI classifiers can identify signal types, detect anomalies, and trigger adaptive countermeasures.
+AI classifiers can identify signal types, detect anomalies and trigger adaptive countermeasures.
 
 Learning does not increase SNR, but it can improve decision-making under uncertainty.
 
-**3.5 GNSS and Multipath Mitigation**
+### GNSS and Multipath Mitigation
 
-White Paper 3 showed that GNSS positioning suffers from multipath, bias, and spoofing risk.
+As discussed earlier, GNSS positioning suffers from multipath, bias and spoofing risk.
 
 AI can assist in:
 
@@ -192,11 +189,11 @@ However, AI cannot improve satellite geometry or increase received signal power.
 
 It refines inference where measurements already exist.
 
-**4. Where AI Does Not Help**
+## Where AI Does Not Help
 
 AI cannot recover information that was never received.
 
-**4.1 AI Cannot Increase Received Energy**
+### AI Cannot Increase Received Energy
 
 Received signal power depends on:
 
@@ -214,7 +211,7 @@ No neural network can reconstruct bits that were never distinguishable from rand
 
 Energy scarcity remains fundamental.
 
-**4.2 AI Cannot Remove Thermal Noise**
+### AI Cannot Remove Thermal Noise
 
 Thermal noise is governed by:
 
@@ -227,7 +224,7 @@ Matched filtering is already optimal for maximizing SNR in additive white Gaussi
 
 AI cannot outperform fundamental detection limits in this regime.
 
-**4.3 AI Cannot Fix Poor Geometry**
+### AI Cannot Fix Poor Geometry
 
 Positioning accuracy depends on geometric diversity.
 
@@ -237,7 +234,7 @@ AI may smooth solutions or regularize estimates.
 
 It cannot create spatial constraints that do not exist.
 
-**4.4 AI Cannot Exceed Shannon Capacity**
+### AI Cannot Exceed Shannon Capacity
 
 Channel capacity is bounded by:
 
@@ -252,11 +249,11 @@ It cannot exceed it.
 
 If bandwidth and SNR are fixed, capacity is fixed.
 
-**4.5 AI Cannot Bypass Threshold Behaviour**
+### AI Cannot Bypass Threshold Behaviour
 
 Wireless systems operating near sensitivity limits are effectively threshold driven. If a signal never exceeds the detection threshold, it cannot be decoded. Learning algorithms operate on received samples. If those samples contain insufficient information, learning provides no remedy.
 
-**5. Risk and Robustness**
+## Risk and Robustness
 
 Model-based systems degrade predictably as SNR decreases.
 
@@ -272,7 +269,7 @@ A model trained under nominal conditions may fail abruptly when assumptions brea
 
 Robust AI systems must be grounded in physical insight.
 
-**6. The Hybrid Future**
+## The Hybrid Future
 
 The most realistic path forward is not "AI replacing signal processing."
 
@@ -298,7 +295,7 @@ AI provides:
 
 Together, they produce robust systems.
 
-**7. The Final Synthesis**
+## Final Thoughts
 
 Across the series:
 
@@ -324,7 +321,7 @@ AI is powerful, but only inside that boundary.
 
 Understanding the constraints is prerequisite to applying learning intelligently.
 
-**Conclusion**
+## Conclusion
 
 AI at the physical layer represents an evolution of signal processing, not a revolution against physics. It,
 
