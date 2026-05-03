@@ -63,7 +63,7 @@ High peak power can coexist with low average power. Total energy may remain cons
 
 In practical receivers operating near detection limits, wireless systems are effectively threshold-driven: reliable detection or demodulation requires the instantaneous SNR or $E_{b}/N_{0}$ to exceed a minimum threshold. A continuous low-power signal that remains below this threshold produces little useful detection probability. In contrast, a bursty high-power transmission may briefly exceed the detection threshold, significantly increasing the probability of successful detection.
 
-For beacon-type systems, including Cospas-Sarsat satellites (WP1), short intervals above threshold can be sufficient for detection. In such cases, the ability to exceed the detection threshold at critical moments can be more consequential than maintaining moderate average power.
+For beacon-type systems, including Cospas-Sarsat satellites, short intervals above threshold can be sufficient for detection. In such cases, the ability to exceed the detection threshold at critical moments can be more consequential than maintaining moderate average power.
 
 **Why ELTs Transmit Bursts**
 
@@ -131,7 +131,7 @@ Bursty systems emit energy in discrete intervals separated by silence.
 
 Examples:
 
-- ELT 406 MHz beacons (WP1)
+- ELT 406 MHz beacons
 
 - Radar pulses
 
