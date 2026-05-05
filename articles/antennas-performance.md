@@ -96,7 +96,7 @@ Devices are small. Wavelengths are not.
 
 This mismatch drives almost every antenna design trade-off.
 
-**Key** **insight**: Antenna size is dictated by wavelength and wavelength is set by physics.
+**Key** **Insight**: Antenna size is dictated by wavelength and wavelength is set by physics.
 
 ## The Antenna Is Not a Component. It Is a System
 
@@ -106,7 +106,13 @@ A monopole is electrically half of a dipole. The ground plane completes the othe
 
 ![](images/media/image11.png){width="5.555811461067367in" height="2.2996358267716537in"}
 
+As shown above, the radiating element together with the ground plane forms the complete current path that enables electromagnetic radiation.
+
 ![](images/media/image12.png){width="7.472077865266842in" height="1.5257086614173228in"}
+
+As shown above, the ground plane acts as a mirror, creating an image of the monopole below it.  The real antenna and its image together form an equivalent half-wave dipole. As a result, a quarter-wave monopole radiates like a dipole, but only into half-space.
+
+**Key** **Insight**: The ground plane completes the antenna; it is not optional.
 
 When current flows through the antenna element, it must return through the ground plane. Together, they form the complete radiating system.
 
@@ -142,7 +148,7 @@ This has important implications:
 
 A well-designed antenna on a poor ground plane will underperform. A simple antenna on a good ground plane can perform well.
 
-**Key insight**: The antenna is not just the element; it is the current loop.
+**Key Insight**: The antenna is not just the element; it is the current loop.
 
 ## The Small Antenna Problem
 
@@ -272,7 +278,7 @@ As frequency changes:
 
 As a result, a single monopole structure can operate across multiple frequency bands by supporting different current distributions at different frequencies.
 
-**Key insight**: A multi-band antenna is not a single resonance; it is multiple resonant behaviours within the same structure.
+**Key Insight**: A multi-band antenna is not a single resonance; it is multiple resonant behaviours within the same structure.
 
 ### Why Multiple Resonances Exist
 
@@ -410,7 +416,7 @@ This increase in gain is not due to amplification, but due to redistribution of 
 
 In practical systems, the actual gain depends on the quality of the ground plane and the surrounding environment.
 
-**Key Insight:** Gain does not increase total energy; it determines how that energy is distributed in space.
+**Key Insight**: Gain does not increase total energy; it determines how that energy is distributed in space.
 
 ## Aperture: The Missing Link
 
@@ -464,7 +470,7 @@ Gain and aperture are two views of the same phenomenon:
 
 They are linked through wavelength.
 
-**Key Insight:** Antennas determine not just where energy goes, but how much of it can be captured.
+**Key Insight**: Antennas determine not just where energy goes, but how much of it can be captured.
 
 ## Real-World Mistake: Cable Loss
 
