@@ -418,7 +418,7 @@ In practical systems, the actual gain depends on the quality of the ground plane
 
 **Key Insight**: Gain does not increase total energy; it determines how that energy is distributed in space.
 
-## Aperture: The Missing Link
+## Aperture of Antenna
 
 An antenna behaves as if it has an effective area over which it captures energy from incoming waves. This is called the effective aperture.
 
