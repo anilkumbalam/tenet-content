@@ -58,8 +58,7 @@ $$\lambda = \frac{c}{f}$$
 where:  
 λ = wavelength  
 c = speed of light  
-f = frequency$
-$
+f = frequency
 
 Wavelength determines how electromagnetic fields vary in space and how current is distributed along the antenna. For an antenna to radiate efficiently, the current must follow this spatial variation. This happens when the antenna is resonant.
 
@@ -175,8 +174,7 @@ where:
 
 $R_{r}$ = radiation resistance
 
-$R_{loss}$ = loss resistance$
-$
+$R_{loss}$ = loss resistance
 
 For compact antennas:
 
@@ -280,7 +278,7 @@ As a result, a single monopole structure can operate across multiple frequency b
 
 Resonance occurs when the antenna length supports a standing wave. For a simple conductor, this happens when its electrical length satisfies:
 
-> L ≈ n · (λ/2)
+$$\ L ≈ n · (λ/2) $$
 
 where:
 
@@ -420,7 +418,7 @@ An antenna behaves as if it has an effective area over which it captures energy 
 
 The effective aperture is given by:
 
-Aₑ = (λ² / 4π) · G
+$$\ Aₑ = (λ² / 4π) · G $$
 
 where:
 
