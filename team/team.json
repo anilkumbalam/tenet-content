@@ -39,7 +39,7 @@
     "icon": "⚙️",
     "photo": "zahid-hussain.jpg",
     "tagline": "Three decades of turning complexity into reliability",
-    "linkedin": "https://linkedin.com/in/zahidhussain",
+    "linkedin": "https://www.linkedin.com/company/tenet-networks/",
     "email": "zahid@tenetnetworks.com",
     "quickFacts": [
       "30+ years in technology",
@@ -71,7 +71,7 @@
     "icon": "📈",
     "photo": "shrikant-gupta.jpg",
     "tagline": "Building partnerships that scale from millions to billions",
-    "linkedin": "https://linkedin.com/in/shrikantgupta",
+    "linkedin": "https://www.linkedin.com/in/shrikant-gupta-46ab7017/",
     "email": "shrikant@tenetnetworks.com",
     "quickFacts": [
       "20 years sales leadership",
@@ -103,7 +103,7 @@
     "icon": "🗂️",
     "photo": "naresh-chandra.jpg",
     "tagline": "Delivering billion-dollar projects on time, on budget",
-    "linkedin": "https://linkedin.com/in/nareshchandra",
+    "linkedin": "https://www.linkedin.com/in/naresh-chandra-03944839/",
     "email": "naresh@tenetnetworks.com",
     "quickFacts": [
       "$100M+ project experience",
@@ -135,7 +135,7 @@
     "icon": "🔧",
     "photo": "rajeev-singh.jpg",
     "tagline": "From deployment to uptime: making systems work globally",
-    "linkedin": "https://linkedin.com/in/rajeevsingh",
+    "linkedin": "https://www.linkedin.com/in/rajeev-singh-68992913/",
     "email": "rajeev@tenetnetworks.com",
     "quickFacts": [
       "Global operations expert",
@@ -163,11 +163,11 @@
   {
     "name": "Shalini Lal",
     "role": "Director – HR & Administration",
-    "bio": "Specialist in managing data-centric networks with experience at Indian Telephone Industries and Idea Cellular.",
+    "bio": "Specialist in data-centric networks with experience at Indian Telephone Industries and Idea Cellular.",
     "icon": "🤝",
     "photo": "shalini-lal.jpg",
     "tagline": "Building the culture that builds the technology",
-    "linkedin": "https://linkedin.com/in/shalinilal",
+    "linkedin": "https://www.linkedin.com/in/shalini-lal-3181011a/",
     "email": "shalini@tenetnetworks.com",
     "quickFacts": [
       "HR & operations specialist",
@@ -182,8 +182,8 @@
       "Administrative excellence"
     ],
     "background": [
-      "Indian Telephone Industries – HR & Administration",
-      "Idea Cellular – Talent Management",
+      "Indian Telephone Industries",
+      "Idea Cellular",
       "Data-centric network operations",
       "Building high-performance teams"
     ],
