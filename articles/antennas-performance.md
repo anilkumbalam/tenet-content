@@ -1,8 +1,4 @@
-**Antennas: Where Wireless Performance Is Actually Determined**
-
-***How Energy Moves from Circuits into the Real World***
-
-**Executive Summary**
+## Executive Summary
 
 Wireless communication does not occur simply because signals exist inside a circuit.  
 It occurs only when energy leaves a device, propagates through space and is captured elsewhere in a useful form.
@@ -27,7 +23,7 @@ While modulation, coding and protocols are often emphasized, **the antenna ultim
 
 **Key insight:** Communication is not just signal processing. It is energy transfer through space.
 
-**1. From Circuits to Space**
+## From Circuits to Space
 
 Inside a device, signals are electrical. They exist as currents and voltages moving through electronic components and conductors.
 
@@ -53,7 +49,7 @@ This defines the communication chain:
 
 If this transfer is inefficient, no amount of signal processing can compensate. This is because communication depends on energy transfer, not just signal generation.
 
-**2. The Constraint That Governs Everything: Wavelength**
+## The Constraint That Governs Everything: Wavelength
 
 Every antenna is governed by the wavelength of the signal to be transmitted or received. Wavelength is defined as
 
@@ -103,7 +99,7 @@ This mismatch drives almost every antenna design trade-off.
 
 **Key** **insight**: Antenna size is dictated by wavelength and wavelength is set by physics.
 
-**3. The Antenna Is Not a Component. It Is a System**
+## The Antenna Is Not a Component. It Is a System
 
 The most common antenna in IoT devices is the monopole. It appears to be a single conductor, but in reality, it is only half the antenna. **The other half is the ground plane**.
 
@@ -149,7 +145,7 @@ A well-designed antenna on a poor ground plane will underperform. A simple anten
 
 **Key insight**: The antenna is not just the element; it is the current loop.
 
-**4. The Small Antenna Problem**
+## The Small Antenna Problem
 
 When an antenna is much smaller than λ/4, it becomes electrically short.
 
@@ -190,7 +186,7 @@ For compact antennas:
 
 As a result, much of the energy is lost as heat rather than being radiated. This limitation leads to a key question: how can physically small antennas be made to resonate?
 
-**5. Electrical Lengthening: The Role of Loading**
+## Electrical Lengthening: The Role of Loading
 
 Small antennas do not radiate efficiently because they are shorter than the wavelength required for resonance.
 
@@ -218,7 +214,7 @@ The antenna still:
 
 - Is more sensitive to manufacturing tolerances and environment
 
-**5.1 Loading Configurations**
+### Loading Configurations
 
 Different loading strategies distribute current differently along the antenna:
 
@@ -242,7 +238,7 @@ Loading enables a short antenna to reach resonance, but it does not make it equi
 
 This raises a further challenge; how can a single antenna operate efficiently across multiple frequencies?
 
-**6. Multi-Band Antennas**
+## Multi-Band Antennas
 
 Modern devices must support multiple bands:
 
@@ -280,7 +276,7 @@ As a result, a single monopole structure can operate across multiple frequency b
 
 **Key insight**: A multi-band antenna is not a single resonance; it is multiple resonant behaviours within the same structure.
 
-**6.1 Why Multiple Resonances Exist**
+### Why Multiple Resonances Exist
 
 Resonance occurs when the antenna length supports a standing wave. For a simple conductor, this happens when its electrical length satisfies:
 
@@ -318,7 +314,7 @@ Each mode has a different shape and frequency.
 
 Similarly, an antenna supports multiple standing wave patterns along its length, each corresponding to a different resonant frequency.
 
-**6.2 How Geometry Controls Resonance**
+### How Geometry Controls Resonance
 
 In practical monopole antennas, resonance is not determined by length alone. It is shaped by how current flows along the structure.
 
@@ -332,7 +328,7 @@ Together, these features modify the effective electrical length and impedance of
 
 This allows the same physical structure to support multiple resonant conditions across different frequencies.
 
-**7. Gain: What It Really Means**
+## Gain: What It Really Means
 
 Antennas do not create power. They redistribute it.
 
@@ -344,7 +340,7 @@ Gain is focusing, not amplification. A higher-gain antenna increases signal stre
 
 ![](media/image4.png){width="6.268055555555556in" height="4.128472222222222in"}
 
-**Why High Gain Can Be Problematic in IoT**
+**Why High Gain Can Be Problematic**
 
 High gain can be beneficial, but often performs poorly in typical IoT deployments:
 
@@ -418,7 +414,7 @@ In practical systems, the actual gain depends on the quality of the ground plane
 
 **Key Insight:** Gain does not increase total energy; it determines how that energy is distributed in space.
 
-**8. Aperture: The Missing Link**
+## Aperture: The Missing Link
 
 An antenna behaves as if it has an effective area over which it captures energy from incoming waves. This is called the effective aperture.
 
@@ -472,7 +468,7 @@ They are linked through wavelength.
 
 **Key Insight:** Antennas determine not just where energy goes, but how much of it can be captured.
 
-**9. Real-World Mistake: Cable Loss**
+## Real-World Mistake: Cable Loss
 
 One of the most overlooked issues in wireless systems is cable loss. The signal between the transmitter and antenna travels through a cable and this cable introduces attenuation.
 
@@ -494,7 +490,7 @@ Cable loss is effectively equivalent to reducing antenna gain. A high-performanc
 
 **Key Insight**: Unnecessary cable length reduces system performance.
 
-**10. Real-World Scenario Where Designs Fail**
+## Real-World Scenario Where Designs Fail
 
 Even when using external antennas, the antenna is not fully isolated from the system.
 
@@ -508,7 +504,7 @@ The return current flows through the cable shield and the device ground, making 
 
 An external antenna improves isolation but does not eliminate system interaction. A well-designed antenna can still fail due to poor system integration
 
-**Conclusion**
+## Conclusion
 
 Wireless communication does not occur because signals are generated.
 
