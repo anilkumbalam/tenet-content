@@ -23,6 +23,28 @@ function safeName(str) {
 
 
 // ============================================
+// LAZY LOAD KaTeX — only when articles are opened
+// ============================================
+async function loadKaTeX() {
+  if (typeof katex !== 'undefined') return; // already loaded
+  await new Promise((resolve, reject) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css';
+    link.integrity = 'sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM';
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js';
+    script.integrity = 'sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI';
+    script.crossOrigin = 'anonymous';
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+// ============================================
 // FIX #1: IMPROVED safeName() FUNCTION
 // ============================================
 
@@ -2218,6 +2240,7 @@ window.submitApplication = async function(toEmail) {
 
 /* ── ARTICLE READER ── */
 async function renderArticle(articleId) {
+  await loadKaTeX(); // lazy load KaTeX only when needed
   /* Don't wipe the page immediately - keep current content visible while loading */
   const isFirstLoad = !app.querySelector('.page');
   
