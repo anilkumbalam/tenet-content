@@ -1,6 +1,6 @@
 
 /* ═══════════════════════════════════════════════════════
-   GITHUB CONTENT CONFIG
+   GITHUB CONTENT CONFIG 
    ► Replace the two values below with your own.
    ► Keep everything else as-is.
    ► Use a PUBLIC repo for zero-config, or see README
