@@ -1,0 +1,481 @@
+[
+  {
+    "id": "jal-jeevan-mission",
+    "icon": "\ud83d\udca7",
+    "title": "Jal Jeevan Mission",
+    "subtitle": "Enabling India's Rural Water Infrastructure with Real-Time Monitoring",
+    "industry": "Water & Irrigation",
+    "hero_summary": "Rugged industrial M2M gateways enabled real-time monitoring and remote automation of geographically distributed rural water infrastructure under India's Jal Jeevan Mission \u2014 bridging legacy Modbus field devices with cloud-based telemetry platforms over secure 4G/LTE networks. Extended to irrigation infrastructure with solar-powered deployments supporting remote pumping stations and canal automation.",
+    "challenge": "Water supply departments required reliable telemetry across thousands of rural pumping stations and irrigation sites under extreme constraints:\n\n\n\u2022 Intermittent grid power with frequent outages and severe voltage fluctuations\n\n\u2022 No fiber connectivity \u2014 nearest ISP termination many kilometers away\n\n\u2022 Large-scale deployment across thousands of remote sites needing uniform configuration\n\n\u2022 Difficult terrain access and high site visit costs (hours of travel)\n\n\u2022 Solar-powered remote sites requiring battery autonomy and low-power operation\n\n\u2022 Unmanned operation with regional-language operators and minimal technical training",
+    "solution": "Tenet's rugged industrial M2M Cellular Gateway deployed with integrated protocol conversion engine capable of translating Modbus RTU/TCP data into MQTT streams over secure 4G/LTE connectivity. Local data buffering ensured continuity during intermittent connectivity conditions. Solar-powered deployment compatibility enabled remote irrigation infrastructure connectivity without grid power dependency.",
+    "technologies": [
+      "Modbus RTU/TCP",
+      "MQTT",
+      "4G/LTE connectivity",
+      "RS485 serial communication",
+      "Local data buffering",
+      "Remote diagnostics",
+      "Solar-powered deployment",
+      "VPN-secured telemetry"
+    ],
+    "impact": [
+      "Two-way secure communication enabled remote pump control and automation",
+      "Existing PLCs and field sensors remained operational without hardware replacement",
+      "Reduced deployment complexity and rollout costs significantly",
+      "Improved visibility into distributed rural water and irrigation infrastructure",
+      "Enhanced operational continuity during network instability",
+      "Successfully deployed across Rajasthan, Maharashtra, and Uttarakhand",
+      "Supported irrigation automation in rural and semi-urban agricultural regions"
+    ],
+    "tags": [
+      "water monitoring India",
+      "Jal Jeevan Mission",
+      "Modbus MQTT gateway",
+      "irrigation automation",
+      "rural telemetry",
+      "solar-powered M2M"
+    ],
+    "summary": "Rugged industrial M2M gateways enabled real-time monitoring and remote automation of geographically distributed rural water infrastructure under India's Jal Jeevan Mission.",
+    "detail": "Water supply departments required reliable telemetry across thousands of rural pumping stations and irrigation sites under extreme constraints:\n\n\n\u2022 Intermittent grid power with frequent outages and severe voltage fluctuations\n\n\u2022 No fiber connectivity \u2014 nearest ISP termination many kilometers away\n\n\u2022 Large-scale deployment across thousands of remote sites needing uniform configuration\n\n\u2022 Difficult terrain access and high site visit costs (hours of travel)\n\n\u2022 Solar-powered remote sites requiring battery autonomy and low-power operation\n\n\u2022 Unmanned operation with regional-language operators and minimal technical training",
+    "bullets": [
+      "Two-way secure communication enabled remote pump control and automation",
+      "Existing PLCs and field sensors remained operational without hardware replacement",
+      "Reduced deployment complexity and rollout costs significantly",
+      "Improved visibility into distributed rural water and irrigation infrastructure",
+      "Enhanced operational continuity during network instability",
+      "Successfully deployed across Rajasthan, Maharashtra, and Uttarakhand",
+      "Supported irrigation automation in rural and semi-urban agricultural regions"
+    ]
+  },
+  {
+    "id": "smart-cities",
+    "icon": "\ud83c\udfd9\ufe0f",
+    "title": "Smart Cities",
+    "subtitle": "Powering Urban Safety and Intelligence for Smart City Infrastructure",
+    "industry": "Smart Cities & Public Safety",
+    "hero_summary": "Outdoor industrial M2M gateways enabled secure connectivity between traffic systems, ANPR enforcement, surveillance infrastructure, and Integrated Command & Control Centers (ICCCs) across urban and peri-urban smart city deployments.",
+    "challenge": "Smart city operators needed a resilient backbone for traffic, ANPR, surveillance, and ICCC systems under real-world urban constraints:\n\n\n\u2022 Roadside cabinet installations with extreme heat, vibration, and dust\n\n\u2022 Frequent fiber cuts during monsoons and construction\n\n\u2022 Outer city/highway corridors with no wired backhaul available\n\n\u2022 24/7 zero-downtime expectations across hundreds of locations\n\n\u2022 Distributed deployment requiring centralized remote management\n\n\u2022 ISP outages lasting hours to days during severe weather",
+    "solution": "Tenet deployed rugged outdoor M2M gateways with secure 4G/5G connectivity, multi-WAN failover, and centralized remote management connecting traffic signals, surveillance cameras, ANPR systems, public alert systems, environmental monitoring equipment, and edge processing units to centralized ICCC infrastructure.",
+    "technologies": [
+      "4G/LTE and 5G connectivity",
+      "Multi-WAN failover",
+      "Secure VPN connectivity",
+      "Remote OTA management",
+      "Edge telemetry",
+      "IP surveillance integration",
+      "Centralized device orchestration"
+    ],
+    "impact": [
+      "Enabled automated traffic enforcement and live surveillance at hundreds of locations",
+      "Extended connectivity into outer city limits and highway corridors without wired backhaul",
+      "Reduced field maintenance effort through centralized management",
+      "Enabled real-time diagnostics, monitoring, and OTA firmware upgrades",
+      "Improved operational visibility for smart city administrators",
+      "Continuous city-wide monitoring even during ISP outages"
+    ],
+    "tags": [
+      "smart city India",
+      "ANPR gateway",
+      "ICCC connectivity",
+      "traffic management system",
+      "urban surveillance",
+      "intelligent transport"
+    ],
+    "summary": "Outdoor industrial M2M gateways enabled secure connectivity between traffic systems, ANPR enforcement, surveillance infrastructure, and Integrated Com...",
+    "detail": "Smart city operators needed a resilient backbone for traffic, ANPR, surveillance, and ICCC systems under real-world urban constraints:\n\n\n\u2022 Roadside cabinet installations with extreme heat, vibration, and dust\n\n\u2022 Frequent fiber cuts during monsoons and construction\n\n\u2022 Outer city/highway corridors with no wired backhaul available\n\n\u2022 24/7 zero-downtime expectations across hundreds of locations\n\n\u2022 Distributed deployment requiring centralized remote management\n\n\u2022 ISP outages lasting hours to days during severe weather",
+    "bullets": [
+      "Enabled automated traffic enforcement and live surveillance at hundreds of locations",
+      "Extended connectivity into outer city limits and highway corridors without wired backhaul",
+      "Reduced field maintenance effort through centralized management",
+      "Enabled real-time diagnostics, monitoring, and OTA firmware upgrades",
+      "Improved operational visibility for smart city administrators",
+      "Continuous city-wide monitoring even during ISP outages"
+    ]
+  },
+  {
+    "id": "city-gas-distribution",
+    "icon": "\ud83d\udd25",
+    "title": "City Gas Distribution",
+    "subtitle": "Empowering City Gas Networks with Secure, Always-On Connectivity",
+    "industry": "City Gas & Utilities",
+    "hero_summary": "Industrial M2M gateways enabled secure telemetry and centralized monitoring across city gas distribution infrastructure \u2014 connecting gas flow meters, pressure sensors, and SCADA systems over resilient multi-operator cellular networks.",
+    "challenge": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Hazardous area installations with strict explosive atmosphere protocols\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
+    "solution": "Tenet's industrial M2M gateways deployed with RS232/RS485 serial integration, Ethernet connectivity, secure VPN tunneling, multi-operator SIM redundancy, and centralized telemetry collection enabling real-time communication between field instrumentation and centralized SCADA platforms.",
+    "technologies": [
+      "RS232 / RS485",
+      "SCADA integration",
+      "Secure VPN connectivity",
+      "Multi-operator 4G LTE",
+      "Remote telemetry",
+      "Threshold-based alerting",
+      "OTA firmware management"
+    ],
+    "impact": [
+      "Improved operational visibility across city gas infrastructure",
+      "Enabled real-time anomaly detection and pressure monitoring",
+      "Reduced manual maintenance and field configuration effort",
+      "Improved security through encrypted communications",
+      "Simplified large-scale operational management using centralized updates"
+    ],
+    "tags": [
+      "city gas monitoring",
+      "CGD telemetry",
+      "gas SCADA India",
+      "pipeline monitoring",
+      "pressure telemetry"
+    ],
+    "summary": "Industrial M2M gateways enabled secure telemetry and centralized monitoring across city gas distribution infrastructure.",
+    "detail": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Hazardous area installations with strict explosive atmosphere protocols\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
+    "bullets": [
+      "Improved operational visibility across city gas infrastructure",
+      "Enabled real-time anomaly detection and pressure monitoring",
+      "Reduced manual maintenance and field configuration effort",
+      "Improved security through encrypted communications",
+      "Simplified large-scale operational management using centralized updates"
+    ]
+  },
+  {
+    "id": "power-distribution-sdwan",
+    "icon": "\u26a1",
+    "title": "Power Distribution SD-WAN",
+    "subtitle": "Modernizing Power Distribution with Centrally Orchestrated Overlay WAN",
+    "industry": "Power & Energy",
+    "hero_summary": "Tenet cWAN SD-WAN infrastructure enabled resilient, centrally orchestrated WAN connectivity across substations, billing centers, and regional offices \u2014 supporting real-time metering synchronization and future smart-grid initiatives.",
+    "challenge": "Power distribution operator faced severe WAN challenges across hundreds of substations and billing centers:\n\n\n\u2022 Unreliable ISP with frequent fiber outages during monsoons\n\n\u2022 Hundreds of distributed sites with limited local IT expertise\n\n\u2022 Delayed data synchronization impacting billing accuracy\n\n\u2022 High operational overhead from manual network interventions\n\n\u2022 Remote locations many hours away from service teams\n\n\u2022 Need for rapid, zero-touch rollout across multiple states",
+    "solution": "Tenet deployed its centrally orchestrated cWAN SD-WAN architecture using industrial-grade edge devices with dual-SIM 4G/5G failover, centralized orchestration, geographically redundant data concentrators, automated provisioning, and remote monitoring. Zero-touch provisioning significantly reduced on-site IT configuration during large-scale rollout.",
+    "technologies": [
+      "SD-WAN overlay networking",
+      "Dual-SIM 4G/5G failover",
+      "Zero-touch provisioning",
+      "Centralized orchestration",
+      "Secure VPN overlay",
+      "Remote diagnostics",
+      "Redundant data concentrators"
+    ],
+    "impact": [
+      "Maintained connectivity during fiber outages using cellular failover",
+      "Accelerated deployment across hundreds of distributed locations",
+      "Improved billing synchronization accuracy",
+      "Reduced operational downtime and maintenance overhead",
+      "Enabled future smart-grid initiatives including outage management and prepaid metering"
+    ],
+    "tags": [
+      "utility SD-WAN",
+      "power distribution connectivity",
+      "substation network",
+      "cWAN",
+      "zero-touch provisioning",
+      "smart grid"
+    ],
+    "summary": "Tenet cWAN SD-WAN infrastructure enabled resilient, centrally orchestrated WAN connectivity across substations, billing centers, and regional offices.",
+    "detail": "Power distribution operator faced severe WAN challenges across hundreds of substations and billing centers:\n\n\n\u2022 Unreliable ISP with frequent fiber outages during monsoons\n\n\u2022 Hundreds of distributed sites with limited local IT expertise\n\n\u2022 Delayed data synchronization impacting billing accuracy\n\n\u2022 High operational overhead from manual network interventions\n\n\u2022 Remote locations many hours away from service teams\n\n\u2022 Need for rapid, zero-touch rollout across multiple states",
+    "bullets": [
+      "Maintained connectivity during fiber outages using cellular failover",
+      "Accelerated deployment across hundreds of distributed locations",
+      "Improved billing synchronization accuracy",
+      "Reduced operational downtime and maintenance overhead",
+      "Enabled future smart-grid initiatives including outage management and prepaid metering"
+    ]
+  },
+  {
+    "id": "renewable-energy",
+    "icon": "\ud83c\udf1e",
+    "title": "Renewable Energy",
+    "subtitle": "Centralized Control of Renewable Energy Infrastructure",
+    "industry": "Renewable Energy",
+    "hero_summary": "Rugged industrial cellular gateways enabled secure telemetry and centralized SCADA integration across distributed solar farms and wind energy infrastructure using legacy serial-based equipment.",
+    "challenge": "Renewable energy operators needed centralized SCADA integration across remote solar and wind assets:\n\n\n\u2022 Extremely remote desert and mountainous locations with no wired infrastructure\n\n\u2022 Extreme weather exposure (sandstorms, lightning, temperature swings)\n\n\u2022 Legacy RS232 equipment without native IP connectivity\n\n\u2022 Unmanned operations with technicians hours away\n\n\u2022 High site visit costs and difficult terrain access\n\n\u2022 Need for fleet-wide remote monitoring and firmware management",
+    "solution": "Tenet deployed rugged industrial cellular gateways with secure 4G LTE connectivity, RS232 serial integration, Modbus-to-MQTT protocol conversion, centralized remote management, and watchdog-based self-recovery enabling remote telemetry and SCADA communication without wired WAN dependency.",
+    "technologies": [
+      "RS232 serial communication",
+      "Modbus RTU/TCP",
+      "MQTT protocol conversion",
+      "Secure 4G LTE",
+      "Watchdog auto-recovery",
+      "Firewall protection",
+      "Remote OTA management"
+    ],
+    "impact": [
+      "Enabled centralized monitoring across remote renewable energy assets",
+      "Preserved compatibility with existing legacy equipment",
+      "Eliminated the need for wired infrastructure in remote deployments",
+      "Improved operational resilience with self-recovery mechanisms",
+      "Simplified large-scale remote maintenance and firmware updates"
+    ],
+    "tags": [
+      "solar farm monitoring",
+      "wind turbine connectivity",
+      "renewable energy SCADA",
+      "remote energy telemetry"
+    ],
+    "summary": "Rugged industrial cellular gateways enabled secure telemetry and centralized SCADA integration across distributed solar farms and wind energy infrastr...",
+    "detail": "Renewable energy operators needed centralized SCADA integration across remote solar and wind assets:\n\n\n\u2022 Extremely remote desert and mountainous locations with no wired infrastructure\n\n\u2022 Extreme weather exposure (sandstorms, lightning, temperature swings)\n\n\u2022 Legacy RS232 equipment without native IP connectivity\n\n\u2022 Unmanned operations with technicians hours away\n\n\u2022 High site visit costs and difficult terrain access\n\n\u2022 Need for fleet-wide remote monitoring and firmware management",
+    "bullets": [
+      "Enabled centralized monitoring across remote renewable energy assets",
+      "Preserved compatibility with existing legacy equipment",
+      "Eliminated the need for wired infrastructure in remote deployments",
+      "Improved operational resilience with self-recovery mechanisms",
+      "Simplified large-scale remote maintenance and firmware updates"
+    ]
+  },
+  {
+    "id": "manufacturing-plc",
+    "icon": "\ud83c\udfed",
+    "title": "Manufacturing & PLC Automation",
+    "subtitle": "Industrial Connectivity for Manufacturing & PLC Automation",
+    "industry": "Manufacturing & Industrial",
+    "hero_summary": "Industrial M2M gateways and secure remote connectivity infrastructure enabled centralized monitoring, machine telemetry, and remote diagnostics across distributed manufacturing and industrial automation environments.",
+    "challenge": "Manufacturing facilities required reliable PLC and SCADA connectivity under demanding industrial conditions:\n\n\n\u2022 Mixed legacy and modern equipment needing protocol bridging\n\n\u2022 Harsh factory environments (heat, dust, EMI)\n\n\u2022 Production uptime requirements with minimal acceptable downtime\n\n\u2022 Distributed multi-site operations across regions\n\n\u2022 Limited local IT expertise focused on production\n\n\u2022 Need for secure OT/IT network segmentation",
+    "solution": "Tenet deployed industrial M2M gateways with RS232/RS485 serial communication, Modbus RTU/TCP, secure VPN tunnels, centralized remote access, and edge telemetry aggregation enabling communication between PLCs, HMIs, industrial sensors, VFDs, SCADA servers, and maintenance systems while maintaining secure OT/IT network segmentation.",
+    "technologies": [
+      "Modbus RTU/TCP",
+      "RS232 / RS485 integration",
+      "Secure VPN access",
+      "Industrial telemetry",
+      "SCADA integration",
+      "Remote diagnostics",
+      "Edge connectivity",
+      "Predictive maintenance telemetry"
+    ],
+    "impact": [
+      "Improved visibility into distributed manufacturing systems",
+      "Enabled secure remote engineering access for diagnostics and maintenance",
+      "Reduced production downtime through faster issue identification",
+      "Preserved compatibility with legacy industrial equipment",
+      "Simplified large-scale industrial network management",
+      "Enabled future predictive maintenance initiatives"
+    ],
+    "tags": [
+      "PLC connectivity",
+      "industrial automation",
+      "SCADA manufacturing",
+      "Modbus gateway",
+      "OT IT bridge",
+      "predictive maintenance"
+    ],
+    "summary": "Industrial M2M gateways and secure remote connectivity infrastructure enabled centralized monitoring, machine telemetry, and remote diagnostics across...",
+    "detail": "Manufacturing facilities required reliable PLC and SCADA connectivity under demanding industrial conditions:\n\n\n\u2022 Mixed legacy and modern equipment needing protocol bridging\n\n\u2022 Harsh factory environments (heat, dust, EMI)\n\n\u2022 Production uptime requirements with minimal acceptable downtime\n\n\u2022 Distributed multi-site operations across regions\n\n\u2022 Limited local IT expertise focused on production\n\n\u2022 Need for secure OT/IT network segmentation",
+    "bullets": [
+      "Improved visibility into distributed manufacturing systems",
+      "Enabled secure remote engineering access for diagnostics and maintenance",
+      "Reduced production downtime through faster issue identification",
+      "Preserved compatibility with legacy industrial equipment",
+      "Simplified large-scale industrial network management",
+      "Enabled future predictive maintenance initiatives"
+    ]
+  },
+  {
+    "id": "oil-gas-telemetry",
+    "icon": "\ud83d\udee2\ufe0f",
+    "title": "Oil & Gas Remote Telemetry",
+    "subtitle": "Secure Telemetry for Oil & Gas Pipeline Infrastructure",
+    "industry": "Oil & Gas",
+    "hero_summary": "Industrial M2M gateways enabled secure telemetry, remote diagnostics, and centralized monitoring across distributed oil & gas pipeline infrastructure operating in remote and environmentally challenging conditions.",
+    "challenge": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Hazardous explosive atmosphere zones\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
+    "solution": "Tenet deployed industrial gateways supporting secure LTE communication, VPN-based telemetry, RS232/RS485 integration, centralized SCADA connectivity, remote threshold monitoring, and event-based alerting enabling continuous telemetry transmission and remote diagnostics across geographically distributed oil & gas assets.",
+    "technologies": [
+      "Secure VPN connectivity",
+      "Multi-operator LTE failover",
+      "SCADA integration",
+      "RS232 / RS485",
+      "Threshold alerting",
+      "Remote diagnostics",
+      "Industrial telemetry"
+    ],
+    "impact": [
+      "Improved visibility into remote pipeline infrastructure",
+      "Enabled real-time operational alerts and telemetry monitoring",
+      "Reduced field maintenance overhead",
+      "Improved operational continuity during network failures",
+      "Enhanced infrastructure security through encrypted communications"
+    ],
+    "tags": [
+      "oil gas telemetry",
+      "pipeline monitoring",
+      "SCADA oil gas",
+      "remote RTU connectivity"
+    ],
+    "summary": "Industrial M2M gateways enabled secure telemetry, remote diagnostics, and centralized monitoring across distributed oil & gas pipeline infrastructure ...",
+    "detail": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Hazardous explosive atmosphere zones\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
+    "bullets": [
+      "Improved visibility into remote pipeline infrastructure",
+      "Enabled real-time operational alerts and telemetry monitoring",
+      "Reduced field maintenance overhead",
+      "Improved operational continuity during network failures",
+      "Enhanced infrastructure security through encrypted communications"
+    ]
+  },
+  {
+    "id": "ev-charging",
+    "icon": "\ud83d\udd0c",
+    "title": "EV Charging Infrastructure",
+    "subtitle": "Secure Connectivity for EV Charging Infrastructure",
+    "industry": "EV & Transportation",
+    "hero_summary": "Industrial networking infrastructure enabled secure, centralized connectivity across distributed EV charging stations \u2014 supporting telemetry, payment systems, surveillance, and remote operational management over resilient cellular and wired networks.",
+    "challenge": "EV charging operators needed reliable connectivity across distributed stations with strict uptime requirements:\n\n\n\u2022 Highway and remote locations with limited fixed-line connectivity\n\n\u2022 24/7 operational needs \u2014 revenue loss during any downtime\n\n\u2022 Variable cellular coverage depending on location\n\n\u2022 Payment system dependency on real-time transactions\n\n\u2022 Wide geographical spread (cities, highways, rural areas)\n\n\u2022 Need for remote diagnostics without frequent technician dispatch",
+    "solution": "Tenet deployed industrial LTE/5G gateways and edge networking infrastructure supporting secure VPN communication, LTE failover, centralized device management, remote diagnostics, and multi-device connectivity enabling communication between EV chargers, PoS terminals, surveillance cameras, edge controllers, and centralized charging management systems.",
+    "technologies": [
+      "4G/LTE and 5G connectivity",
+      "VPN-secured communications",
+      "OTA firmware management",
+      "Multi-WAN failover",
+      "Remote device monitoring",
+      "Smart charging telemetry",
+      "IP surveillance integration"
+    ],
+    "impact": [
+      "Enabled reliable connectivity across distributed charging infrastructure",
+      "Improved operational uptime during ISP outages",
+      "Simplified charger monitoring and remote troubleshooting",
+      "Enabled secure payment and telemetry communication",
+      "Reduced field maintenance overhead through centralized management",
+      "Supported scalable expansion of EV charging infrastructure"
+    ],
+    "tags": [
+      "EV charging connectivity",
+      "EV infrastructure India",
+      "charging station monitoring",
+      "EV telemetry"
+    ],
+    "summary": "Industrial networking infrastructure enabled secure, centralized connectivity across distributed EV charging stations.",
+    "detail": "EV charging operators needed reliable connectivity across distributed stations with strict uptime requirements:\n\n\n\u2022 Highway and remote locations with limited fixed-line connectivity\n\n\u2022 24/7 operational needs \u2014 revenue loss during any downtime\n\n\u2022 Variable cellular coverage depending on location\n\n\u2022 Payment system dependency on real-time transactions\n\n\u2022 Wide geographical spread (cities, highways, rural areas)\n\n\u2022 Need for remote diagnostics without frequent technician dispatch",
+    "bullets": [
+      "Enabled reliable connectivity across distributed charging infrastructure",
+      "Improved operational uptime during ISP outages",
+      "Simplified charger monitoring and remote troubleshooting",
+      "Enabled secure payment and telemetry communication",
+      "Reduced field maintenance overhead through centralized management",
+      "Supported scalable expansion of EV charging infrastructure"
+    ]
+  },
+  {
+    "id": "mobile-surveillance",
+    "icon": "\ud83d\udcf9",
+    "title": "Mobile & Rapid-Deployment Surveillance",
+    "subtitle": "Mobile Surveillance and Connectivity for Infrastructure Projects",
+    "industry": "Public Safety & Infrastructure",
+    "hero_summary": "Portable industrial M2M gateways and mobile IP surveillance systems enabled rapid deployment of secure, temporary monitoring infrastructure across construction sites, highways, railway projects, disaster-response operations, and fixed industrial surveillance installations.",
+    "challenge": "Infrastructure and emergency teams needed rapid-deployment surveillance under tight time and resource constraints:\n\n\n\u2022 Must be operational within minutes, not days\n\n\u2022 No trenching or permanent wired infrastructure allowed\n\n\u2022 Off-grid / solar-powered operation only\n\n\u2022 Harsh outdoor conditions and frequent relocation needs\n\n\u2022 Centralized command-center monitoring required\n\n\u2022 Plug-and-play setup by non-technical field staff",
+    "solution": "Tenet deployed rugged plug-and-play industrial M2M gateways integrated with portable IP camera systems, solar-powered units, secure LTE backhaul, cloud-based monitoring platforms, VPN-secured surveillance traffic, PoE integration, and centralized monitoring for both rapid-deployment mobile and fixed industrial surveillance applications.",
+    "technologies": [
+      "Secure 4G/LTE backhaul",
+      "Portable IP surveillance",
+      "Solar-powered deployment",
+      "Remote cloud monitoring",
+      "Plug-and-play deployment",
+      "Mobile edge networking",
+      "VPN-secured surveillance",
+      "PoE integration"
+    ],
+    "impact": [
+      "Enabled full deployment in under 30 minutes without trenching or wired infrastructure",
+      "Supported live remote video monitoring from centralized command centers",
+      "Extended surveillance capability into remote and temporary deployment environments",
+      "Successfully adopted across PWD projects, railway infrastructure, disaster response, and event security",
+      "Enabled centralized monitoring across remote industrial infrastructure",
+      "Simplified deployment of both temporary and permanent surveillance systems"
+    ],
+    "tags": [
+      "mobile surveillance",
+      "rapid deployment monitoring",
+      "PWD surveillance",
+      "disaster response connectivity",
+      "industrial surveillance"
+    ],
+    "summary": "Portable industrial M2M gateways and mobile IP surveillance systems enabled rapid deployment of secure, temporary monitoring infrastructure across con...",
+    "detail": "Infrastructure and emergency teams needed rapid-deployment surveillance under tight time and resource constraints:\n\n\n\u2022 Must be operational within minutes, not days\n\n\u2022 No trenching or permanent wired infrastructure allowed\n\n\u2022 Off-grid / solar-powered operation only\n\n\u2022 Harsh outdoor conditions and frequent relocation needs\n\n\u2022 Centralized command-center monitoring required\n\n\u2022 Plug-and-play setup by non-technical field staff",
+    "bullets": [
+      "Enabled full deployment in under 30 minutes without trenching or wired infrastructure",
+      "Supported live remote video monitoring from centralized command centers",
+      "Extended surveillance capability into remote and temporary deployment environments",
+      "Successfully adopted across PWD projects, railway infrastructure, disaster response, and event security",
+      "Enabled centralized monitoring across remote industrial infrastructure",
+      "Simplified deployment of both temporary and permanent surveillance systems"
+    ]
+  },
+  {
+    "id": "banking-infrastructure",
+    "icon": "\ud83c\udfe6",
+    "title": "Banking & Financial Services Infrastructure",
+    "subtitle": "Reliable WAN Connectivity for Banking Infrastructure",
+    "industry": "Banking & Finance",
+    "hero_summary": "Industrial-grade WAN and cellular failover infrastructure enabled uninterrupted connectivity across distributed ATM networks, branch offices, and financial service points \u2014 ensuring secure transactions, centralized visibility, and operational continuity across metro, Tier-2, and Tier-3 locations.",
+    "challenge": "Banks required highly reliable connectivity for ATMs and branches across metro to Tier-3 locations:\n\n\n\u2022 Unstable wired ISP infrastructure with frequent failures\n\n\u2022 Hundreds to thousands of distributed ATMs and branches\n\n\u2022 24/7 operational requirements \u2014 revenue loss during downtime\n\n\u2022 Limited local IT support in smaller towns\n\n\u2022 Strict cybersecurity and encrypted communication needs\n\n\u2022 Remote rural locations with minimal technical support",
+    "solution": "Tenet deployed resilient WAN edge infrastructure featuring dual-SIM 4G/LTE failover, encrypted VPN tunnels, centralized WAN orchestration, remote diagnostics and monitoring, and automatic link failover connecting ATM kiosks, branch offices, transaction terminals, centralized banking systems, and surveillance infrastructure.",
+    "technologies": [
+      "Dual-SIM LTE failover",
+      "IPSec / OpenVPN",
+      "SD-WAN overlay",
+      "Centralized WAN orchestration",
+      "Remote diagnostics",
+      "Secure transaction networking",
+      "Automated failover monitoring"
+    ],
+    "impact": [
+      "Improved ATM uptime across distributed banking locations",
+      "Reduced downtime caused by wired ISP failures",
+      "Enabled centralized monitoring and remote troubleshooting",
+      "Reduced dependency on local technical intervention",
+      "Improved operational continuity across Tier-2 and Tier-3 deployments",
+      "Enhanced network security through encrypted WAN connectivity"
+    ],
+    "tags": [
+      "ATM connectivity",
+      "banking WAN",
+      "financial services network",
+      "branch connectivity India",
+      "secure banking infrastructure"
+    ],
+    "summary": "Industrial-grade WAN and cellular failover infrastructure enabled uninterrupted connectivity across distributed ATM networks, branch offices, and financial service points.",
+    "detail": "Banks required highly reliable connectivity for ATMs and branches across metro to Tier-3 locations:\n\n\n\u2022 Unstable wired ISP infrastructure with frequent failures\n\n\u2022 Hundreds to thousands of distributed ATMs and branches\n\n\u2022 24/7 operational requirements \u2014 revenue loss during downtime\n\n\u2022 Limited local IT support in smaller towns\n\n\u2022 Strict cybersecurity and encrypted communication needs\n\n\u2022 Remote rural locations with minimal technical support",
+    "bullets": [
+      "Improved ATM uptime across distributed banking locations",
+      "Reduced downtime caused by wired ISP failures",
+      "Enabled centralized monitoring and remote troubleshooting",
+      "Reduced dependency on local technical intervention",
+      "Improved operational continuity across Tier-2 and Tier-3 deployments",
+      "Enhanced network security through encrypted WAN connectivity"
+    ]
+  },
+  {
+    "id": "warehousing-logistics",
+    "icon": "\ud83d\udce6",
+    "title": "Smart Warehousing & Logistics",
+    "subtitle": "Real-Time Connectivity for Smart Warehousing & Logistics Operations",
+    "industry": "Warehousing & Logistics",
+    "hero_summary": "Industrial networking infrastructure enabled centralized visibility, telemetry, and operational coordination across modern warehouse, logistics, and distribution environments.",
+    "challenge": "Warehouse operators and logistics providers required reliable connectivity across distributed facilities facing operational challenges:\n\n\n\u2022 Wi-Fi dead zones in large facilities (metal structures, interference)\n\n\u2022 Unreliable WAN connectivity causing operational disruptions\n\n\u2022 Multi-site operations with limited IT staffing\n\n\u2022 Real-time coordination needs (inventory, fleet, logistics)\n\n\u2022 Scaling challenges as facilities expand\n\n\u2022 Operational downtime costs (inventory sync failures, order delays)",
+    "solution": "Tenet deployed resilient industrial networking infrastructure with LTE failover, secure VPN overlays, centralized WAN management, industrial Wi-Fi integration, and edge telemetry support connecting warehouse management systems, handheld terminals, automation controllers, surveillance systems, and logistics platforms.",
+    "technologies": [
+      "SD-WAN",
+      "LTE failover",
+      "Industrial Wi-Fi",
+      "VPN-secured WAN",
+      "Remote diagnostics",
+      "Edge telemetry",
+      "Warehouse system integration"
+    ],
+    "impact": [
+      "Improved operational continuity during WAN outages",
+      "Enabled centralized inventory and logistics visibility",
+      "Reduced downtime across warehouse operations",
+      "Improved connectivity coverage across industrial facilities",
+      "Simplified large-scale warehouse network management"
+    ],
+    "tags": [
+      "warehouse connectivity",
+      "logistics network",
+      "WMS integration",
+      "industrial Wi-Fi"
+    ],
+    "summary": "Industrial networking infrastructure enabled centralized visibility, telemetry, and operational coordination across modern warehouse, logistics, and distribution environments..",
+    "detail": "Warehouse operators and logistics providers required reliable connectivity across distributed facilities facing operational challenges:\n\n\n\u2022 Wi-Fi dead zones in large facilities (metal structures, interference)\n\n\u2022 Unreliable WAN connectivity causing operational disruptions\n\n\u2022 Multi-site operations with limited IT staffing\n\n\u2022 Real-time coordination needs (inventory, fleet, logistics)\n\n\u2022 Scaling challenges as facilities expand\n\n\u2022 Operational downtime costs (inventory sync failures, order delays)",
+    "bullets": [
+      "Improved operational continuity during WAN outages",
+      "Enabled centralized inventory and logistics visibility",
+      "Reduced downtime across warehouse operations",
+      "Improved connectivity coverage across industrial facilities",
+      "Simplified large-scale warehouse network management"
+    ]
+  }
+]
