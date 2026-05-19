@@ -99,7 +99,7 @@
     "subtitle": "Empowering City Gas Networks with Secure, Always-On Connectivity",
     "industry": "City Gas & Utilities",
     "hero_summary": "Industrial M2M gateways enabled secure telemetry and centralized monitoring across city gas distribution infrastructure \u2014 connecting gas flow meters, pressure sensors, and SCADA systems over resilient multi-operator cellular networks.",
-    "challenge": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Hazardous area installations with strict explosive atmosphere protocols\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
+    "challenge": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
     "solution": "Tenet's industrial M2M gateways deployed with RS232/RS485 serial integration, Ethernet connectivity, secure VPN tunneling, multi-operator SIM redundancy, and centralized telemetry collection enabling real-time communication between field instrumentation and centralized SCADA platforms.",
     "technologies": [
       "RS232 / RS485",
@@ -125,7 +125,7 @@
       "pressure telemetry"
     ],
     "summary": "Industrial M2M gateways enabled secure telemetry and centralized monitoring across city gas distribution infrastructure.",
-    "detail": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Hazardous area installations with strict explosive atmosphere protocols\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
+    "detail": "City Gas Distribution operators required secure, highly reliable communication across hazardous and remote pipeline infrastructure:\n\n\n\u2022 Unmanned remote stations with no local technical support\n\n\u2022 24/7 uptime requirements \u2014 zero tolerance for communication failures\n\n\u2022 Legacy RS232/RS485 equipment needing protocol bridging\n\n\u2022 Wide geographical distribution spanning hundreds of kilometers\n\n\u2022 Restricted site access and extremely high maintenance costs",
     "bullets": [
       "Improved operational visibility across city gas infrastructure",
       "Enabled real-time anomaly detection and pressure monitoring",
@@ -271,7 +271,7 @@
     "subtitle": "Secure Telemetry for Oil & Gas Pipeline Infrastructure",
     "industry": "Oil & Gas",
     "hero_summary": "Industrial M2M gateways enabled secure telemetry, remote diagnostics, and centralized monitoring across distributed oil & gas pipeline infrastructure operating in remote and environmentally challenging conditions.",
-    "challenge": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Hazardous explosive atmosphere zones\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
+    "challenge": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
     "solution": "Tenet deployed industrial gateways supporting secure LTE communication, VPN-based telemetry, RS232/RS485 integration, centralized SCADA connectivity, remote threshold monitoring, and event-based alerting enabling continuous telemetry transmission and remote diagnostics across geographically distributed oil & gas assets.",
     "technologies": [
       "Secure VPN connectivity",
@@ -296,7 +296,7 @@
       "remote RTU connectivity"
     ],
     "summary": "Industrial M2M gateways enabled secure telemetry, remote diagnostics, and centralized monitoring across distributed oil & gas pipeline infrastructure ...",
-    "detail": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Hazardous explosive atmosphere zones\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
+    "detail": "Pipeline operators required uninterrupted telemetry in extremely challenging remote environments:\n\n\n\u2022 Remote desert, offshore, and mountainous terrains\n\n\u2022 Unmanned stations with no human presence for long periods\n\n\u2022 No wired infrastructure for many kilometers\n\n\u2022 Critical safety requirements (real-time leak detection)\n\n\u2022 Extremely high site visit costs (helicopter/multi-day access)",
     "bullets": [
       "Improved visibility into remote pipeline infrastructure",
       "Enabled real-time operational alerts and telemetry monitoring",
