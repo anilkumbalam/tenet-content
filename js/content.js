@@ -65,7 +65,7 @@ window.CONTENT = {
       
       tag: "cWAN · Centralized Control",
       title: "Control Every Site From <span class='accent'>One Dashboard</span>",
-      subtitle: "Monitor and manage every Credo router across locations with centralized visibility, automated failover and policy-based control.",    
+      subtitle: "Monitor and manage every Credo edge devices across locations with centralized visibility, automated failover and policy-based control.",    
       features: [
         { icon: "📊", label: "Single-Pane Visibility" },
         { icon: "⚡", label: "Zero-Touch Provisioning" },
