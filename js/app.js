@@ -848,7 +848,7 @@ function footerHTML() {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${c.founded}–2026 Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p>
+      <p>© ${c.founded}–${new Date().getFullYear()} Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p>
     </div>
   </footer>
   
