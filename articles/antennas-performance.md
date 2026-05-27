@@ -21,7 +21,7 @@ In modern wireless systems, from IoT devices to 4G and 5G networks, antenna beha
 
 While modulation, coding and protocols are often emphasized, **the antenna ultimately governs how a system interacts with the physical world**.
 
-**Key insight:** Communication is not just signal processing. It is energy transfer through space.
+**Lessons for Engineers**: Communication is not just signal processing. It is energy transfer through space.
 
 ## From Circuits to Space
 
@@ -96,7 +96,7 @@ Devices are small. Wavelengths are not.
 
 This mismatch drives almost every antenna design trade-off.
 
-**Key** **Insight**: Antenna size is dictated by wavelength and wavelength is set by physics.
+**Lessons for Engineers**: Antenna size is dictated by wavelength and wavelength is set by physics.
 
 ## The Antenna Is Not a Component. It Is a System
 
@@ -112,7 +112,7 @@ As shown above, the radiating element together with the ground plane forms the c
 
 As shown above, the ground plane acts as a mirror, creating an image of the monopole below it.  The real antenna and its image together form an equivalent half-wave dipole. As a result, a quarter-wave monopole radiates like a dipole, but only into half-space.
 
-**Key** **Insight**: The ground plane completes the antenna; it is not optional.
+**Lessons for Engineers**: The ground plane completes the antenna; it is not optional.
 
 When current flows through the antenna element, it must return through the ground plane. Together, they form the complete radiating system.
 
@@ -148,7 +148,7 @@ This has important implications:
 
 A well-designed antenna on a poor ground plane will underperform. A simple antenna on a good ground plane can perform well.
 
-**Key Insight**: The antenna is not just the element; it is the current loop.
+**Lessons for Engineers**: The antenna is not just a element; it is the current loop.
 
 ## The Small Antenna Problem
 
@@ -188,7 +188,7 @@ For compact antennas:
 
 - Loss resistance becomes comparable
 
-As a result, much of the energy is lost as heat rather than being radiated. This limitation leads to a key question: how can physically small antennas be made to resonate?
+As a result, much of the energy is lost as heat rather than being radiated. This limitation leads to a important question: how can physically small antennas be made to resonate?
 
 ## Electrical Lengthening: The Role of Loading
 
@@ -238,7 +238,7 @@ Loading enables a short antenna to reach resonance, but it does not make it equi
 
 - Losses in the coil and conductor remain
 
-**Key Insight:** Compact antennas can be made to work through loading, but this comes at the cost of efficiency and bandwidth.
+**Lessons for Engineers:** Compact antennas can be made to work through loading, but this comes at the cost of efficiency and bandwidth.
 
 This raises a further challenge; how can a single antenna operate efficiently across multiple frequencies?
 
@@ -278,7 +278,7 @@ As frequency changes:
 
 As a result, a single monopole structure can operate across multiple frequency bands by supporting different current distributions at different frequencies.
 
-**Key Insight**: A multi-band antenna is not a single resonance; it is multiple resonant behaviours within the same structure.
+**Lessons for Engineers**: A multi-band antenna is not a single resonance; it is multiple resonant behaviours within the same structure.
 
 ### Why Multiple Resonances Exist
 
@@ -322,7 +322,7 @@ Similarly, an antenna supports multiple standing wave patterns along its length,
 
 In practical monopole antennas, resonance is not determined by length alone. It is shaped by how current flows along the structure.
 
-Two key design elements are used to control this:
+Two design elements are used to control this:
 
 - Loading coils introduce inductance, which cancels the capacitive behaviour of a short antenna. This allows resonance to occur at lower frequencies without increasing physical length.
 
@@ -416,7 +416,7 @@ This increase in gain is not due to amplification, but due to redistribution of 
 
 In practical systems, the actual gain depends on the quality of the ground plane and the surrounding environment.
 
-**Key Insight**: Gain does not increase total energy; it determines how that energy is distributed in space.
+**Lessons for Engineers**: Gain does not increase total energy; it determines how that energy is distributed in space.
 
 ## Aperture of Antenna
 
@@ -470,7 +470,7 @@ Gain and aperture are two views of the same phenomenon:
 
 They are linked through wavelength.
 
-**Key Insight**: Antennas determine not just where energy goes, but how much of it can be captured.
+**Lessons for Engineers**: Antennas determine not just where energy goes, but how much of it can be captured.
 
 ## The Deeper Principle: Why Antennas Behave This Way
 
@@ -532,7 +532,7 @@ This loss directly reduces system performance:
 
 Cable loss is effectively equivalent to reducing antenna gain. A high-performance antenna can be negated by poor cable choices.
 
-**Key Insight**: Unnecessary cable length reduces system performance.
+**Lessons for Engineers**: Unnecessary cable length reduces system performance.
 
 ## Real-World Scenario Where Designs Fail
 
