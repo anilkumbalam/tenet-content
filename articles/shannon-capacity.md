@@ -74,7 +74,7 @@ Doubling SNR does **not** double capacity. Doubling SNR increases capacity only 
 
 ## What the Equation Really Says
 
-The formula contains two key ideas:
+The formula contains two key, intuitive ideas:
 
 1.  Capacity grows **linearly** with bandwidth **B** (for fixed SNR).
 
