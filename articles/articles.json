@@ -44,7 +44,7 @@
   {
     "id": "wp3-gnss",
     "title": "GNSS: Why Positioning Is Harder Than It Looks",
-    "summary": "Why GPS accuracy depends on satellite geometry (GDOP), clock bias, ionospheric delay, multipath and interference, and not just trilateration. An examination of how timing errors, measurement uncertainty and satellite geometry combine to determine GNSS positioning accuracy.",
+    "summary": "Why GPS accuracy depends on satellite geometry (GDOP), clock bias, ionospheric delay, multipath and interference and not just trilateration. An examination of how timing errors, measurement uncertainty and satellite geometry combine to determine GNSS positioning accuracy.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2024-01-26",
