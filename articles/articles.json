@@ -2,7 +2,7 @@
   {
     "id": "series-intro",
     "title": "How Wireless Systems Actually Work: Introduction to the Series",
-    "summary": "Discover the fundamental physical laws governing all wireless systems — bandwidth, noise, geometry, and energy. A seven-part engineering series by Anil Joseph, Senior Member IEEE, developing engineering judgment through first-principles thinking.",
+    "summary": "Wireless engineering is about working within limits rather than overcoming them. This seven-part series examines the fundamental constraints of bandwidth, noise, geometry, energy and their influence on system design and performance.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2022-11-10",
@@ -16,7 +16,7 @@
   {
     "id": "wp1-elt",
     "title": "Emergency Locator Transmitters: When Reliability Means Survival",
-    "summary": "How Cospas-Sarsat ELTs, EPIRBs, and PLBs use 406 MHz digital bursts, Doppler positioning, and satellite geometry to rescue survivors within hours — without GPS data from the beacon. From 121.5 MHz analog to Galileo Return Link Service.",
+    "summary": "How Cospas-Sarsat locates distress beacons using 406 MHz digital transmissions, Doppler positioning and satellite geometry even when the beacon itself does not provide GPS coordinates. From the era of 121.5 MHz analog beacons to today's Galileo Return Link Service.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2023-02-15",
@@ -30,7 +30,7 @@
   {
     "id": "wp2-doppler",
     "title": "Doppler, Time, and Geometry in RF: How Motion Encodes Information",
-    "summary": "How Doppler shift, Time of Arrival (ToA), Time Difference of Arrival (TDoA), and geometric constraints enable positioning, velocity measurement, and signal detection. Unifying GNSS, radar, ADS-B multilateration, and search-and-rescue systems under one framework.",
+    "summary": "How Doppler shift, Time of Arrival (ToA), Time Difference of Arrival (TDoA) and geometry are used to determine position, velocity and signal origin. Connecting the principles behind GNSS, radar, ADS-B multilateration and satellite search-and-rescue systems.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2023-09-21",
@@ -44,7 +44,7 @@
   {
     "id": "wp3-gnss",
     "title": "GNSS: Why Positioning Is Harder Than It Looks",
-    "summary": "Why GPS accuracy depends on satellite geometry (GDOP), clock bias, ionospheric delay, multipath, and spoofing vulnerability — not just trilateration. A deep dive into why GNSS is a fragile inference problem that succeeds only when time, geometry, and signal environment align simultaneously.",
+    "summary": "Why GPS accuracy depends on satellite geometry (GDOP), clock bias, ionospheric delay, multipath and interference, and not just trilateration. An examination of how timing errors, measurement uncertainty and satellite geometry combine to determine GNSS positioning accuracy.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2024-01-26",
@@ -58,7 +58,7 @@
   {
     "id": "wp4-link-budgets",
     "title": "Link Budgets in the Real World: Energy as the Fundamental Constraint",
-    "summary": "Why wireless systems are energy-limited before they are algorithm-limited. Complete guide to RF link budgets: Eb/N0, thermal noise floor at -174 dBm/Hz, spread-spectrum processing gain, fading margins, and why GNSS works 20 dB below the noise floor.",
+    "summary": "Why wireless systems are energy-limited before they are algorithm-limited. Understanding how Eb/N₀, thermal noise, path loss and processing gain define the limits of wireless communication performance.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2024-03-26",
@@ -72,7 +72,7 @@
   {
     "id": "wp5-bursty",
     "title": "Bursty vs Continuous Transmission: How Scheduling Energy Changes Everything",
-    "summary": "Why ELTs transmit 0.5-second bursts every 50 seconds instead of continuously — and what this reveals about energy structuring in wireless systems. How duty cycle, peak SNR, and burst timing affect detectability, battery life, latency, and interference in IoT, radar, and satellite systems.",
+    "summary": "Why ELTs transmit short bursts instead of continuous signals. Exploring how duty cycle, peak SNR and burst timing determine detectability, energy efficiency, latency and interference in modern wireless systems.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2024-12-12",
@@ -86,7 +86,7 @@
   {
     "id": "wp6-ai-physical",
     "title": "AI at the Physical Layer: Where Learning Helps and Where Physics Dominates",
-    "summary": "Where machine learning genuinely improves wireless systems — channel estimation, hardware nonlinearity compensation, beamforming, interference detection — and where physics sets hard limits that no AI can bypass: Shannon capacity, thermal noise, geometric dilution, and link budgets.",
+    "summary": "How machine learning can improve wireless systems, but cannot repeal the laws of information theory and physics.",
     "author": "Ansh Kumar & Anil Joseph",
     "credential": "",
     "date": "2026-04-09",
@@ -100,7 +100,7 @@
   {
     "id": "antennas-performance",
     "title": "Antennas: Where Wireless Performance Is Actually Determined",
-    "summary": "How antenna gain, radiation patterns, impedance matching, and efficiency determine real-world wireless performance. A practical guide for engineers selecting and deploying antennas in industrial IoT and M2M systems.",
+    "summary": "How antenna gain, radiation patterns, impedance matching and efficiency determine real-world wireless performance. A practical guide for engineers selecting and deploying antennas in industrial IoT and M2M systems.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2022-05-04",
@@ -111,7 +111,7 @@
   {
     "id": "logarithmic-thinking",
     "title": "Logarithmic Thinking and the Decibel: From Sound to Satellites",
-    "summary": "Master decibel (dB) calculations for RF link budgets, SNR, and dynamic range. Understand why 10 log vs 20 log, thermal noise floor at -174 dBm/Hz, receiver sensitivity, and how logarithmic thinking unifies acoustics, vibration analysis, and wireless engineering.",
+    "summary": "Master decibel (dB) calculations for RF link budgets, SNR and dynamic range. Understand why 10 log vs 20 log, thermal noise floor at -174 dBm/Hz, receiver sensitivity and how logarithmic thinking unifies acoustics, vibration analysis and wireless engineering.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2019-05-10",
@@ -122,7 +122,7 @@
   {
     "id": "shannon-capacity",
     "title": "Shannon Capacity: The Absolute Limit of Communication",
-    "summary": "Shannon's theorem C = B·log₂(1+SNR) defines the absolute limit of any wireless channel. Why infinite bandwidth cannot overcome finite energy, how Eb/N0 sets the -1.59 dB ultimate threshold, and how 5G LDPC and Turbo codes approach but never exceed this fundamental boundary.",
+    "summary": "Why infinite bandwidth cannot compensate for finite energy and how Shannon's theorem defines the ultimate performance boundary for wireless communication.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2024-09-07",
@@ -133,7 +133,7 @@
   {
     "id": "wavelength-range",
     "title": "Why Shorter Wavelength Does Not Always Mean Shorter Range",
-    "summary": "Why shortwave (HF, 3-30 MHz) signals travel thousands of kilometres via ionospheric sky-wave while FM stays local. Understanding ground wave, ionospheric refraction, and why propagation mode — not wavelength — determines wireless range in MW, SW, and FM bands.",
+    "summary": "Why shortwave (HF, 3-30 MHz) signals travel thousands of kilometres via ionospheric sky-wave while FM stays local. Understanding ground wave, ionospheric refraction and why propagation mode, not wavelength determines wireless range in MW, SW, and FM bands.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2023-06-01",
@@ -144,7 +144,7 @@
   {
     "id": "power-grid-india",
     "title": "Reading the Indian Power Grid from the Streets: Seeing Engineering in Plain Sight",
-    "summary": "Decode India's power grid from street level: insulator disc count reveals voltage (11kV to 765kV), conductor bundling controls corona discharge, Stockbridge dampers prevent fatigue failure, and corona rings shape electric fields. Every visible feature is a response to physics.",
+    "summary": "Decode India's power grid from street level. How insulator disc counts reveal voltage, conductor bundling controls corona discharge, Stockbridge dampers prevent fatigue failure and corona rings shape electric fields. Every visible feature is a response to physics.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2018-06-06",
