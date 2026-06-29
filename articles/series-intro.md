@@ -4,11 +4,11 @@ When an aircraft goes missing and a satellite detects a faint distress beacon, i
 
 Most wireless engineering education presents the field as a collection of techniques such as modulation, error-correcting codes, antenna designs, MAC protocols, signal processing algorithms and more. In real systems, these are not independent choices. They are tightly connected responses to physical constraints.
 
-Emergency tracking systems offer a uniquely complete way to understand wireless engineering. They bring together geometry, time, energy, and signal processing in a single real-world system.
+Emergency tracking systems offer a uniquely complete way to understand wireless engineering. They bring together geometry, time, energy and signal processing in a single real-world system.
 
-This series explains the deeper structure that governs all wireless systems; a small set of limits set by physics and information theory that no technology can overcome. It is intended to help young engineers develop systems thinking in wireless engineering.
+This series try to explain the deeper structure that governs all wireless systems; a small set of limits set by physics and information theory that no technology can overcome. It is intended to help young engineers develop systems thinking in wireless engineering.
 
-At its core, every wireless system is constrained by a small set of physical realities. Everything else, hardware, algorithms, and software operate within these limits.
+At its core, every wireless system is constrained by a small set of physical realities. Everything else, hardware, algorithms and software operate within these limits.
 
 - **Geometry** → The spatial relationship between transmitters and receivers
 
@@ -16,7 +16,7 @@ At its core, every wireless system is constrained by a small set of physical rea
 
 - **Energy** → Signal strength relative to noise and interference
 
-Each paper in this series explores one aspect of these constraints through real systems:
+Each paper in this series explores one aspect of these constraints through real realtable systems:
 
 1.  **Emergency Locator Transmitters (ELTs)**  
     How satellites detect and locate distress signals under extreme conditions
@@ -55,8 +55,5 @@ Then design the system
 Technology evolves.  
 **Constraints do not**.
 
-## Final Thought
-
-If you take away just one idea from this series, let it be that
 
 **Radio signals are not just carriers of data. They are carriers of information about space, time and motion.** Understanding this is what turns knowledge into engineering judgment.
