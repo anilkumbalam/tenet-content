@@ -2,11 +2,11 @@
 
 Emergency Locator Transmitters (ELTs) and related distress beacons are among the most important life-saving wireless systems ever built.
 
-When an aircraft crashes or a boat/ship is lost at sea, these devices transmit simple radio signals that satellites, aircraft or land-based emergency stations detect. From those signals alone, global systems can determine where help is needed.
+When an aircraft crashes or a boat/ship is lost at sea, these devices transmit simple radio signals that satellites, aircraft or land-based emergency stations detect. From these signals alone, global systems can determine where help is needed.
 
-What makes this remarkable is that location can be estimated even without GPS data from the beacon. By using principles such as Doppler^1^ shift, signal timing, and geometry, the system extracts information about position and motion directly from the radio signal itself.
+What makes this remarkable is that location can be estimated even without GPS data from the beacon. By using principles such as Doppler^1^ shift, signal timing and geometry, the system extracts information about position and motion directly from the radio signal itself.
 
-Over the decades, the system has evolved from simple analog beacons operating at 121.5 MHz to modern 406 MHz digital beacons integrated with GNSS and Return Link Service (RLS), dramatically improving accuracy, reliability, and lives saved.
+Over the decades, the system has evolved from simple analog beacons operating at 121.5 MHz to modern 406 MHz digital beacons integrated with GNSS and Return Link Service (RLS), dramatically improving accuracy, reliability and lives saved.
 
 This paper explores how these systems work, how they evolved and what they reveal about the fundamental principles that govern all wireless systems.
 
@@ -64,7 +64,7 @@ This makes ELT systems an excellent real-world example of how wireless signals i
 
 - Short battery life; no global satellite detection.
 
-### 406.025 MHz Digital Beacons (primary since 1980s): {#mhz-digital-beacons-primary-since-1980s}
+### 406.025 MHz Digital Beacons (primary since 1980s):
 
 - Dedicated protected band (406.0--406.1 MHz).
 
@@ -72,7 +72,7 @@ This makes ELT systems an excellent real-world example of how wireless signals i
 
 - 15-character hexadecimal unique ID (HEX ID).
 
-- Registration links to owner, vessel/aircraft details, and contacts → verifies alerts and reduces false alarms.
+- Registration links to owner, vessel/aircraft details and contacts → verifies alerts and reduces false alarms.
 
 - Doppler processing in Low-Earth Orbit Search and Rescue (LEOSAR) initially yielded \~5 km accuracy; later GNSS integration provides \~100 m or better.
 
