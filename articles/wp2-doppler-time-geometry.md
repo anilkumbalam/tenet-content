@@ -6,9 +6,11 @@ This white paper explains how motion and time become information in RF systems, 
 
 ## Introduction
 
+Every radio transmission carries far more than data. Hidden within every RF signal are clues about motion, distance, geometry and time. Modern navigation, radar and search-and-rescue systems exploit these hidden dimensions to determine where objects are, how fast they are moving and how entire networks remain synchronized.
+
 When a satellite determines your location or tracks a moving object, it is not just decoding data, it is measuring time, motion and geometry.
 
-When engineers think of wireless communication, the focus often lies on modulation schemes, coding and throughput. However, in many safety critical and sensing oriented systems, **the most valuable information is not the payload data but what the signal reveals about space and motion**.
+Wireless communication is often viewed through the lens of modulation schemes, coding and throughput. Yet in navigation, sensing and safety-critical systems, **the most valuable information is not the payload itself, but what the signal reveals about the physical world**.
 
 A single RF transmission inherently carries:
 
@@ -18,7 +20,7 @@ A single RF transmission inherently carries:
 
 - **Spatial information** → constrained by geometry between nodes ^2^
 
-Systems that exploit these properties can locate aircraft, synchronize global clocks, track vehicles and rescue people in distress, sometimes with **no bidirectional communication at all**.
+Systems that exploit these properties can locate aircraft, synchronize clocks across continents, track vehicles and rescue people in distress, sometimes without **decoding a single bit of payload data**.
 
 ## Doppler Shift: Motion as a Measurement Tool
 
