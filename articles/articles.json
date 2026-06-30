@@ -29,7 +29,7 @@
   },
   {
     "id": "wp2-doppler",
-    "title": "Doppler, Time and Geometry in RF: How Space, Time and Motion Encode Information",
+    "title": "Doppler, Timing and Geometry in RF: How Space, Time and Motion Encode Information",
     "summary": "How Doppler shift, Time of Arrival (ToA), Time Difference of Arrival (TDoA) and geometry are used to determine position, velocity and signal origin. Connecting the principles behind GNSS, radar, ADS-B multilateration and satellite search-and-rescue systems.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
