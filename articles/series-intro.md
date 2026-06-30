@@ -10,7 +10,7 @@ This series try to explain the deeper structure that governs all wireless system
 
 At its core, every wireless system is constrained by a small set of physical realities. Everything else, hardware, algorithms and software operate within these limits.
 
-- **Geometry** → The spatial relationship between transmitters and receivers
+- **Space** → The spatial relationship between transmitters and receivers
 
 - **Time** → The precision with which signals can be measured
 
