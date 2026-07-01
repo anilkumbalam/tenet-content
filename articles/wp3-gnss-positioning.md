@@ -52,7 +52,7 @@ While satellite clocks are highly stable, receiver clocks are not. The system wo
 
 However, this also means:
 
-**Any unmodeled timing bias appears directly as a position error.**
+**Any unmodeled timing bias translates directly into a position error.**
 
 Timing is not just one error source among many; it is the **dominant sensitivity axis** of GNSS.
 
