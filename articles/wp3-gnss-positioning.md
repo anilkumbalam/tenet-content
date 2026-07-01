@@ -32,7 +32,7 @@ Every GNSS position fix depends on assumptions about:
 
 - Environmental conditions
 
-When these assumptions are incorrect, even slightly, errors grow rapidly.
+When these assumptions are incorrect, even slightly, positioning errors grow rapidly.
 
 ## GNSS Is a Time Measurement Problem First
 
