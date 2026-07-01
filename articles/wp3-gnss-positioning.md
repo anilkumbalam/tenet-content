@@ -141,11 +141,7 @@ These effects do not add noise; they add **bias**, which is far more dangerous ^
 
 ### Multipath: When One Signal Becomes Many
 
-Multipath occurs when GNSS signals:
-
-- Reflect off buildings, terrain, or structures
-
-- Arrive at the receiver via multiple paths
+Multipath occurs when GNSS signals reflect from buildings, terrain or other structures, causing multiple copies of the same signal to arrive at the receiver along different paths.
 
 The receiver cannot easily distinguish:
 
@@ -163,7 +159,7 @@ Consequences:
 
 Key insight:
 
-**Multipath corrupts time measurements while preserving signal strength, making it hard to detect and hard to correct**.
+**Multipath does not weaken the signal; it corrupts the measured signal travel time, making it difficult to detect and difficult to correct**.
 
 This is why GNSS can report "strong signal" yet produce poor position fixes.
 
