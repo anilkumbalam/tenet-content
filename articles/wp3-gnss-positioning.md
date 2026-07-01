@@ -165,21 +165,23 @@ This is why GNSS can report "strong signal" yet produce poor position fixes.
 
 ## "More Satellites" Is Not a Universal Fix
 
-A common intuition is that adding more satellites always improves accuracy. This is only conditionally true.
+A common intuition is that adding more satellites always improves positioning accuracy. This is true only when the additional measurements provide new information.
 
 Additional satellites help when they:
 
-- Improve geometry
+- Improve satellite geometry
 
-- Add independent viewing angles
+- Provide independent viewing angles
+
+- Reduce the effect of random measurement errors
 
 They help far less when:
 
-- Signals are correlated (e.g., same reflection surfaces)
+- Signals are correlated (e.g., affected by the same reflection surfaces)
 
-- Geometry remains poor
+- Satellite Geometry remains poor
 
-- Environmental bias dominates
+- Common environmental biases (such as atmospheric delay or correlated multipath) affect many measurements in the same way.
 
 Thus:
 
