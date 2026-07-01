@@ -34,11 +34,11 @@ Every GNSS position fix depends on assumptions about:
 
 When these assumptions are incorrect, even slightly, positioning errors grow rapidly.
 
-## GNSS Is a Time Measurement Problem First
+## GNSS Is Fundamentally a Time Measurement System
 
-As established previously, GNSS pseudorange measurements are fundamentally **time measurements**.
+A GNSS receiver never measures its position directly. Instead, it measures the time taken for signals to travel from multiple satellites to the receiver. These signal travel times are expressed as pseudoranges, from which the receiver estimates its position.
 
-A timing error of:
+A timing error of the following order translates directly into a position error of approximately:
 
 - 1 microsecond → \~300 meters
 
