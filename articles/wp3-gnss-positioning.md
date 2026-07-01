@@ -97,9 +97,9 @@ Even with perfect timing, GNSS accuracy depends critically on **satellite geomet
 
 If satellites are:
 
-- Widely separated across the sky → strong geometric constraints
+- Widely separated across the sky → Strong geometric diversity → Better positioning accuracy
 
-- Clustered in one region → weak constraints
+- Clustered in one region → Weak geometric diversity → Poor positioning accuracy
 
 This effect is quantified as **Geometric Dilution of Precision (GDOP)**.
 
