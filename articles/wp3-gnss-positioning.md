@@ -139,7 +139,7 @@ GNSS theory assumes signals propagate through free space at the speed of light. 
 
 These effects do not add noise; they add **bias**, which is far more dangerous ^2^
 
-## Multipath: The Most Insidious Error Source
+### Multipath: When One Signal Becomes Many
 
 Multipath occurs when GNSS signals:
 
@@ -163,7 +163,7 @@ Consequences:
 
 Key insight:
 
-**Multipath corrupts time measurements while preserving signal strength, making it hard to detect and hard to correct.**
+**Multipath corrupts time measurements while preserving signal strength, making it hard to detect and hard to correct**.
 
 This is why GNSS can report "strong signal" yet produce poor position fixes.
 
