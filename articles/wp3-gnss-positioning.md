@@ -185,7 +185,7 @@ They help far less when:
 
 Thus:
 
-**Quantity of measurements does not replace quality of constraints.**
+**More measurements do not necessarily mean more information. What matters is whether they provide independent constraints on the receiver's position**.
 
 This directly connects to the geometry limits discussed earlier.
 
