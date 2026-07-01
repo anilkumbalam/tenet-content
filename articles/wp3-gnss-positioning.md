@@ -4,7 +4,7 @@ Global Navigation Satellite Systems (GNSS) such as **GPS** and **Galileo** are o
 
 GNSS is one of the clearest real-world examples of how time, geometry and signal propagation interact to produce position estimates.
 
-This white paper explains why GNSS positioning is fundamentally harder than it appears. Building on the concepts of Doppler, time, geometry, and clock offsets, it examines real-world error sources, multipath, atmospheric delay, satellite geometry, clock behaviour, and environmental blockage. This shows why more satellites or more processing power do not automatically lead to better position estimates. The goal is not to describe or study every error term, but to develop **engineering intuition** about why GNSS works when it does, and why it fails when conditions degrade.
+This white paper explains why GNSS positioning is fundamentally harder than it appears. Building on the concepts of Doppler, time, geometry and clock offsets, it examines real-world error sources, multipath, atmospheric delay, satellite geometry, clock behaviour and environmental blockage. This shows why more satellites or more processing power do not automatically lead to better position estimates. The goal is to develop **engineering intuition** about why GNSS works when it does and why it fails when conditions degrade.
 
 ## The Illusion of Simplicity
 
@@ -20,7 +20,7 @@ At a high level, GNSS positioning appears straightforward:
 
 This simplicity hides a critical fact:
 
-**GNSS is not a direct measurement of position. It is an inference made under uncertainty.**
+**GNSS is not a positioning problem. It is an inference problem. A GNSS receiver does not directly measure position. Instead, it infers position from a collection of imperfect measurements**.
 
 Every GNSS position fix depends on assumptions about:
 
