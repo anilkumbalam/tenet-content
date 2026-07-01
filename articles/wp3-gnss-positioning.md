@@ -191,27 +191,19 @@ This directly connects to the geometry limits discussed earlier.
 
 ## GNSS Is Fragile by Design
 
-GNSS signals are:
-
-- Extremely weak at the Earth's surface
-
-- Easily blocked, reflected, or interfered with
-
-- Vulnerable to jamming and spoofing ^3^
-
-This fragility is not accidental. GNSS prioritizes:
+GNSS signals arrive at the Earth's surface with extremely low power. This makes them inherently vulnerable to blockage, reflections, interference, jamming and spoofing. This fragility is not a design flaw. It is a consequence of the system's design goals. GNSS was designed to provide:
 
 - Global coverage
 
-- Passive reception
+- Passive reception (receivers only listen; they do not transmit)
 
-- Low satellite transmit power
+- Long satellite lifetime through efficient use of power
 
-The result is a system that is:
+These choices enable worldwide navigation using inexpensive receivers, but they also leave GNSS vulnerable to local disturbances. The result is a system that is:
 
 - Brilliant in open environments
 
-- Brittle in constrained or adversarial ones
+- Brittle in dense urban, indoor or adversarial environments
 
 Understanding this fragility is essential for engineers working on:
 
