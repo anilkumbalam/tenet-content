@@ -16,7 +16,7 @@ At a high level, GNSS positioning appears straightforward:
 
 3.  Distances are computed from time delay
 
-4.  Position is obtained by Pseudorange-based multilateration with clock bias estimation
+4.  Position is estimated by solving pseudorange measurements together with receiver clock bias
 
 This simplicity hides a critical fact:
 
