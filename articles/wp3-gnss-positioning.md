@@ -215,7 +215,9 @@ Understanding this fragility is essential for engineers working on:
 
 ## Why GNSS Often Fails Gracefully and Sometimes Doesn't
 
-GNSS receivers apply:
+A GNSS receiver does more than compute a position. Because it estimates position from imperfect measurements, it must continually assess whether those measurements are mutually consistent.
+
+To achieve this, receivers employ techniques such as:
 
 - Statistical estimation
 
@@ -223,33 +225,31 @@ GNSS receivers apply:
 
 - Residual analysis
 
-These allow graceful degradation when:
+When measurement errors are largely random and satellite geometry is favourable, these techniques allow the receiver to reject inconsistent observations and produce a stable position estimate. Performance degrades gradually rather than suddenly.
 
-- Errors are random
+However, GNSS fails catastrophically when the underlying assumptions of the estimation process are no longer valid:
 
-- Geometry is reasonable
+- Environmental biases dominate the measurements
 
-However, GNSS fails catastrophically when:
+- Satellite Geometry is poor
 
-- Biases dominate
+- Multipath affects many measurements simultaneously
 
-- Geometry is poor
+- Jamming or spoofing goes undetected
 
-- Incorrect assumptions go undetected
+Unlike random noise, systematic biases do not average out. Instead, they shift many measurements in the same direction. The receiver may therefore compute a position that appears internally consistent while being significantly wrong. This explains why:
 
-This explains why:
-
-- GNSS errors can jump suddenly
+- Position errors can increase suddenly
 
 - "Last known good fix" can be misleading
 
-- Confidence estimates are as important as position estimates
+- A strong signal does not necessarily indicate an accurate position
 
 ## The Engineering Takeaway
 
-GNSS success requires **simultaneous alignment** of:
+GNSS succeeds only when several conditions are **satisfied simultaneously**:
 
-- Accurate time
+- Accurate timing
 
 - Favourable geometry
 
@@ -261,7 +261,7 @@ Failure in any one dimension can dominate the solution.
 
 The most important lesson is this:
 
-**GNSS positioning is not about computing where you are. It is about knowing when you can trust the answer.**
+**A GNSS receiver does not measure where you are. It estimates the position that best explains the available measurements. The real engineering challenge is not computing that estimate, it is knowing when it can no longer be trusted**
 
 ## Conclusion
 
