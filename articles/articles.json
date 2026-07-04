@@ -16,7 +16,7 @@
   {
     "id": "wp1-elt",
     "title": "Emergency Locator Transmitters: When Reliability Means Survival",
-    "summary": "How Cospas-Sarsat locates distress beacons using 406 MHz digital transmissions, Doppler positioning and satellite geometry even when the beacon itself does not provide GPS coordinates. From the era of 121.5 MHz analog beacons to today's Galileo Return Link Service.",
+    "summary": "Every radio signal carries more than data. Hidden within every transmission are clues about motion, distance, time and geometry. Discover how modern RF systems use these hidden dimensions to navigate, synchronize, track and even locate distress beacons without GPS.",
     "author": "Anil Joseph",
     "credential": "Senior Member IEEE",
     "date": "2023-02-15",
