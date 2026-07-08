@@ -1,11 +1,9 @@
 ## Executive Summary
 
-Most people walk past electric poles and transmission towers without
-noticing them. They see wires overhead, metal structures in the
-distance, and assume it is all simply "electricity."
+Every day, we pass beneath electric poles and transmission towers without giving them a second thought. We see wires overhead, metal structures in the
+distance and assume it is all simply "electricity."
 
-But if you pause and look carefully, the power grid begins to reveal
-itself.
+But if you pause and look carefully, you begin to realise that the power grid is quietly revealing the invisible physical constraints that shaped its design.
 
 Why are some poles short concrete columns while others are massive steel
 lattice towers?\
@@ -15,7 +13,7 @@ Why do small metallic weights hang near the ends of some lines?\
 Why do high-voltage towers sometimes carry circular metal rings near the
 insulators?
 
-None of these details are decorative. Every visible feature is a
+None of these details are decorative. Every visible feature is a engineering
 response to physics.
 
 > Voltage.\
@@ -27,8 +25,7 @@ Pollution.\
 Safety margins.\
 Economics.
 
-What looks like ordinary infrastructure is actually applied
-electromagnetics and mechanics stretched across thousands of kilometres.
+What appears to be ordinary infrastructure is, in reality, applied electromagnetics, mechanics, materials science and economics stretched across thousands of kilometres.
 
 Once you learn how to read it, every street becomes a laboratory.
 
