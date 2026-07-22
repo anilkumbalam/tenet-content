@@ -44,7 +44,7 @@ window.CONTENT = {
       
       tag: "Industrial IoT · Proven Reliability",
       title: "Industrial Connectivity That Never <span class='accent'>Stops Working</span>",
-      subtitle: "Keep factories, utilities, and remote sites online 24/7 with Credo self-healing industrial routers and edge gateways built for zero downtime.",    
+      subtitle: "Keep factories, utilities and remote sites online 24/7 with Credo self-healing industrial routers and edge gateways built for zero downtime.",    
       features: [
         { icon: "⚡", label: "99.97% Field-Verified Uptime" },
         { icon: "🔄", label: "<1s Auto-Failover", prefix: "<" },
@@ -108,7 +108,7 @@ window.CONTENT = {
       
       tag: "RF Engineering · Deployment Reality",
       title: "Connectivity That Works Where <span class='accent'>Others Fail</span>",
-      subtitle: "Most systems fail due to RF conditions, antenna placement, and real-world constraints—not the modem. We design for the conditions your system actually faces.",
+      subtitle: "Most systems fail due to RF conditions, antenna placement and real-world constraints, not the modem. We design for the conditions your system actually faces.",
       
       benefits: [
         { icon: "📡", label: "RF-Driven Design" },
@@ -199,10 +199,10 @@ window.CONTENT = {
       
       tag: "☔ Monsoon-Ready Infrastructure",
       title: "<span class='accent'>Monsoon-Proof</span> Connectivity That Never Fails",
-      subtitle: "Weatherproof enclosures and lightning protection keep critical infrastructure online through India's harshest monsoons—from heavy rainfall to extreme humidity.",
+      subtitle: "Weatherproof enclosures and lightning protection keep critical infrastructure online through India's harshest monsoons, from heavy rainfall to extreme humidity.",
       
       weatherProof: [
-        { icon: "💧", label: "IP65 Water & Dust Resistance" },
+        { icon: "💧", label: "Water & Dust Resistance" },
         { icon: "🌧️", label: "Extreme Humidity Resilience" },
         { icon: "⚡", label: "Lightning-Grade Surge Protection" }
       ],
@@ -221,7 +221,7 @@ window.CONTENT = {
       icon: '🏙️',
       title: 'Smart Cities & Utilities',
       subtitle: 'Reliable connectivity for smart grids, traffic systems, and city-scale SCADA',
-      description: 'Power smart grids, traffic management, and city-wide SCADA systems with redundant, multi-path connectivity designed for zero-downtime operations.',
+      description: 'Power smart grids, traffic management and city-wide SCADA systems with redundant, multi-path connectivity designed for zero-downtime operations.',
       useCases: [
         { icon: '💡', label: 'Smart Grid Management' },
         { icon: '🚦', label: 'Intelligent Traffic Control' },
@@ -236,7 +236,7 @@ window.CONTENT = {
       icon: '🏭',
       title: 'Industrial IoT & Manufacturing',
       subtitle: 'Cellular connectivity for factory automation, asset tracking, and predictive maintenance',
-      description: 'Enable Industry 4.0 with secure, always-on M2M connectivity across factory floors, warehouses, and remote facilities. Real-time telemetry, predictive maintenance, and centralized control.',
+      description: 'Enable Industry 4.0 with secure, always-on M2M connectivity across factory floors, warehouses and remote facilities. Real-time telemetry, predictive maintenance and centralized control.',
       useCases: [
         { icon: '⚙️', label: 'Factory Automation' },
         { icon: '📊', label: 'Real-Time Asset Tracking' },
@@ -251,7 +251,7 @@ window.CONTENT = {
       icon: '🌐',
       title: 'Enterprise SD-WAN',
       subtitle: 'Intelligent WAN for multi-branch offices, retail chains, and remote workforce',
-      description: 'Transform your network with intelligent, policy-driven SD-WAN. Seamlessly connect offices, stores, and remote workers with centralized visibility and zero-touch deployment.',
+      description: 'Transform your network with intelligent, policy-driven SD-WAN. Seamlessly connect offices, stores and remote workers with centralized visibility and zero-touch deployment.',
       useCases: [
         { icon: '🏢', label: 'Multi-Branch Connectivity' },
         { icon: '🛒', label: 'Retail Chain Networks' },
@@ -266,7 +266,7 @@ window.CONTENT = {
       icon: '📡',
       title: 'Remote Site Monitoring',
       subtitle: 'Ruggedized connectivity for surveillance, sensors, and field telemetry',
-      description: 'Deploy secure, weatherproof connectivity for remote installations, surveillance, environmental monitoring, and field telemetry. Built for harsh conditions and inaccessible locations.',
+      description: 'Deploy secure, weatherproof connectivity for remote installations, surveillance, environmental monitoring and field telemetry. Built for harsh conditions and inaccessible locations.',
       useCases: [
         { icon: '📹', label: 'Video Surveillance' },
         { icon: '🌡️', label: 'Environmental Sensors' },
@@ -291,12 +291,12 @@ window.CONTENT = {
     m2m_intro: {
       heading:  "M2M Cellular Gateways",
       subhead:  "Always-On Connectivity for Mission-Critical Operations",
-      body:     "Empower seamless machine to machine communication across industrial sites, enterprises, and remote deployments with our rugged, high-performance cellular gateway. Designed for real-world challenges, our gateway portfolio ensures Always-On Connectivity, secure data transport, and centralized control.",
+      body:     "Empower seamless machine to machine communication across industrial sites, enterprises and remote deployments with our rugged, high-performance cellular gateway. Designed for real-world challenges, our gateway portfolio ensures Always-On Connectivity, secure data transport and centralized control.",
     },
     ces_intro: {
       heading:  "Connectivity Evolution Platform (cWAN)",
       subhead:  "Future-Proof SD-WAN Architecture for Modern Enterprises",
-      body:     "Leverage our modular, scalable platform—powered by a split-design architecture—to modernize legacy infrastructure, enhance flexibility, and drive enterprise-wide digital transformation. Designed for service providers, industrial networks, and enterprise WANs, our solution ensures agility, visibility, and end-to-end control.",
+      body:     "Leverage our modular, scalable platform—powered by a split-design architecture—to modernize legacy infrastructure, enhance flexibility and drive enterprise-wide digital transformation. Designed for service providers, industrial networks and enterprise WANs, our solution ensures agility, visibility and end-to-end control.",
     },
     indoor: {
       label:   "Credo Indoor Industrial Gateways",
@@ -305,7 +305,7 @@ window.CONTENT = {
       // NEW STRUCTURE - Decision-first layout
       hero: {
         headline: "Reliable Indoor Connectivity for Industrial and Enterprise Environments",
-        subhead: "Built for control rooms, factory floors, and enterprise networks where downtime is not acceptable.",
+        subhead: "Built for control rooms, factory floors and enterprise networks where downtime is not acceptable.",
         description: "These gateways deliver secure, always-on connectivity with remote management and zero-touch deployment.",
       },
       
@@ -337,7 +337,7 @@ window.CONTENT = {
         },
         {
           title: "Manage Remotely",
-          desc: "Full control via Credo CMS, web interface, or SMS commands — even in the most inaccessible locations. Real-time visibility and diagnostics."
+          desc: "Full control via Credo CMS, web interface or SMS commands, even in the most inaccessible locations. Real-time visibility and diagnostics."
         },
         {
           title: "Secure Your Data",
@@ -347,7 +347,7 @@ window.CONTENT = {
       
       differentiator: {
         title: "Why This Gateway Stands Out",
-        content: "Built for 24×7 industrial operation with fanless cooling, metal enclosure, and field-proven reliability across 80,000+ deployments. Designed not just in the lab — but validated in real-world factories, warehouses, and remote sites across three continents."
+        content: "Built for 24×7 industrial operation with fanless cooling, metal enclosure and field-proven reliability across 80,000+ deployments. Designed not just in the lab, but validated in real-world factories, warehouses and remote sites across three continents."
       },
       
       techCapabilities: [
@@ -371,7 +371,7 @@ window.CONTENT = {
         { k:"Management",     v:"Web, CLI, SNMP, Credo CMS, TR069" },
         { k:"Form Factor",    v:"Compact DIN-Rail / Wall Mount" },
         { k:"Power",          v:"Wide Voltage Input (9-36V DC)" },
-        { k:"Environment",    v:"Industrial Grade (-30°C to +75°C)" },
+        { k:"Environment",    v:"Industrial Grade (-30°C to +70°C)" },
         { k:"Deployment",     v:"80,000+ installations worldwide" },
       ],
     },
@@ -382,7 +382,7 @@ window.CONTENT = {
       hero: {
         headline: "Ruggedized Outdoor Connectivity for Extreme Environments",
         subhead: "Built for remote installations, surveillance poles, and utility substations where failure is not an option.",
-        description: "IP65-rated, pole-mountable, and powered by PoE or wide-voltage DC — engineered to survive rain, dust, temperature extremes, and years of 24×7 operation.",
+        description: "IP65-rated, pole-mountable and powered by PoE or wide range DC voltage. Engineered to survive rain, dust, temperature extremes and years of 24×7 operation.",
       },
       
       useCases: [
@@ -397,7 +397,7 @@ window.CONTENT = {
       enables: [
         {
           title: "Survive Extreme Conditions",
-          desc: "IP65 weatherproof enclosure withstands rain, dust, and temperature extremes from -30°C to +75°C. Fanless design eliminates moving parts that fail in harsh environments."
+          desc: "IP65 weatherproof enclosure withstands rain, dust and temperature extremes from -30°C to +70°C. Fanless design eliminates moving parts that fail in harsh environments."
         },
         {
           title: "Deploy Anywhere Fast",
@@ -409,11 +409,11 @@ window.CONTENT = {
         },
         {
           title: "Know When Power Fails",
-          desc: "Dying gasp alerts instantly notify you when outdoor sites lose power — before equipment goes offline and before it's too late."
+          desc: "Optional Dying gasp alerts instantly notify you when outdoor sites lose power, before equipment goes offline and before it's too late."
         },
         {
           title: "Manage Remotely",
-          desc: "Complete control via CMS, TR069, SNMP, or SMS — even for the most inaccessible outdoor locations. Zero-touch provisioning simplifies deployment."
+          desc: "Complete control via CMS, TR069, SNMP or SMS, even in the most inaccessible outdoor locations. Zero-touch provisioning simplifies deployment."
         },
         {
           title: "Handle Complex Topologies",
@@ -423,7 +423,7 @@ window.CONTENT = {
       
       differentiator: {
         title: "Why This Gateway Stands Out",
-        content: "Engineered specifically for outdoor deployment with IP65-rated weatherproof housing, integrated lightning protection, and industrial-grade components tested to withstand shock, vibration, and electromagnetic interference. Proven in thousands of remote installations across all climate zones."
+        content: "Engineered specifically for outdoor deployment with IP65-rated weatherproof housing, integrated lightning protection and industrial-grade components tested to withstand shock, vibration and electromagnetic interference. Proven in thousands of remote installations across all climate zones."
       },
       
       techCapabilities: [
@@ -434,9 +434,9 @@ window.CONTENT = {
         "Pole and mast mounting with outdoor-rated hardware",
         "Multi-VPN support (IPSec, OpenVPN, L2TP, GRE)",
         "Advanced routing with OSPF, BGP, and static routes",
-        "Dying gasp alert for power loss notification",
+        "Dying gasp alert for power loss notification (optional)",
         "Gigabit Ethernet ports for high-bandwidth applications",
-        "Extended temperature range (-30°C to +75°C operational)"
+        "Extended temperature range (upto +70°C operational)"
       ],
       
       specs: [
@@ -447,7 +447,7 @@ window.CONTENT = {
         { k:"Mounting",       v:"Pole/Mast (Outdoor Hardware Included)" },
         { k:"Security",       v:"Multi-VPN, Firewall, Encryption" },
         { k:"Management",     v:"CMS, TR069, SNMP, SMS" },
-        { k:"Environment",    v:"Extended Industrial (-30°C to +75°C)" },
+        { k:"Environment",    v:"Extended Industrial (upto +70°C)" },
         { k:"Deployment",     v:"Thousands of remote sites worldwide" },
       ],
     },
@@ -457,8 +457,8 @@ window.CONTENT = {
       
       hero: {
         headline: "Protocol-Aware Connectivity for Industrial Automation & Utilities",
-        subhead: "Purpose-built for SCADA, smart grids, and industrial control systems where every data point matters.",
-        description: "Native Modbus RTU/TCP, serial interfaces (RS232/RS485), and enterprise security for deterministic, real-time telemetry and remote control.",
+        subhead: "Purpose-built for SCADA, smart grids and industrial control systems where every data point matters.",
+        description: "Native Modbus RTU/TCP, serial interfaces (RS232/RS485) and enterprise security for deterministic, real-time telemetry and remote control.",
       },
       
       useCases: [
@@ -473,11 +473,11 @@ window.CONTENT = {
       enables: [
         {
           title: "Connect Legacy Equipment",
-          desc: "Native Modbus RTU/TCP and serial interfaces (RS232/RS485) connect directly to PLCs, RTUs, and field instruments without protocol converters or middleware."
+          desc: "Native Modbus RTU/TCP and serial interfaces (RS232/RS485) connect directly to PLCs, RTUs and field instruments without protocol converters or middleware."
         },
         {
           title: "Secure Critical Infrastructure",
-          desc: "Military-grade encryption, VPN tunneling, and enterprise firewall protect SCADA communications from cyber threats and unauthorized access."
+          desc: "Military-grade encryption, VPN tunneling and enterprise firewall protect SCADA communications from cyber threats and unauthorized access."
         },
         {
           title: "Ensure High Availability",
@@ -489,7 +489,7 @@ window.CONTENT = {
         },
         {
           title: "Operate in Harsh Conditions",
-          desc: "Industrial-grade components, fanless cooling, and wide voltage support handle control cabinet environments with temperature extremes and electrical noise."
+          desc: "Industrial-grade components, fanless cooling and wide voltage support handle control cabinet environments with temperature extremes and electrical noise."
         },
         {
           title: "Minimize Power Consumption",
@@ -499,7 +499,7 @@ window.CONTENT = {
       
       differentiator: {
         title: "Why This Gateway Stands Out",
-        content: "Purpose-engineered for SCADA deployments with native industrial protocol support, deterministic performance, and security features designed specifically for critical infrastructure. Tested and certified for deployment in utilities, energy, water, and industrial automation environments."
+        content: "Purpose-engineered for SCADA deployments with native industrial protocol support, deterministic performance and security features designed specifically for critical infrastructure. Tested and certified for deployment in utilities, energy, water and industrial automation environments."
       },
       
       techCapabilities: [
@@ -509,7 +509,6 @@ window.CONTENT = {
         "Multi-VPN tunneling (IPSec, OpenVPN, GRE, L2TP)",
         "VRRP high-availability with hardware watchdog",
         "Advanced routing (OSPF, BGP, static) for multi-site topologies",
-        "Enterprise firewall with stateful packet inspection",
         "TR069 remote management for large-scale deployments",
         "DIN-rail mounting for control cabinet installation",
         "Ultra-low power consumption for battery backup operation"
@@ -534,7 +533,7 @@ window.CONTENT = {
       hero: {
         headline: "Secure, Resilient Site-to-Site Connectivity for Distributed Enterprises",
         subhead: "Built for demanding enterprise and ISP environments requiring maximum uptime and flexibility.",
-        description: "High-performance hardware with advanced security, sub-second failover, and centralized management for multi-site VPN deployments.",
+        description: "High-performance hardware with advanced security, sub-second failover and centralized management for multi-site VPN deployments.",
       },
       
       useCases: [
@@ -553,7 +552,7 @@ window.CONTENT = {
         },
         {
           title: "Eliminate Downtime",
-          desc: "Sub-second hardware-level failover with dual WAN, automatic backup, and hardware watchdogs keep critical business links operational 24/7."
+          desc: "Sub-second hardware-level failover with dual WAN, automatic backup and hardware watchdogs keep critical business links operational 24/7."
         },
         {
           title: "Balance Traffic Intelligently",
@@ -561,11 +560,11 @@ window.CONTENT = {
         },
         {
           title: "Support Modern Networks",
-          desc: "Full IPv4/IPv6 dual-stack with enterprise firewall, NAT, port forwarding, DNS, and routing protocols handle complex network topologies."
+          desc: "Full IPv4/IPv6 dual-stack with enterprise firewall, NAT, port forwarding, DNS and routing protocols handle complex network topologies."
         },
         {
           title: "Deploy and Manage at Scale",
-          desc: "Credo CMS enables remote provisioning, firmware updates, and visual monitoring across hundreds of distributed VPN gateways from a single dashboard."
+          desc: "Credo CMS enables remote provisioning, firmware updates and visual monitoring across hundreds of distributed VPN gateways from a single dashboard."
         },
         {
           title: "Install Anywhere",
@@ -575,7 +574,7 @@ window.CONTENT = {
       
       differentiator: {
         title: "Why This Gateway Stands Out",
-        content: "Engineered for carrier-grade performance with hardware-accelerated VPN encryption, sub-second failover, and proven reliability in demanding ISP and enterprise environments. Combines the flexibility of software-defined networking with the robustness of purpose-built hardware."
+        content: "Engineered for carrier-grade performance with hardware-accelerated VPN encryption, sub-second failover and proven reliability in demanding ISP and enterprise environments. Combines the flexibility of software-defined networking with the robustness of purpose-built hardware."
       },
       
       techCapabilities: [
@@ -609,7 +608,7 @@ window.CONTENT = {
       hero: {
         headline: "Centralized Platform to Monitor, Configure, and Manage Devices at Scale",
         subhead: "Built for industrial and enterprise networks managing thousands of distributed gateways and routers.",
-        description: "Powerful orchestration suite with deep visibility, automation, and remote troubleshooting to ensure network uptime and SLA adherence.",
+        description: "Powerful orchestration suite with deep visibility, automation and remote troubleshooting to ensure network uptime and SLA adherence.",
       },
       
       useCases: [
@@ -624,7 +623,7 @@ window.CONTENT = {
       enables: [
         {
           title: "Manage Thousands of Devices",
-          desc: "Centrally control firmware, configurations, SIM cards, and access policies across your entire deployment from a single unified dashboard."
+          desc: "Centrally control firmware, configurations, SIM cards and access policies across your entire deployment from a single unified dashboard."
         },
         {
           title: "Deploy Without Site Visits",
@@ -632,25 +631,25 @@ window.CONTENT = {
         },
         {
           title: "See Everything in Real-Time",
-          desc: "Real-time device status, link quality, data usage, and critical alerts ensure you catch problems before they impact operations."
+          desc: "Real-time device status, link quality, data usage and critical alerts ensure you catch problems before they impact operations."
         },
         {
           title: "Scale On Demand",
-          desc: "Deploy on public cloud, private cloud, or on-premise with high-availability architecture that grows with your network."
+          desc: "Deploy on public cloud, private cloud or on-premise with high-availability architecture that grows with your network."
         },
         {
           title: "Control Access Securely",
-          desc: "Multi-tenancy, role-based access control (RBAC), and granular permissions ensure secure operations across teams and organizations."
+          desc: "Multi-tenancy, role-based access control (RBAC) and granular permissions ensure secure operations across teams and organizations."
         },
         {
           title: "Troubleshoot Remotely",
-          desc: "Visual monitoring tools, diagnostics, and remote access capabilities enable rapid troubleshooting without physical site access."
+          desc: "Visual monitoring tools, diagnostics and remote access capabilities enable rapid troubleshooting without physical site access."
         }
       ],
       
       differentiator: {
         title: "Why This Platform Stands Out",
-        content: "Purpose-built for industrial and enterprise deployments with advanced automation, multi-tenant architecture, and proven scalability managing tens of thousands of devices in production. Unlike generic device management platforms, CMS understands cellular gateways, SD-WAN, and industrial protocols natively."
+        content: "Purpose-built for industrial and enterprise deployments with advanced automation, multi-tenant architecture and proven scalability managing tens of thousands of devices in production. Unlike generic device management platforms, CMS understands cellular gateways, SD-WAN, and industrial protocols natively."
       },
       
       techCapabilities: [
@@ -683,8 +682,8 @@ window.CONTENT = {
       
       hero: {
         headline: "Enterprise SD-WAN with Advanced Analytics and WAN Bonding",
-        subhead: "Built for enterprises and service providers demanding total visibility, performance optimization, and multi-site resilience.",
-        description: "Split-plane architecture with bandwidth aggregation, comprehensive reporting dashboards, and intent-based routing for complex multi-site networks.",
+        subhead: "Built for enterprises and service providers demanding total visibility, performance optimization and multi-site resilience.",
+        description: "Split-plane architecture with bandwidth aggregation, comprehensive reporting dashboards and intent-based routing for complex multi-site networks.",
       },
       
       useCases: [
@@ -703,7 +702,7 @@ window.CONTENT = {
         },
         {
           title: "Get Deep Network Intelligence",
-          desc: "Advanced reporting dashboards reveal network performance, application usage, bandwidth trends, and SLA compliance. Make data-driven decisions about network optimization and capacity planning."
+          desc: "Advanced reporting dashboards reveal network performance, application usage, bandwidth trends and SLA compliance. Make data-driven decisions about network optimization and capacity planning."
         },
         {
           title: "Route Traffic Intelligently",
@@ -715,7 +714,7 @@ window.CONTENT = {
         },
         {
           title: "Visualize Everything in Real-Time",
-          desc: "Unified orchestration interface shows topology, tunnel health, link quality, and alerts in one dashboard. Provision new sites, troubleshoot issues, and monitor performance from anywhere."
+          desc: "Unified orchestration interface shows topology, tunnel health, link quality and alerts in one dashboard. Provision new sites, troubleshoot issues, and monitor performance from anywhere."
         },
         {
           title: "Scale Across Any Infrastructure",
@@ -761,7 +760,7 @@ window.CONTENT = {
       
       hero: {
         headline: "Enterprise-Grade SD-WAN Without the Complexity",
-        subhead: "Built for branch offices, retail locations, and distributed sites requiring fast, secure, intelligent routing.",
+        subhead: "Built for branch offices, retail locations and distributed sites requiring fast, secure, intelligent routing.",
         description: "Same proven split-plane architecture as full cWAN, streamlined for edge deployment without reporting overhead or WAN bonding complexity.",
       },
       
@@ -777,7 +776,7 @@ window.CONTENT = {
       enables: [
         {
           title: "Deploy at Scale Without Complexity",
-          desc: "Zero-touch provisioning means ship devices to site, power on, and they self-configure. Scale to hundreds of edge locations without on-site IT expertise or truck rolls."
+          desc: "Zero-touch provisioning means ship devices to site, power on and they self-configure. Scale to hundreds of edge locations without on-site IT expertise or truck rolls."
         },
         {
           title: "Optimize Traffic Intelligently",
@@ -797,7 +796,7 @@ window.CONTENT = {
         },
         {
           title: "Manage Everything Centrally",
-          desc: "Visual orchestration interface provides real-time topology monitoring, tunnel health, and alerts from one unified dashboard. Manage all edge devices and policies remotely."
+          desc: "Visual orchestration interface provides real-time topology monitoring, tunnel health and alerts from one unified dashboard. Manage all edge devices and policies remotely."
         }
       ],
       
@@ -844,7 +843,7 @@ window.CONTENT = {
       hero: {
         headline: "Custom Hardware and Software Solutions Engineered for Your Exact Needs",
         subhead: "When off-the-shelf won't work, we design and build exactly what your deployment requires.",
-        description: "From ruggedized enclosures to protocol converters and specialized boards — we engineer solutions for unique industrial challenges.",
+        description: "From ruggedized enclosures to protocol converters and specialized boards, we engineer solutions for unique industrial challenges.",
       },
       
       useCases: [
@@ -859,7 +858,7 @@ window.CONTENT = {
       enables: [
         {
           title: "Solve Unique Challenges",
-          desc: "We design custom solutions for problems that standard products can't solve — from extreme temperature enclosures to specialized protocol bridges."
+          desc: "We design custom solutions for problems that standard products can't solve, from extreme temperature enclosures to specialized protocol bridges."
         },
         {
           title: "Integrate Legacy Systems",
@@ -867,7 +866,7 @@ window.CONTENT = {
         },
         {
           title: "Meet Exact Specifications",
-          desc: "Custom PCB design, specialized I/O expansion, and tailored hardware integration deliver precisely what your application demands."
+          desc: "Custom PCB design, specialized I/O expansion and tailored hardware integration deliver precisely what your application demands."
         },
         {
           title: "Deploy in Extreme Conditions",
@@ -879,13 +878,13 @@ window.CONTENT = {
         },
         {
           title: "Own Your IP",
-          desc: "You retain full intellectual property rights to custom designs — no vendor lock-in, complete control over your solution."
+          desc: "You retain full intellectual property rights to custom designs. No vendor lock-in, complete control over your solution."
         }
       ],
       
       differentiator: {
         title: "Why Choose Tenet for Custom Engineering",
-        content: "150+ years of combined engineering experience across industrial automation, cellular connectivity, and embedded systems. We've solved custom challenges for clients across utilities, manufacturing, oil & gas, and transportation — from Arctic installations to tropical deployments."
+        content: "150+ years of combined engineering experience across industrial automation, cellular connectivity and embedded systems. We've solved custom challenges for clients across utilities, manufacturing, oil & gas, and transportation — from Arctic installations to tropical deployments."
       },
       
       techCapabilities: [
@@ -916,7 +915,7 @@ window.CONTENT = {
       hero: {
         headline: "Expert Technical Guidance from Design to Deployment",
         subhead: "Deep expertise in LTE/5G, IoT architecture, and industrial network deployments.",
-        description: "Our consultants bring 150+ years of combined experience to help you design, optimize, and future-proof your embedded and network systems.",
+        description: "Our consultants bring 150+ years of combined experience to help you design, optimize and future-proof your embedded and network systems.",
       },
       
       useCases: [
@@ -957,7 +956,7 @@ window.CONTENT = {
       
       differentiator: {
         title: "Why Choose Tenet for Consulting",
-        content: "We're not just consultants — we're engineers who build the systems we recommend. Our advice comes from real-world deployment experience across 150,000+ installed devices in utilities, manufacturing, transportation, and energy sectors worldwide."
+        content: "We're not just consultants. We're engineers who build the systems we recommend. Our advice comes from real-world deployment experience across 150,000+ installed devices in utilities, manufacturing, transportation and energy sectors worldwide."
       },
       
       techCapabilities: [
@@ -987,8 +986,8 @@ window.CONTENT = {
       
       hero: {
         headline: "Secure, High-Performance Embedded Software from Silicon to Cloud",
-        subhead: "Full-stack firmware and software development optimized for performance, stability, and long-term support.",
-        description: "From board bring-up and bootloaders to cloud-connected applications — we build embedded systems that power intelligent products across industries.",
+        subhead: "Full-stack firmware and software development optimized for performance, stability and long-term support.",
+        description: "From board bring-up and bootloaders to cloud-connected applications, we build embedded systems that power intelligent products across industries.",
       },
       
       useCases: [
@@ -1003,11 +1002,11 @@ window.CONTENT = {
       enables: [
         {
           title: "Bring Hardware to Life",
-          desc: "Board bring-up, bootloaders, and hardware abstraction layers get your custom hardware operational quickly with stable, optimized low-level code."
+          desc: "Board bring-up, bootloaders and hardware abstraction layers get your custom hardware operational quickly with stable, optimized low-level code."
         },
         {
           title: "Build on Proven Platforms",
-          desc: "Linux, OpenWRT, and RTOS firmware development leverages battle-tested platforms while customizing for your specific requirements."
+          desc: "Linux, OpenWRT and RTOS firmware development leverages battle-tested platforms while customizing for your specific requirements."
         },
         {
           title: "Support Proprietary Hardware",
@@ -1023,13 +1022,13 @@ window.CONTENT = {
         },
         {
           title: "Ensure Long-Term Reliability",
-          desc: "Long-term software support, maintenance, and security patching protects your investment and keeps systems secure as threats evolve."
+          desc: "Long-term software support, maintenance and security patching protects your investment and keeps systems secure as threats evolve."
         }
       ],
       
       differentiator: {
         title: "Why Choose Tenet for Software Development",
-        content: "We build the firmware and software that powers our own products — tested in real-world deployments across 150,000+ devices. Our code runs 24/7 in mission-critical environments from Arctic weather stations to desert oil fields, proving reliability under extreme conditions."
+        content: "We build the firmware and software that powers our own products and tested in real-world deployments across 150,000+ devices. Our code runs 24/7 in mission-critical environments from Arctic weather stations to desert oil fields, proving reliability under extreme conditions."
       },
       
       techCapabilities: [
@@ -1060,7 +1059,7 @@ window.CONTENT = {
   /* ── ABOUT ── */
   about: {
     who_title:  "Making Technology Work Seamlessly",
-    who_body:   "At Tenet Networks, we design connectivity solutions that thrive in the toughest environments — from factory floors to smart cities. Built by engineers for real-world deployments, our systems are trusted across 150,000+ installations worldwide.\n\nWith over 150 years of combined leadership experience, we build products that just work: secure, reliable, and scalable. From concept to deployment and ongoing support, we're your long-term partner in connectivity and automation.",
+    who_body:   "At Tenet Networks, we design connectivity solutions that thrive in the toughest environments, from factory floors to smart cities. Built by engineers for real-world deployments, our systems are trusted across 150,000+ installations worldwide.\n\nWith over 150 years of combined leadership experience, we build products that just work: secure, reliable and scalable. From concept to deployment and ongoing support, we're your long-term partner in connectivity and automation.",
     offerings:  [
       { icon:"🏭", h:"Industrial-Grade M2M & Edge Devices",       p:"Rugged gateways that keep operations running without interruption. Proven in mission-critical deployments across harsh industrial environments." },
       { icon:"🔄", h:"Legacy-to-Digital Transformation",   p:"Upgrade without disruption. Bridge older systems with modern IoT platforms while maintaining operational continuity." },
