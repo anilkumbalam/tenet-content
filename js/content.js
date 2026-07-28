@@ -17,7 +17,7 @@ window.CONTENT = {
   },
 
   /* ═══════════════════════════════════════════════════════════
-     ✨ MODERN MODULAR HERO SLIDES - Easy to Update! ✨
+     ✨ MODERN MODULAR HERO SLIDES - Easy to  Update! ✨
      ═══════════════════════════════════════════════════════════
      
      🎯 HOW TO UPDATE:
