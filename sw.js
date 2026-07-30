@@ -15,7 +15,7 @@ const warn  = (...args) => { if (IS_DEV) console.warn('[SW]', ...args); };
         the ?v= query strings in index.html script tags to match.
         e.g. BUILD_TIMESTAMP = '20260419'  →  ?v=20260419
         This ensures the SW re-caches fresh JS files on every deploy. */
-const BUILD_TIMESTAMP = '20260729';
+const BUILD_TIMESTAMP = '20260730';
 const DEPLOY_VERSION  = BUILD_TIMESTAMP; // single source of truth
 const CACHE_VERSION = `tenet-v1.0.2-${BUILD_TIMESTAMP}`;
 const IMAGE_CACHE_VERSION = `tenet-images-v1.0.2-${BUILD_TIMESTAMP}`;
