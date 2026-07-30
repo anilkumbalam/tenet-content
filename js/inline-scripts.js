@@ -179,7 +179,7 @@ document.addEventListener('click', (e) => {
   
   // Tab switcher clicks (for cards with data-tab that are NOT navigation)
   const tabCard = target.closest('.card[data-tab]');
-  if (tabCard && typeof switchTab === 'function') {
+  if (tabCard && !tabCard.dataset.nav && typeof switchTab === 'function') {
     const tabId = tabCard.dataset.tab;
     if (tabId) {
       e.preventDefault();
