@@ -11,7 +11,10 @@ const GITHUB = {
   repo:   'tenet-content',           // ← your repo name
   branch: 'main',
   url(path) {
-    return `https://raw.githubusercontent.com/${this.user}/${this.repo}/${this.branch}/${path}`;
+    // Serve content from the same Cloudflare Pages deployment.
+    // This removes the production dependency on raw.githubusercontent.com.
+    const cleanPath = String(path || '').replace(/^\/+/, '');
+    return `/${cleanPath}`;
   }
 };
 
