@@ -15,9 +15,9 @@ const warn  = (...args) => { if (IS_DEV) console.warn('[SW]', ...args); };
         the ?v= query strings in index.html script tags to match.
         e.g. BUILD_TIMESTAMP = '20260419'  →  ?v=20260419
         This ensures the SW re-caches fresh JS files on every deploy. */
-const BUILD_TIMESTAMP = '20260731';
+const BUILD_TIMESTAMP = '20260813PHASE2CWAN1';
 const DEPLOY_VERSION  = BUILD_TIMESTAMP; // single source of truth
-const CACHE_VERSION = `tenet-v1.0.2-${BUILD_TIMESTAMP}`;
+const CACHE_VERSION = `tenet-v20260812BN.0.2-${BUILD_TIMESTAMP}`;
 const IMAGE_CACHE_VERSION = `tenet-images-v1.0.2-${BUILD_TIMESTAMP}`;
 const CONTENT_CACHE_VERSION = `tenet-content-v1.0.2-${BUILD_TIMESTAMP}`;
 
@@ -28,7 +28,7 @@ const CACHE_ASSETS = [
   `/js/content.js?v=${DEPLOY_VERSION}`,
   `/js/app.js?v=${DEPLOY_VERSION}`,
   `/js/inline-scripts.js?v=${DEPLOY_VERSION}`,
-  '/favicon-32x32.png'
+  '/images/icons/favicon-32x32.png'
   // External CDN assets are NOT cached by SW — browser handles them directly
 ];
 
@@ -98,6 +98,34 @@ self.addEventListener('fetch', event => {
     return;
   }
   
+  // SPA navigation: clean URLs such as /home, /products/... and /services/...
+  // are client-side routes, not physical files. Serve the cached app shell
+  // directly so static hosts/local HTTP servers do not produce fetch errors.
+  // Treat all same-origin HTML/document requests as SPA navigations.
+  // Some browsers/extensions can issue clean-route requests with a mode
+  // other than 'navigate'; checking destination/Accept avoids requesting
+  // physical files such as /services/software from a static host.
+  const acceptsHtml = (request.headers.get('accept') || '').includes('text/html');
+  const routePath = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+  const isKnownSpaRoute =
+    routePath === '/home' ||
+    routePath === '/contact' ||
+    routePath === '/partner-enquiry' ||
+    routePath === '/products' || routePath.startsWith('/products/') ||
+    routePath === '/services' || routePath.startsWith('/services/') ||
+    routePath === '/company' || routePath.startsWith('/company/') ||
+    routePath === '/partners' || routePath.startsWith('/partners/');
+  const isDocumentRequest = request.mode === 'navigate' || request.destination === 'document' || acceptsHtml || isKnownSpaRoute;
+  if (isDocumentRequest) {
+    event.respondWith(
+      caches.match('/index.html').then(cachedIndex => {
+        if (cachedIndex) return cachedIndex;
+        return fetch(new Request('/index.html', { headers: { 'Accept': 'text/html' } }));
+      })
+    );
+    return;
+  }
+
   // Determine cache based on content type
   const isImage = /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(request.url);
   const isArticleContent = request.url.includes('raw.githubusercontent.com') && 
@@ -309,8 +337,8 @@ self.addEventListener('push', event => {
   
   const options = {
     body: event.data ? event.data.text() : 'New update from Tenet Networks',
-    icon: '/favicon-32x32.png',
-    badge: '/favicon-32x32.png',
+    icon: '/images/icons/favicon-32x32.png',
+    badge: '/images/icons/favicon-32x32.png',
     vibrate: [200, 100, 200]
   };
   

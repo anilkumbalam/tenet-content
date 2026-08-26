@@ -272,7 +272,7 @@ const SEO_META = {
               desc:  'Tenet Networks delivers industrial-grade M2M gateways, SD-WAN platforms, and embedded connectivity solutions for IoT, SCADA, and enterprise automation.' },
   products: {
     _default: { title: 'Products – Industrial Connectivity Portfolio | Tenet Networks',
-                desc:  "Explore Tenet Networks' full range of M2M gateways, SCADA modems, VPN gateways, CMS platforms, and cWAN SD-WAN solutions." },
+                desc:  "Explore Tenet Networks' industrial cellular gateways, enterprise networking platforms, and Credo Cloud network orchestration." },
     m2m:      { title: 'M2M Gateways – Machine-to-Machine Cellular Connectivity | Tenet Networks',
                 desc:  'Rugged, always-on M2M cellular gateways for industrial IoT, remote monitoring, and enterprise automation deployments.' },
     indoor:   { title: 'Indoor LTE Modems & Gateways | Tenet Networks',
@@ -557,33 +557,43 @@ function nav(page, tab) {
 
 /* Handle browser back/forward */
 window.addEventListener('popstate', e => {
-  // Try state first, fall back to reading pathname
-  let page, tab;
+  // Try state first, fall back to reading pathname/hash. Story URLs use
+  // /company/stories/<story-id> and are rendered as the existing modal.
+  let page, tab, storyId = null;
   if (e.state && e.state.page) {
     page = e.state.page;
     tab = e.state.tab || null;
+    storyId = e.state.storyId || null;
   } else {
-    // Read from current URL pathname
     const pathname = window.location.pathname;
     const hash = window.location.hash;
-    if (pathname && pathname !== '/') {
-      const parts = pathname.slice(1).split('/');
-      page = parts[0] || 'home';
-      tab = parts[1] || null;
-    } else if (hash) {
-      const parts = hash.slice(1).split('/');
-      page = parts[0] || 'home';
-      tab = parts[1] || null;
-    } else {
-      page = 'home';
-      tab = null;
-    }
+    const raw = (pathname && pathname !== '/') ? pathname.slice(1) : (hash ? hash.slice(1) : '');
+    const parts = raw ? raw.split('/').filter(Boolean) : [];
+    page = parts[0] || 'home';
+    tab = parts[1] || null;
+    storyId = (page === 'company' && tab === 'stories') ? (parts[2] || null) : null;
   }
-  const state = { page, tab };
+  const state = { page, tab, storyId };
   currentPage = page;
-  setState({ page, tab: tab || null });
+  // A Back/Forward navigation away from a story URL must close the modal
+  // before the underlying SPA page is rendered.
+  if (!storyId) {
+    const storyOverlay = document.getElementById('storyModalOverlay');
+    if (storyOverlay) storyOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  setState({ page, tab: tab || null, modal: storyId ? 'story' : null, modalIndex: null });
   render(page, tab);
   updateMeta(page, tab);
+  if (storyId && page === 'company' && tab === 'stories') {
+    const open = () => {
+      const stories = CONTENT.stories || [];
+      const idx = stories.findIndex(s => s.id === storyId);
+      if (idx >= 0) openStoryModal(idx, { pushHistory: false });
+    };
+    if (Array.isArray(CONTENT.stories) && CONTENT.stories.length) open();
+    else window.addEventListener('storiesLoaded', open, { once: true });
+  }
   
   /* Restore scroll position for back/forward - wait for dynamic content */
   requestAnimationFrame(() => {
@@ -808,56 +818,24 @@ function footerHTML() {
   return `<footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="cursor:pointer" data-nav="home">
-          <img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" />
-        </div>
-        <p>Engineering intelligent connectivity and automation solutions for modern enterprises. Backed by 150+ years of combined technology leadership.</p>
-        <div class="socials">
-          <a href="${c.linkedin}" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn">in</a>
-          
-          <a href="${c.youtube}" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube">▶</a>
-        </div>
+        <div class="logo" style="cursor:pointer" data-nav="home"><img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" /></div>
+        <p>Engineering intelligent connectivity solutions for modern enterprises, industrial operations and critical infrastructure.</p>
+        <div class="socials"><a href="${c.linkedin}" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn">in</a><a href="${c.youtube}" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube">▶</a></div>
       </div>
-      <div class="footer-col">
-        <h5>Products</h5>
-        <a data-nav="products" data-tab="indoor">Indoor Modems</a>
-        <a data-nav="products" data-tab="outdoor">Outdoor Modems</a>
-        <a data-nav="products" data-tab="scada">SCADA Gateways</a>
-        <a data-nav="products" data-tab="vpn">VPN Gateways</a>
-        <a data-nav="products" data-tab="ces">cWAN / SD-WAN</a>
-        <a data-nav="products" data-tab="cms">Credo CMS</a>
-      </div>
-      <div class="footer-col">
-        <h5>Services</h5>
-        <a data-nav="services" data-tab="custom">Custom Engineering</a>
-        <a data-nav="services" data-tab="consulting">Consulting & Engineering</a>
-        <a data-nav="services" data-tab="software">Software & Embedded</a>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <a data-nav="company" data-tab="about">About Us</a>
-        <a data-nav="company" data-tab="team">Our Team</a>
-        <a data-nav="company" data-tab="careers">Careers</a>
-        <a data-nav="company" data-tab="stories">Customer Stories</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a data-nav="contact">Get in Touch</a>
-        <a data-nav="partner-enquiry">Partner With Us</a>
-        <a data-nav="request-quote">Request a Quote</a>
-      </div>
+      <div class="footer-col"><h5>Platform</h5>
+        <a data-nav="products" data-tab="cwan">cWAN (Enterprise SD-WAN)</a><a data-nav="products" data-tab="cwanexpress">cWAN Express (SD-Branch)</a><a data-nav="products" data-tab="cms">Credo Cloud (Network Orchestration)</a></div>
+      <div class="footer-col"><h5>Edge Connectivity</h5>
+        <a data-nav="products" data-tab="indoor">Indoor Industrial 4G/5G Gateways</a><a data-nav="products" data-tab="outdoor">Outdoor Industrial 4G/5G Gateways</a><a data-nav="products" data-tab="scada">Industrial 4G/5G SCADA Gateways</a><a data-nav="products" data-tab="vpn">Enterprise VPN Gateways</a></div>
+      <div class="footer-col"><h5>Services</h5>
+        <a data-nav="services" data-tab="consulting">RF, Wireless &amp; Network Engineering</a><a data-nav="services" data-tab="custom">Custom Hardware</a><a data-nav="services" data-tab="software">Embedded Software</a></div>
+      <div class="footer-col"><h5>Company</h5>
+        <a data-nav="company" data-tab="about">About Us</a><a data-nav="company" data-tab="team">Team</a><a data-nav="company" data-tab="careers">Careers</a><a data-nav="company" data-tab="stories">Customer Stories</a><a data-nav="company" data-tab="perspective">Engineering Insights</a></div>
+      <div class="footer-col"><h5>Partners</h5>
+        <a data-nav="partner-enquiry">Partner With Tenet</a><a data-nav="partner-enquiry">Become a Partner</a><h5 style="margin-top:1rem">Contact</h5><a data-nav="contact">Get in Touch</a><a data-nav="request-quote">Request a Quote</a></div>
     </div>
-    <div class="footer-bottom">
-      <p>© ${c.founded}–${new Date().getFullYear()} Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p>
-    </div>
+    <div class="footer-bottom"><p>© ${c.founded}–${new Date().getFullYear()} Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p></div>
   </footer>
-  
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor">
-      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.053 1.352 1.35-5.034-0.308-0.517c-1.316-2.203-2.012-4.733-2.012-7.307 0-7.51 6.11-13.62 13.6-13.62s13.6 6.11 13.6 13.62-6.090 13.667-13.6 13.667zM21.137 18.12c-0.323-0.162-1.913-0.944-2.21-1.052s-0.513-0.162-0.728 0.162c-0.216 0.323-0.835 1.052-1.024 1.268s-0.377 0.243-0.7 0.081c-0.324-0.162-1.366-0.503-2.6-1.603-0.962-0.857-1.61-1.916-1.8-2.24s-0.020-0.498 0.142-0.659c0.145-0.145 0.323-0.377 0.485-0.566s0.216-0.323 0.323-0.539c0.108-0.216 0.054-0.404-0.027-0.566s-0.728-1.755-0.997-2.402c-0.262-0.631-0.528-0.546-0.728-0.556-0.188-0.009-0.404-0.011-0.62-0.011s-0.566 0.081-0.862 0.404c-0.297 0.323-1.133 1.107-1.133 2.698s1.16 3.13 1.321 3.346c0.162 0.216 2.282 3.484 5.53 4.888 0.772 0.333 1.375 0.533 1.845 0.681 0.775 0.247 1.481 0.212 2.039 0.128 0.622-0.093 1.913-0.782 2.183-1.537s0.27-1.402 0.189-1.537c-0.080-0.135-0.296-0.216-0.620-0.378z"/>
-    </svg>
-  </a>`;
+  <a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/></svg></a>`;
 }
 
 /* ══════════════════════════════════
@@ -904,7 +882,7 @@ function renderHome() {
     return idx;
   }
   
-  const startIdx = getRandomStart();
+  const startIdx = 0;
   
   // ═════════════════════════════════════════════════════
   // 🎨 RENDER: Support new structure (metrics, features)
@@ -1014,33 +992,55 @@ function renderHome() {
     <!-- FEATURED PRODUCTS -->
     <div class="section">
       <div class="section-inner">
-        <div class="section-hd" style="text-align:center;max-width:620px;margin:0 auto 2.5rem">
-          <div class="t-overline">Featured Products</div>
+        <div class="section-hd" style="text-align:center;max-width:720px;margin:0 auto 2.5rem">
+          <div class="t-overline">Connectivity From Edge to Cloud</div>
           <h2 style="margin:.6rem 0 .8rem">Engineered for <span class="accent">Real-World</span> Demands</h2>
-          <p class="body-l">Purpose-built platforms that power critical connectivity across industries and geographies.</p>
+          <p class="body-l">Purpose-built connectivity platforms and edge devices for demanding enterprise, industrial, and distributed-network environments.</p>
+        </div>
+        <div class="edge-network-cloud">
+          <div class="enc-node">
+            <div class="enc-icon">📡</div>
+            <div class="enc-label">INDUSTRIAL EDGE</div>
+            <h3>Connect the site</h3>
+            <p>Industrial 4G/5G gateways, SCADA connectivity and resilient access for remote assets.</p>
+          </div>
+          <div class="enc-arrow">→</div>
+          <div class="enc-node enc-node-main">
+            <div class="enc-icon">🌐</div>
+            <div class="enc-label">ENTERPRISE NETWORK</div>
+            <h3>Connect the network</h3>
+            <p>cWAN, SD-WAN and SD-Branch for branches, factories and distributed operations.</p>
+          </div>
+          <div class="enc-arrow">→</div>
+          <div class="enc-node">
+            <div class="enc-icon">☁️</div>
+            <div class="enc-label">CLOUD</div>
+            <h3>Orchestrate centrally</h3>
+            <p>Credo Cloud provides centralized visibility, provisioning and network management.</p>
+          </div>
         </div>
         <div class="feat-prod-grid">
           <div class="feat-prod-card" data-nav="products" data-tab="m2m">
             <div class="feat-prod-thumb">📡</div>
             <div class="feat-prod-body">
-              <div class="t-overline" style="margin-bottom:.5rem">M2M Cellular Gateway</div>
-              <h3>Industrial-Grade M2M <span class="accent">Connectivity</span></h3>
-              <p>Reliable cellular connectivity for industrial systems, remote sites, and enterprise deployments. Built for mission-critical operations with secure data transport and centralized management.</p>
-              <span class="card-link">Explore Products</span>
+              <div class="t-overline" style="margin-bottom:.5rem">Industrial Cellular Gateways</div>
+              <h3>Industrial-Grade Cellular <span class="accent">Connectivity</span></h3>
+              <p>Reliable 4G/5G connectivity for industrial systems, remote sites, SCADA applications, and enterprise deployments. Built for demanding environments with secure data transport, multi-WAN capabilities, and centralized management.</p>
+              <span class="card-link">Explore Industrial Cellular Gateways →</span>
             </div>
           </div>
           <div class="feat-prod-card" data-nav="products" data-tab="ces">
             <div class="feat-prod-thumb">🌐</div>
             <div class="feat-prod-body">
-              <div class="t-overline" style="margin-bottom:.5rem">Connectivity Evolution Platform (cWAN)</div>
+              <div class="t-overline" style="margin-bottom:.5rem">Enterprise Networking</div>
               <h3>Modern SD-WAN for <span class="accent">Distributed Networks</span></h3>
-              <p>Modular SD-WAN platform for distributed enterprises and industrial networks. Split-design architecture enables flexible deployment, seamless migration, and centralized orchestration.</p>
-              <span class="card-link">Explore Platform</span>
+              <p>An enterprise SD-WAN platform that connects branches, remote sites, factories, and distributed operations over multiple WAN links. Centralized orchestration, intelligent traffic management, and zero-touch deployment simplify network operations at scale.</p>
+              <span class="card-link">Explore Enterprise Networking →</span>
             </div>
           </div>
         </div>
         <div style="text-align:center;margin-top:2rem">
-          <button class="btn btn-ghost" data-nav="products">View Full Product Portfolio →</button>
+          <button class="btn btn-ghost" data-nav="products" data-tab="portfolio">View Full Product Portfolio →</button>
         </div>
       </div>
     </div>
@@ -1057,43 +1057,51 @@ function renderHome() {
       </div>
     </div>
 
+    <!-- FEATURED CUSTOMER STORIES -->
+    <div class="section featured-customer-section">
+      <div class="section-inner">
+        <div class="section-hd" style="text-align:center;max-width:760px;margin:0 auto 2.5rem">
+          <div class="t-overline">Customer Evidence</div>
+          <h2 style="margin:.6rem 0 .9rem">Connectivity <span class="accent">Proven in the Field</span></h2>
+          <p class="body-l">From enterprise WANs to remote water infrastructure, power distribution and industrial operations, Tenet solutions are already working in demanding real-world environments.</p>
+        </div>
+        <div class="featured-stories-grid">${['power-distribution-sdwan','banking-infrastructure','jal-jeevan-mission','smart-cities'].map((id)=>{
+            const st=(C.stories||[]).find(x=>x.id===id);
+            if(!st) return '';
+            const proof = {
+              'power-distribution-sdwan':'cWAN · SD-WAN · dual-SIM 4G/5G failover',
+              'banking-infrastructure':'SD-WAN · dual-SIM LTE · encrypted VPN',
+              'jal-jeevan-mission':'4G/LTE · Modbus · MQTT · remote operations',
+              'smart-cities':'4G/5G · multi-WAN · secure VPN'
+            }[id];
+            return `<article class="featured-story-card" data-action="openStoryModal" data-story="${(C.stories||[]).indexOf(st)}" data-story-index="${(C.stories||[]).indexOf(st)}">
+              <div class="featured-story-top"><span class="featured-story-icon">${st.icon}</span><span class="featured-story-industry">${st.industry}</span></div>
+              <h3>${st.title}</h3>
+              <p class="featured-story-subtitle">${st.subtitle || ''}</p>
+              <p>${st.hero_summary || st.summary}</p>
+              <div class="featured-story-proof">${proof}</div>
+              <span class="card-link">Read case study →</span>
+            </article>`;
+          }).join('')}</div>
+        <div style="text-align:center;margin-top:2rem">
+          <button class="btn btn-ghost" data-nav="company" data-tab="stories">Explore All Customer Stories →</button>
+        </div>
+      </div>
+    </div>
+
     <!-- WHY CHOOSE US -->
     <div class="section">
       <div class="section-inner">
-        <div style="text-align:center;max-width:620px;margin:0 auto 0">
-          <div class="t-overline">Why Choose Us</div>
-          <h2 style="margin:.6rem 0 .9rem">Your Strategic Partner in <span class="accent">Connectivity &amp; Automation</span></h2>
-          <p class="body-l">At Tenet Networks, we don't just deliver products — we build lasting partnerships.</p>
+        <div style="text-align:center;max-width:720px;margin:0 auto 0">
+          <div class="t-overline">Why Tenet</div>
+          <h2 style="margin:.6rem 0 .9rem">Engineering Depth. <span class="accent">Field-Proven Connectivity.</span></h2>
+          <p class="body-l">We combine enterprise networking, RF and wireless engineering, embedded technology and industrial connectivity to solve real-world deployment challenges.</p>
         </div>
         <div class="why-grid">
-          <div class="why-card">
-            <div class="why-num">01</div>
-            <div>
-              <h3>Depth &amp; Excellence</h3>
-              <p>Our team brings deep domain expertise and a track record of engineering robust, secure, and field-proven systems — trusted in thousands of deployments.</p>
-            </div>
-          </div>
-          <div class="why-card">
-            <div class="why-num">02</div>
-            <div>
-              <h3>Tailored Solutions</h3>
-              <p>No two businesses are alike. We design, engineer, and deploy solutions that align with your specific use case and performance objectives.</p>
-            </div>
-          </div>
-          <div class="why-card">
-            <div class="why-num">03</div>
-            <div>
-              <h3>End-to-End Partnership</h3>
-              <p>From product development to ongoing support, we're with you every step of the way. Our long-term engagement model ensures continuity and trust.</p>
-            </div>
-          </div>
-          <div class="why-card">
-            <div class="why-num">04</div>
-            <div>
-              <h3>Future-Ready Innovation</h3>
-              <p>We harness the latest in LTE, 5G NR, IoT, and edge computing to build solutions that are scalable, secure, and ready for tomorrow.</p>
-            </div>
-          </div>
+          <div class="why-card"><div class="why-num">01</div><div><h3>Proven at Scale</h3><p>150K+ devices deployed across enterprise, industrial and critical-infrastructure environments.</p></div></div>
+          <div class="why-card"><div class="why-num">02</div><div><h3>Engineering Depth</h3><p>Deep expertise across RF, wireless, networking, embedded systems and custom hardware when standard solutions aren't enough.</p></div></div>
+          <div class="why-card"><div class="why-num">03</div><div><h3>Built for Real Networks</h3><p>We design for difficult RF conditions, multiple WANs, remote sites and demanding operating environments—not just ideal lab conditions.</p></div></div>
+          <div class="why-card"><div class="why-num">04</div><div><h3>Long-Term Partnership</h3><p>From architecture and product development through deployment and ongoing support, we work alongside customers for the full technology lifecycle.</p></div></div>
         </div>
       </div>
     </div>
@@ -1101,10 +1109,10 @@ function renderHome() {
     <!-- SERVICES -->
     <div class="section" style="background:var(--bg1);padding-top:4rem;padding-bottom:4rem">
       <div class="section-inner">
-        <div class="section-hd" style="text-align:center;max-width:620px;margin:0 auto 2.5rem">
-          <div class="t-overline">Our Services</div>
-          <h2 style="margin:.6rem 0 .8rem">End-to-End <span class="accent">Engineering</span> Partnership</h2>
-          <p class="body-l">Deep engineering expertise and custom development to solve your most complex connectivity challenges.</p>
+        <div class="section-hd" style="text-align:center;max-width:700px;margin:0 auto 2.5rem">
+          <div class="t-overline">Engineering Services</div>
+          <h2 style="margin:.6rem 0 .8rem">Engineering Depth Across <span class="accent">Connectivity, Hardware &amp; Software</span></h2>
+          <p class="body-l">Deep engineering expertise across connectivity, hardware and embedded software.</p>
         </div>
         <div class="grid-3">${svcCards}</div>
       </div>
@@ -1116,30 +1124,31 @@ function renderHome() {
         <div class="about-grid">
           <div>
             <div class="t-overline">About Us</div>
-            <h2 style=\"margin:.6rem 0 1rem\">Making Technology Work <span class=\"accent\">Seamlessly</span></h2>
-<p class=\"body-l\">At Tenet Networks, we design connectivity solutions that thrive in the toughest environments; from factory floors to smart cities. With over 150 years of combined leadership expertise, our team builds products that just work: secure, reliable and scalable.</p>
-<ul class=\"about-cap-list\" style=\"margin-top:1.5rem\">
-  <li><div class=\"cap-icon\">🏭</div>Industrial-grade devices for harsh environments</li>
-  <li><div class=\"cap-icon\">🔄</div>Legacy-to-IoT platform transformation</li>
-  <li><div class=\"cap-icon\">⚙️</div>Custom hardware and firmware development</li>
-  <li><div class=\"cap-icon\">📡</div>Future-ready LTE, 5G, and edge solutions</li>
-</ul>
+            <h2 style="margin:.6rem 0 1rem">Engineering Connectivity for the <span class="accent">Real World</span></h2>
+            <p class="body-l">At Tenet Networks, we build connectivity platforms for distributed enterprises, industrial operations and critical infrastructure. Our expertise spans enterprise SD-WAN, 4G/5G connectivity, RF and wireless engineering, embedded systems and custom hardware.</p>
+            <p class="body-l" style="margin-top:.8rem">From branches and remote sites to factories, utilities and smart infrastructure, we design networks around the conditions in which they actually have to operate.</p>
+            <ul class="about-cap-list" style="margin-top:1.5rem">
+              <li><div class="cap-icon">🏭</div>Industrial-grade connectivity for demanding environments</li>
+              <li><div class="cap-icon">🌐</div>Enterprise SD-WAN and distributed networking</li>
+              <li><div class="cap-icon">⚙️</div>Custom hardware and embedded software</li>
+              <li><div class="cap-icon">📡</div>RF, wireless and 4G/5G engineering</li>
+            </ul>
             <div class="btn-group" style="margin-top:2rem">
               <button class="btn btn-primary" data-nav="company" data-tab="about">Our Story</button>
-              <button class="btn btn-ghost"   data-nav="company" data-tab="team">Meet the Team</button>
+              <button class="btn btn-ghost" data-nav="contact">Talk to an Engineer</button>
             </div>
           </div>
           <div class="about-visual">
             <div class="t-overline" style="margin-bottom:1.2rem">By the Numbers</div>
             <div class="about-stat-grid">
               <div class="about-stat-box"><div class="n">150K+</div><div class="l">Devices Deployed</div></div>
-              <div class="about-stat-box"><div class="n">200+</div><div class="l">Happy Customers</div></div>
-              <div class="about-stat-box"><div class="n">150+</div><div class="l">Years Leadership</div></div>
-              <div class="about-stat-box"><div class="n">Global</div><div class="l">Reach from India</div></div>
+              <div class="about-stat-box"><div class="n">200+</div><div class="l">Customers Served</div></div>
+              <div class="about-stat-box"><div class="n">150+</div><div class="l">Years Combined Leadership Experience</div></div>
+              <div class="about-stat-box"><div class="n">Global</div><div class="l">Engineering from India · Deployments Worldwide</div></div>
             </div>
             <div style="margin-top:2rem;padding-top:1.8rem;border-top:1px solid var(--border2)">
               <div class="t-overline" style="margin-bottom:.9rem">Our Mission</div>
-              <p class="body-m">"To unlock value for our customers by delivering best-in-class solutions for their connectivity and automation needs — built in India, trusted globally."</p>
+              <p class="body-m">"To unlock value for our customers through best-in-class connectivity and engineering solutions — built in India, trusted globally."</p>
             </div>
           </div>
         </div>
@@ -1150,19 +1159,19 @@ function renderHome() {
     <div class="section" style="background:var(--bg1);padding-top:4rem;padding-bottom:4rem">
       <div class="section-inner">
         <div class="partner-banner">
-          <div class="t-overline" style="margin-bottom:.8rem">Partner With Us</div>
-          <h2>Collaborate for <span class="accent">Success</span></h2>
-          <p>Join our fast-growing ecosystem of partners. Whether you're a distributor, reseller, or a value-added system integrator, Tenet offers you a reliable product line, strong technical support, and a partnership rooted in growth and mutual success.</p>
+          <div class="t-overline" style="margin-bottom:.8rem">Partner With Tenet</div>
+          <h2>Build Enterprise <span class="accent">Connectivity Together</span></h2>
+          <p>Partner with Tenet to bring enterprise SD-WAN, branch networking and industrial connectivity to customers across your market. We support distributors, resellers, managed service providers and technology partners with products, technical enablement and ongoing support.</p>
           <div class="partner-perks">
             <span class="partner-perk">✓ 150K+ Devices Deployed</span>
-            <span class="partner-perk">✓ Priority Access &amp; Insights</span>
-            <span class="partner-perk">✓ Marketing &amp; Technical Enablement</span>
-            <span class="partner-perk">✓ Competitive Margins</span>
-            <span class="partner-perk">✓ Post-Sales Service Backing</span>
+            <span class="partner-perk">✓ Technical Enablement</span>
+            <span class="partner-perk">✓ Marketing Support</span>
+            <span class="partner-perk">✓ Competitive Partner Margins</span>
+            <span class="partner-perk">✓ Post-Sales Support</span>
           </div>
           <div class="btn-group" style="justify-content:center">
             <button class="btn btn-primary" data-nav="partner-enquiry">Become a Partner</button>
-            <button class="btn btn-ghost"   data-nav="contact">Get in Touch</button>
+            <button class="btn btn-ghost" data-nav="contact">Get in Touch</button>
           </div>
         </div>
       </div>
@@ -1199,6 +1208,66 @@ function renderHome() {
 
   startTimer();
 
+  /* Keep the hero on the first/selected slide while navigation is open.
+     Also prevent a diagonal cursor path through the header from stealing
+     the active mega-menu. Other top-level groups become non-interactive
+     while the pointer is travelling inside the active dropdown; they are
+     re-enabled when the pointer returns to the header row. */
+  const navGroups = [...document.querySelectorAll('#header .nav-group')];
+  let activeNavGroup = null;
+
+  const releaseNavGuard = () => {
+    navGroups.forEach(g => { g.style.pointerEvents = ''; });
+    activeNavGroup = null;
+  };
+
+  navGroups.forEach(group => {
+    group.addEventListener('mouseenter', () => {
+      heroPaused = true;
+      activeNavGroup = group;
+
+      /* While entering a dropdown, don't let another top-level item
+         capture the pointer during diagonal movement. */
+      navGroups.forEach(other => {
+        if (other !== group) other.style.pointerEvents = 'none';
+      });
+    });
+
+    group.addEventListener('mouseleave', (event) => {
+      heroPaused = false;
+
+      /* If the pointer is still below the header row, it is normally
+         travelling into the active mega-menu. Keep the guard active.
+         Once it returns to the header, release it so another menu
+         can be selected normally. */
+      const header = document.querySelector('#header');
+      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+      if (event.clientY <= headerBottom + 2) {
+        releaseNavGuard();
+      }
+    });
+  });
+
+  document.addEventListener('mousemove', event => {
+    if (!activeNavGroup) return;
+
+    const header = document.querySelector('#header');
+    if (!header) return;
+
+    const rect = header.getBoundingClientRect();
+
+    /* Back in the header row: allow switching to another top-level menu. */
+    if (event.clientY <= rect.bottom + 2) {
+      navGroups.forEach(g => { g.style.pointerEvents = ''; });
+    } else {
+      /* Below the header: keep other top-level groups from stealing
+         hover while the cursor travels through the active dropdown. */
+      navGroups.forEach(g => {
+        if (g !== activeNavGroup) g.style.pointerEvents = 'none';
+      });
+    }
+  });
+
   /* Pause on mouse/touch hold, resume on release */
   const heroEl = document.querySelector('.hero');
   if (heroEl) {
@@ -1228,28 +1297,23 @@ function renderHome() {
 }
 
 /* PRODUCTS */
-function renderProducts(defaultTab='indoor') {
+function renderProducts(defaultTab='portfolio') {
   const P = CONTENT.products;
   const tabs = [
-    {id:'m2m',         label:'M2M Gateways'},
-    {id:'indoor',      label:'Indoor Modems'},
-    {id:'outdoor',     label:'Outdoor Modems'},
-    {id:'scada',       label:'SCADA Gateways'},
-    {id:'vpn',         label:'VPN Gateways'},
-    {id:'cms',         label:'Credo CMS'},
-    {id:'ces',         label:'Connectivity Evolution'},
-    {id:'cwan',        label:'cWAN'},
-    {id:'cwanexpress', label:'cWAN Express'},
+    {id:'portfolio',   label:'Overview'},
+    {id:'m2m',         label:'Industrial Cellular Gateways'},
+    {id:'ces',         label:'Enterprise Networking'},
+    {id:'cms',         label:'Credo Cloud'},
   ];
-  if (!tabs.find(t=>t.id===defaultTab)) defaultTab='indoor';
+  if (!defaultTab) defaultTab='portfolio';
 
   const m2mIntro = `<div class="section-hd">
-    <h2>${P.m2m_intro.heading}</h2>
-    <p style="color:var(--secondary);font-family:var(--font-h);font-weight:500;margin:.5rem 0 .7rem">${P.m2m_intro.subhead}</p>
-    <p class="body-l">${P.m2m_intro.body}</p>
+    <h2>Industrial Cellular Gateways</h2>
+    <p style="color:var(--secondary);font-family:var(--font-h);font-weight:500;margin:.5rem 0 .7rem">Industrial-Grade Cellular Connectivity</p>
+    <p class="body-l">Reliable 4G/5G connectivity for industrial systems, remote sites, SCADA applications and enterprise deployments — built for demanding environments with secure data transport, multi-WAN capabilities and centralized management.</p>
   </div>
   <div class="grid-auto">
-    ${['indoor','outdoor','scada','vpn','cms'].map(id=>{
+    ${['indoor','outdoor','scada'].map(id=>{
       const item = P[id];
       // Get first 3 use cases
       const topUseCases = item.useCases ? item.useCases.slice(0, 3) : [];
@@ -1273,12 +1337,12 @@ function renderProducts(defaultTab='indoor') {
   </div>`;
 
   const cesIntro = `<div class="section-hd">
-    <h2>${P.ces_intro.heading}</h2>
-    <p style="color:var(--secondary);font-family:var(--font-h);font-weight:500;margin:.5rem 0 .7rem">${P.ces_intro.subhead}</p>
-    <p class="body-l">${P.ces_intro.body}</p>
+    <h2>Enterprise Networking</h2>
+    <p style="color:var(--secondary);font-family:var(--font-h);font-weight:500;margin:.5rem 0 .7rem">Intelligent WAN, SD-Branch and secure connectivity for distributed networks</p>
+    <p class="body-l">Connect branches, offices, factories and remote sites across fiber, broadband, MPLS, 4G and 5G with intelligent routing, resilient failover, centralized orchestration and secure enterprise connectivity.</p>
   </div>
   <div class="grid-2">
-    ${['cwan','cwanexpress'].map(id=>{
+    ${['cwan','cwanexpress','vpn'].map(id=>{
       const item = P[id];
       // Get first 3 use cases
       const topUseCases = item.useCases ? item.useCases.slice(0, 3) : [];
@@ -1301,7 +1365,62 @@ function renderProducts(defaultTab='indoor') {
     }).join('')}
   </div>`;
 
+  const portfolioIntro = `
+    <div class="section-hd" style="margin-bottom:2rem">
+      <h2>Connect the <span class="accent">Industrial Edge</span> to the Enterprise</h2>
+      <p class="body-l">From rugged industrial gateways to enterprise networking and cloud orchestration — Tenet's connectivity portfolio is built around the way real networks are deployed.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card" style="display:flex;flex-direction:column">
+        <div style="font-size:2.5rem;margin-bottom:1rem">📡</div>
+        <div class="t-overline" style="margin-bottom:.5rem">Industrial Edge</div>
+        <h3>Industrial Cellular Gateways</h3>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:1.2rem">Rugged 4G/5G connectivity for industrial systems, SCADA, remote assets and demanding field environments.</p>
+        <div style="margin-top:auto">
+          <div style="font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem">
+            ✓ Indoor Industrial Gateways<br>
+            ✓ Outdoor Industrial Gateways<br>
+            ✓ Industrial SCADA Gateways
+          </div>
+          <button class="btn btn-ghost btn-sm" data-nav="products" data-tab="m2m">Explore Industrial Cellular Gateways →</button>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🌐</div>
+        <div class="t-overline" style="margin-bottom:.5rem">Enterprise Network</div>
+        <h3>Enterprise Networking</h3>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:1.2rem">Intelligent WAN, SD-Branch and secure enterprise connectivity for branches, factories and distributed operations.</p>
+        <div style="margin-top:auto">
+          <div style="font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem">
+            ✓ cWAN (Enterprise SD-WAN)<br>
+            ✓ cWAN Express (SD-Branch)<br>
+            ✓ Enterprise VPN Gateways
+          </div>
+          <button class="btn btn-ghost btn-sm" data-nav="products" data-tab="ces">Explore Enterprise Networking →</button>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column">
+        <div style="font-size:2.5rem;margin-bottom:1rem">☁️</div>
+        <div class="t-overline" style="margin-bottom:.5rem">Cloud</div>
+        <h3>Credo Cloud</h3>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:1.2rem">Centralized orchestration for provisioning, configuration, monitoring, analytics, firmware and remote network operations.</p>
+        <div style="margin-top:auto">
+          <div style="font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem">
+            ✓ Centralized Management<br>
+            ✓ Zero-Touch Provisioning<br>
+            ✓ Network Visibility & Operations
+          </div>
+          <button class="btn btn-ghost btn-sm" data-nav="products" data-tab="cms">Explore Credo Cloud →</button>
+        </div>
+      </div>
+    </div>
+  `;
+
   const panels = [
+    tabPanel('portfolio',  portfolioIntro,              defaultTab==='portfolio'),
     tabPanel('m2m',         m2mIntro,                   defaultTab==='m2m'),
     tabPanel('indoor',      productPanelHTML(P.indoor),  defaultTab==='indoor'),
     tabPanel('outdoor',     productPanelHTML(P.outdoor), defaultTab==='outdoor'),
@@ -1319,7 +1438,7 @@ function renderProducts(defaultTab='indoor') {
       <div class="page-hero-inner">
         <div class="t-overline">Products</div>
         <h1>Industrial-Grade <span class="accent">Connectivity</span> Portfolio</h1>
-        <p class="body-l">From rugged field gateways to enterprise WAN platforms — purpose-built for mission-critical deployments.</p>
+        <p class="body-l">From rugged industrial gateways to enterprise networking and cloud orchestration — purpose-built for demanding real-world deployments.</p>
       </div>
     </div>
     ${tabBar(tabs, defaultTab)}
@@ -1369,7 +1488,7 @@ function renderCompany(defaultTab='about') {
   const aboutHTML = `
     <div class="section-hd">
       <div class="t-overline">Who We Are</div>
-      <h2 style="margin:.6rem 0 .8rem">At Tenet Networks, we design <span class="accent">intelligent connectivity</span> and automation solutions</h2>
+      <h2 style="margin:.6rem 0 .8rem">${A.who_title.replace(/(Edge to Cloud)/,'<span class="accent">$1</span>')}</h2>
       <p class="body-l">${A.who_body.replace(/\n\n/g,'</p><p class="body-l" style="margin-top:.6rem">')}</p>
     </div>
     <h3 style="margin-bottom:1.2rem">What We Offer</h3>
@@ -1547,7 +1666,7 @@ function renderCompany(defaultTab='about') {
     {id:'team',        label:'Team'},
     {id:'careers',     label:'Careers'},
     {id:'stories',     label:'Customer Stories'},
-    {id:'perspective', label:'Perspective'},
+    {id:'perspective', label:'Engineering Insights'},
   ];
   const panels = [
     tabPanel('about',       aboutHTML,   defaultTab==='about'),
@@ -1562,8 +1681,8 @@ function renderCompany(defaultTab='about') {
     <div class="page-hero">
       <div class="page-hero-inner">
         <div class="t-overline">Company</div>
-        <h1>Making Technology <span class="accent">Work Seamlessly</span></h1>
-        <p class="body-l">Backed by 150+ years of combined technology leadership — building products and services that work securely, reliably, and at scale.</p>
+        <h1>Engineering Connectivity <span class="accent">for the Real World</span></h1>
+        <p class="body-l">Backed by 150+ years of combined technology leadership, Tenet engineers connectivity solutions that work securely, reliably and at scale.</p>
       </div>
     </div>
     ${tabBar(tabs, defaultTab)}
@@ -3301,39 +3420,110 @@ if (!navigator.onLine) {
   document.addEventListener('DOMContentLoaded', showOfflineBanner);
 }
 
+/* ── ASYNC CUSTOMER STORIES SYNC ── */
+/*
+ * stories.json is loaded asynchronously by content.js. The initial SPA render can
+ * therefore happen before CONTENT.stories is populated, leaving the homepage
+ * featured-story grid empty until a later navigation happens to trigger a render.
+ * Re-render only the affected pages when the story data arrives, while preserving
+ * the user's current scroll position.
+ */
+function refreshFeaturedCustomerStories() {
+  const grid = document.querySelector('.featured-stories-grid');
+  if (!grid || !Array.isArray(CONTENT.stories) || CONTENT.stories.length === 0) return false;
+
+  const proof = {
+    'power-distribution-sdwan':'cWAN · SD-WAN · dual-SIM 4G/5G failover',
+    'banking-infrastructure':'SD-WAN · dual-SIM LTE · encrypted VPN',
+    'jal-jeevan-mission':'4G/LTE · Modbus · MQTT · remote operations',
+    'smart-cities':'4G/5G · multi-WAN · secure VPN'
+  };
+
+  const ids = ['power-distribution-sdwan','banking-infrastructure','jal-jeevan-mission','smart-cities'];
+
+  grid.innerHTML = ids.map(id => {
+    const st = CONTENT.stories.find(x => x.id === id);
+    if (!st) return '';
+    const index = CONTENT.stories.indexOf(st);
+    return `<article class="featured-story-card" data-action="openStoryModal" data-story="${index}" data-story-index="${index}">
+      <div class="featured-story-top"><span class="featured-story-icon">${st.icon}</span><span class="featured-story-industry">${st.industry}</span></div>
+      <h3>${st.title}</h3>
+      <p class="featured-story-subtitle">${st.subtitle || ''}</p>
+      <p>${st.hero_summary || st.summary}</p>
+      <div class="featured-story-proof">${proof[id]}</div>
+      <span class="card-link">Read case study →</span>
+    </article>`;
+  }).join('');
+
+  return true;
+}
+
+window.addEventListener('storiesLoaded', () => {
+  const state = history.state || {};
+  const page = currentPage || state.page || '';
+  const tab = state.tab || null;
+  if (!Array.isArray(CONTENT.stories) || CONTENT.stories.length === 0) return;
+
+  if (page === 'home') {
+    // Update only the featured-story grid. Re-rendering the entire homepage here
+    // caused a visible first-load flicker because the initial render was replaced
+    // a moment later when stories.json finished loading.
+    if (refreshFeaturedCustomerStories()) {
+      console.log('✅ Featured customer stories updated after async load');
+    }
+  } else if (page === 'company' && tab === 'stories') {
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    renderCompany('stories');
+    requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
+    console.log('✅ Customer Stories page rendered after async load');
+  }
+});
+
 /* ── INIT ── */
 /* Parse the current URL pathname to restore state on page load/refresh */
 function initFromHash() {
-  // Support both old hash URLs and new clean URLs
-  let page, tab;
+  // Support legacy hash URLs, existing clean page/tab URLs, and clean
+  // customer-story URLs: /company/stories/<story-id>.
   const pathname = window.location.pathname;
   const hash = window.location.hash;
+  const raw = (pathname && pathname !== '/') ? pathname.slice(1) : (hash ? hash.slice(1) : '');
+  const parts = raw ? raw.split('/').filter(Boolean) : [];
 
-  if (pathname && pathname !== '/') {
-    // Clean URL e.g. /products/indoor or /article/antennas-performance
-    const parts = pathname.slice(1).split('/');
-    page = parts[0] || 'home';
-    tab = parts[1] || null;
-  } else if (hash) {
-    // Legacy hash URL e.g. #products/indoor
-    const parts = hash.slice(1).split('/');
-    page = parts[0] || 'home';
-    tab = parts[1] || null;
-  } else {
-    page = 'home';
-    tab = null;
-  }
+  const page = parts[0] || 'home';
+  const tab = parts[1] || null;
+  const storyId = (page === 'company' && tab === 'stories') ? (parts[2] || null) : null;
+  const url = storyId ? `/${page}/${tab}/${storyId}` : (tab ? `/${page}/${tab}` : `/${page}`);
 
-  const url = tab ? `/${page}/${tab}` : `/${page}`;
-  safeHistoryReplace({ page, tab }, url);
+  safeHistoryReplace({ page, tab, storyId }, url);
   currentPage = page;
-  setState({ page, tab: tab || null });
+  setState({ page, tab: tab || null, modal: storyId ? 'story' : null, modalIndex: null });
   render(page, tab);
   updateMeta(page, tab);
+
+  if (storyId && page === 'company' && tab === 'stories') {
+    const open = () => {
+      const stories = CONTENT.stories || [];
+      const idx = stories.findIndex(s => s.id === storyId);
+      if (idx >= 0) openStoryModal(idx, { pushHistory: false });
+    };
+    if (Array.isArray(CONTENT.stories) && CONTENT.stories.length) open();
+    else window.addEventListener('storiesLoaded', open, { once: true });
+  }
 }
 
 /* Initialize on page load */
 initFromHash();
+
+/* If Customer Stories data finishes loading after the initial SPA render, refresh
+   the currently visible stories tab. This is intentionally limited to stories. */
+if (window.loadStoriesAsync && (!Array.isArray(CONTENT.stories) || CONTENT.stories.length === 0)) {
+  window.loadStoriesAsync().then(() => {
+    const st = history.state || {};
+    if (currentPage === 'company' && st.tab === 'stories' && Array.isArray(CONTENT.stories) && CONTENT.stories.length) {
+      renderCompany('stories');
+    }
+  }).catch(() => {});
+}
 
 /* Preload articles and categories after a brief delay to avoid network errors */
 /* This makes subsequent navigation faster without causing console warnings */
@@ -3507,7 +3697,7 @@ function updateMetaTagsForStory(story) {
     { property: 'og:title', content: `${story.title} | Tenet Networks` },
     { property: 'og:description', content: story.summary },
     { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: `https://www.tenetnetworks.com/company/stories#${story.id}` }
+    { property: 'og:url', content: `https://www.tenetnetworks.com/company/stories/${story.id}` }
   ];
   
   ogTags.forEach(tag => {
@@ -3526,7 +3716,7 @@ function updateMetaTagsForStory(story) {
     canonical.setAttribute('rel', 'canonical');
     document.head.appendChild(canonical);
   }
-  canonical.setAttribute('href', `https://www.tenetnetworks.com/company/stories#${story.id}`);
+  canonical.setAttribute('href', `https://www.tenetnetworks.com/company/stories/${story.id}`);
   
   // if (window.history && window.history.pushState) {
   // window.history.pushState(
@@ -3537,7 +3727,7 @@ function updateMetaTagsForStory(story) {
   // }
 }
 
-window.openStoryModal = function(index) {
+window.openStoryModal = function(index, options = {}) {
   console.log('openStoryModal called with index:', index);
   const stories = CONTENT.stories || [];
   const story = stories[index];
@@ -3546,6 +3736,13 @@ window.openStoryModal = function(index) {
     return;
   }
   console.log('Opening modal for:', story.title);
+
+  // Give every customer story a stable, copy/pasteable URL while retaining
+  // the existing modal UX. Back/Forward therefore opens/closes the story.
+  if (options.pushHistory !== false) {
+    const storyUrl = `/company/stories/${story.id}`;
+    safeHistoryPush({ page: 'company', tab: 'stories', storyId: story.id, storyOrigin: { page: currentPage || 'company', tab: currentPage === 'company' ? (history.state?.tab || 'stories') : (history.state?.tab || null) } }, storyUrl);
+  }
   updateMetaTagsForStory(story);
   
   const overlay = document.getElementById('storyModalOverlay');
@@ -3646,7 +3843,21 @@ window.closeStoryModal = function() {
   if (!overlay) return;
   overlay.classList.remove('active');
   document.body.style.overflow = '';
-  setState({ modal: null, modalIndex: null });
+
+  const state = history.state || {};
+  if (state.storyId) {
+    if (state.storyOrigin && state.storyOrigin.page) {
+      // Returning from a story opened in the SPA should restore the page
+      // the visitor was actually on, rather than forcing /company/stories.
+      history.back();
+      return;
+    }
+    // Direct/shared story URL: return to the customer-stories index.
+    const parentUrl = '/company/stories';
+    safeHistoryPush({ page: 'company', tab: 'stories', storyId: null }, parentUrl);
+    updateMeta('company', 'stories');
+  }
+  setState({ page: 'company', tab: 'stories', modal: null, modalIndex: null });
 };
 
 // Close story modal on overlay click

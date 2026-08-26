@@ -3,7 +3,7 @@ window.CONTENT = {
   /* ── COMPANY META ── */
   company: {
     name:    "Tenet Networks",
-    tagline: "Industrial IoT Gateways, SD-WAN &amp; SCADA Connectivity Solutions",
+    tagline: "Enterprise SD-WAN, Branch Networking & Industrial Connectivity Platform",
     address: "#541, 5th Floor, Tower A, Logix Technova, Sector 132, NOIDA – 201305 UP, INDIA",
     email:   "info@tenetnetworks.com",
     careers: "careers@tenetnetworks.com",
@@ -33,180 +33,171 @@ window.CONTENT = {
      - priority: 10 = Campaign mode (shows ~50% of visits)
   */
     hero: [
-    
+
     // ════════════════════════════════════════════════════════
-    // 🏭 SLIDE 1: Reliability & Uptime (CORE - Always Active)
+    // SLIDE 1: TENET CORE PROPOSITION
     // ════════════════════════════════════════════════════════
     {
-      id: "reliability-24x7",
+      id: "industrial-edge-to-enterprise",
       active: true,
-      priority: 1,
-      
-      tag: "Industrial IoT · Proven Reliability",
-      title: "Industrial Connectivity That Never <span class='accent'>Stops Working</span>",
-      subtitle: "Keep factories, utilities and remote sites online 24/7 with Credo self-healing industrial routers and edge gateways built for zero downtime.",    
+      priority: 5,
+
+      tag: "Industrial Connectivity · Enterprise Networking",
+      title: "Connecting the <span class='accent'>Industrial Edge to the Enterprise.</span>",
+      subtitle: "Rugged cellular gateways, intelligent WAN platforms and centralized management for the networks that keep critical operations connected.",
       features: [
-        { icon: "⚡", label: "99.97% Field-Verified Uptime" },
-        { icon: "🔄", label: "<1s Auto-Failover", prefix: "<" },
-        { icon: "🏭", label: "150K+ Devices Deployed Worldwide" }
+        { icon: "📡", label: "Industrial 4G/5G Connectivity" },
+        { icon: "🌐", label: "Enterprise Networking & SD-WAN" },
+        { icon: "☁️", label: "Centralized Network Orchestration" }
       ],
-      
-      cta1: { label: "Schedule Demo", target: "contact" },
-      cta2: { label: "View Technical Specs →", target: "products" }
+
+      cta1: { label: "View Our Products →", target: "products", tab: "portfolio" },
+      cta2: { label: "Talk to an Engineer →", target: "contact" }
     },
 
     // ════════════════════════════════════════════════════════
-    // 📊 SLIDE 2: Modern Dashboard (CORE - Always Active)
+    // SLIDE 2: INDUSTRIAL CONNECTIVITY
     // ════════════════════════════════════════════════════════
     {
-      id: "sd-wan-dashboard",
+      id: "industrial-connectivity",
       active: true,
       priority: 1,
-      
-      tag: "cWAN · Centralized Control",
-      title: "Control Every Site From <span class='accent'>One Dashboard</span>",
-      subtitle: "Monitor and manage every Credo edge devices across locations with centralized visibility, automated failover and policy-based control.",    
+
+      tag: "Industrial Connectivity · 4G/5G",
+      title: "Connectivity Built for <span class='accent'>Where Networks Actually Live.</span>",
+      subtitle: "Reliable cellular connectivity for industrial systems, SCADA, factories, infrastructure and demanding field environments.",
       features: [
-        { icon: "📊", label: "Single-Pane Visibility" },
-        { icon: "⚡", label: "Zero-Touch Provisioning" },
-        { icon: "🔄", label: "Automatic Load Balancing" }
+        { icon: "📡", label: "Indoor & Outdoor Industrial Gateways" },
+        { icon: "⚙️", label: "SCADA & Industrial Networking" },
+        { icon: "🛡️", label: "Rugged, Secure & Remote-Manageable" }
       ],
-      
-      cta1: { label: "Schedule Demo", target: "contact" },
-      cta2: { label: "See How It Works →", target: "products", tab: "ces" }
+
+      cta1: { label: "Explore Industrial Gateways →", target: "products", tab: "portfolio" },
+      cta2: { label: "Talk to an Engineer →", target: "contact" }
     },
 
     // ════════════════════════════════════════════════════════
-    // 🚀 SLIDE 3: Fast Deployment (CORE - Always Active)
+    // SLIDE 3: ENTERPRISE NETWORKING
     // ════════════════════════════════════════════════════════
     {
-      id: "edge-deployment",
+      id: "enterprise-networking",
       active: true,
       priority: 1,
-      
-      tag: "Edge WAN · Rapid Deployment",
-      title: "Deploy Remote Sites in <span class='accent'>Minutes, Not Weeks</span>",
-      subtitle: "Ship, plug in, connect. Zero-touch provisioning with dynamic bandwidth optimization for remote locations where on-site support isn't an option.",
-      
-      benefits: [
-        { icon: "🚀", label: "5-Minute Setup" },
-        { icon: "📡", label: "Works in Low-Bandwidth Areas" },
-        { icon: "🔧", label: "Remote Management" }
+
+      tag: "Enterprise Networking · SD-WAN",
+      title: "Intelligent Networking for <span class='accent'>Distributed Operations.</span>",
+      subtitle: "Connect branches, offices, factories and remote sites with intelligent multi-WAN connectivity, traffic management and centralized orchestration.",
+      features: [
+        { icon: "🌐", label: "Fiber · MPLS · Broadband · 4G · 5G" },
+        { icon: "⚡", label: "Intelligent Traffic Steering & Failover" },
+        { icon: "☁️", label: "Centralized Network Orchestration" }
       ],
-      
+
       cta1: { label: "Schedule Demo", target: "contact" },
-      cta2: { label: "Partnership Program →", target: "partners" }
+      cta2: { label: "Explore Enterprise Networking →", target: "products", tab: "cwan" }
     },
 
     // ════════════════════════════════════════════════════════
-    // 🔥 SLIDE 4: DIFFERENTIATOR - RF Engineering (CORE)
+    // SLIDE 4: ENGINEERING DIFFERENTIATOR
     // ════════════════════════════════════════════════════════
     {
-      id: "rf-engineering-differentiator",
+      id: "engineering-beyond-datasheet",
       active: true,
       priority: 1,
-      
-      tag: "RF Engineering · Deployment Reality",
-      title: "Connectivity That Works Where <span class='accent'>Others Fail</span>",
-      subtitle: "Most systems fail due to RF conditions, antenna placement and real-world constraints, not the modem. We design for the conditions your system actually faces.",
-      
-      benefits: [
-        { icon: "📡", label: "RF-Driven Design" },
+
+      tag: "RF · Wireless · Network Engineering",
+      title: "Engineering the Network <span class='accent'>Beyond the Datasheet.</span>",
+      subtitle: "When connectivity depends on RF conditions, antenna placement, propagation, interference and difficult field environments, we engineer around the conditions the network actually faces.",
+      features: [
+        { icon: "📡", label: "RF & Wireless Engineering" },
         { icon: "🧠", label: "System-Level Optimization" },
-        { icon: "🔬", label: "Field-Validated" }
+        { icon: "🔬", label: "Field-Validated Solutions" }
       ],
-      
-      cta1: { label: "Analyze Your Deployment", target: "contact" },
-      cta2: { label: "Read: Why Systems Fail →", target:  "company", tab: "perspective" }
+
+      cta1: { label: "Explore Engineering Services →", target: "services" },
+      cta2: { label: "Analyze Your Deployment →", target: "contact" }
     },
 
     // ════════════════════════════════════════════════════════
-    // 🇮🇳 SLIDE 5: Made in India - Engineering Toughness
+    // SLIDE 5: ORCHESTRATION + ENGINEERING
     // ════════════════════════════════════════════════════════
     {
-      id: "made-in-india",
+      id: "field-resilient-connectivity",
       active: true,
       priority: 1,
-      
-      tag: "Engineering Pedigree · Built in India",
-      title: "Built in India, <span class='accent'>Built to Last</span>",
-      subtitle: "Built and designed in India, carrying the engineering DNA of the world's most demanding telecom deployments.",
-      
-      specs: [
-        { icon: "🇮🇳", label: "Designed & Built in India" },
-        { icon: "🔧", label: "Deep Engineering DNA" },
-        { icon: "📅", label: "Delivering Since 2017" }
+
+      tag: "Industrial Connectivity · Built for the Field",
+      title: "Connectivity That Stays On When <span class='accent'>Conditions Get Tough.</span>",
+      subtitle: "Industrial networks don't operate in perfect environments. Tenet gateways are designed for demanding deployments where heat, humidity, dust, rain, power fluctuations and difficult RF conditions can challenge connectivity.",
+      features: [
+        { icon: "💧", label: "Weather & Environmental Resilience" },
+        { icon: "📡", label: "Reliable 4G/5G Connectivity" },
+        { icon: "⚡", label: "Protection for Demanding Deployments" }
       ],
-      
-      cta1: { label: "View Products →", target: "products" },
-      cta2: { label: "Talk to Engineer →", target: "contact" }
+
+      cta1: { label: "Explore Industrial Gateways →", target: "products", tab: "portfolio" },
+      cta2: { label: "Talk to an Engineer →", target: "contact" }
     },
 
     // ════════════════════════════════════════════════════════
-    // 🪔 EXAMPLE: Diwali 2026 Campaign (ACTIVE)
+    // CAMPAIGNS / SEASONAL SLIDES
     // ════════════════════════════════════════════════════════
     {
       id: "diwali-2026",
-      active: true,
+      active: false,
       priority: 5,
       validFrom: "2026-10-15",
       validUntil: "2026-11-15",
-      
+
       tag: "🪔 Happy Diwali",
       title: "Keep Your Operations Running Bright This <span class='accent'>Diwali</span>",
-      subtitle: "Even during peak demand and festive surges, ensure uninterrupted connectivity across all your sites.",  
+      subtitle: "Even during peak demand and festive surges, ensure uninterrupted connectivity across all your sites.",
       festivalMessage: [
         { icon: "🪔", label: "Light up every operation" },
         { icon: "🔄", label: "Reliability that never dims" },
         { icon: "🌟", label: "Prosperity through intelligent connections" }
       ],
-      
+
       cta1: { label: "Connect With Us", target: "contact", campaign: "diwali2026" },
       cta2: { label: "Explore Solutions →", target: "products" }
     },
 
-    // ════════════════════════════════════════════════════════
-    // 📡 EXAMPLE: 5G Product Launch (INACTIVE - Ready to use)
-    // ════════════════════════════════════════════════════════
     {
       id: "5g-gateway-launch",
       active: false,
       priority: 5,
-      
+
       tag: "🚀 New Product Launch · 5G Industrial Gateway",
       title: "Introducing Our <span class='accent'>5G Industrial Gateway</span>",
       subtitle: "Future-proof connectivity with standalone 5G support. Low latency, high throughput and backward compatibility with 4G LTE for seamless migration.",
-      
+
       newFeatures: [
         { icon: "📡", label: "Standalone 5G (SA)" },
         { icon: "⚡", label: "10Gbps Throughput" },
         { icon: "🎯", label: "Ultra-Low Latency" }
       ],
-      
+
       cta1: { label: "Talk to Us", target: "contact", campaign: "5g-launch" },
       cta2: { label: "Learn More →", target: "products", tab: "5g-gateway" }
     },
 
-    // ════════════════════════════════════════════════════════
-    // ☔ EXAMPLE: Monsoon Campaign (ACTIVE)
-    // ════════════════════════════════════════════════════════
     {
       id: "monsoon-2026",
-      active: true,
+      active: false,
       priority: 3,
       validFrom: "2026-06-01",
       validUntil: "2026-09-30",
-      
+
       tag: "☔ Monsoon-Ready Infrastructure",
       title: "<span class='accent'>Monsoon-Proof</span> Connectivity That Never Fails",
       subtitle: "Weatherproof enclosures and lightning protection keep critical infrastructure online through India's harshest monsoons, from heavy rainfall to extreme humidity.",
-      
+
       weatherProof: [
         { icon: "💧", label: "Water & Dust Resistance" },
         { icon: "🌧️", label: "Extreme Humidity Resilience" },
         { icon: "⚡", label: "Lightning-Grade Surge Protection" }
       ],
-      
+
       cta1: { label: "Get Monsoon-Ready", target: "contact", campaign: "monsoon2026" },
       cta2: { label: "View Ruggedized Solutions →", target: "products" }
     }
@@ -217,11 +208,71 @@ window.CONTENT = {
      ═══════════════════════════════════════════════════════════ */
   solutions: [
     {
+      id: 'enterprise-wan',
+      icon: '🌐',
+      title: 'Enterprise SD-WAN',
+      subtitle: 'Intelligent WAN for multi-branch offices, retail chains, and distributed enterprises',
+      description: 'Connect offices, stores and distributed sites over fiber, broadband, MPLS, 4G and 5G with intelligent traffic steering, centralized visibility and zero-touch deployment.',
+      useCases: [
+        { icon: '🏢', label: 'Multi-Branch Connectivity' },
+        { icon: '🛒', label: 'Retail Chain Networks' },
+        { icon: '🏦', label: 'Banking & Financial Services' },
+        { icon: '🏭', label: 'Distributed Industrial Sites' }
+      ],
+      products: ['cwan', 'vpn', 'cms'],
+      cta: { label: 'Explore Enterprise SD-WAN →', target: 'products', tab: 'cwan' }
+    },
+    {
+      id: 'sd-branch',
+      icon: '🏢',
+      title: 'SD-Branch',
+      subtitle: 'Fast, secure and centrally managed connectivity for distributed branches',
+      description: 'Deploy resilient branch connectivity with multi-WAN, intelligent routing, wireless backup, zero-touch provisioning and centralized cloud management.',
+      useCases: [
+        { icon: '🏦', label: 'Bank Branches' },
+        { icon: '🛒', label: 'Retail Locations' },
+        { icon: '🚚', label: 'Distributed Logistics Sites' },
+        { icon: '🏢', label: 'Remote Offices' }
+      ],
+      products: ['cwanexpress', 'vpn', 'cms'],
+      cta: { label: 'Explore Branch Connectivity →', target: 'products', tab: 'cwanexpress' }
+    },
+    {
+      id: 'industrial-iot',
+      icon: '🏭',
+      title: 'Industrial & Critical Infrastructure',
+      subtitle: 'Reliable connectivity for factories, utilities, energy and SCADA',
+      description: 'Enable always-on connectivity across factories, utilities, substations and remote infrastructure with rugged gateways, SCADA connectivity and centralized management.',
+      useCases: [
+        { icon: '⚙️', label: 'Factory Automation' },
+        { icon: '⚡', label: 'Power & Utilities' },
+        { icon: '🔧', label: 'SCADA & Remote Assets' },
+        { icon: '🌐', label: 'Multi-Site Operations' }
+      ],
+      products: ['indoor', 'scada', 'outdoor', 'cms'],
+      cta: { label: 'Read Industrial Case Studies →', target: 'company', tab: 'stories' }
+    },
+    {
+      id: 'remote-monitoring',
+      icon: '📡',
+      title: 'Remote & Distributed Sites',
+      subtitle: 'Ruggedized connectivity for surveillance, sensors and field telemetry',
+      description: 'Deploy secure, weatherproof connectivity for remote installations, surveillance, environmental monitoring and field telemetry where conventional WAN connectivity is unreliable.',
+      useCases: [
+        { icon: '📹', label: 'Video Surveillance' },
+        { icon: '🌡️', label: 'Environmental Sensors' },
+        { icon: '⚡', label: 'Energy & Solar Monitoring' },
+        { icon: '🛰️', label: 'Remote Site Access' }
+      ],
+      products: ['outdoor', 'indoor', 'cms'],
+      cta: { label: 'Explore Remote Deployments →', target: 'company', tab: 'stories' }
+    },
+    {
       id: 'smart-cities',
       icon: '🏙️',
       title: 'Smart Cities & Utilities',
-      subtitle: 'Reliable connectivity for smart grids, traffic systems, and city-scale SCADA',
-      description: 'Power smart grids, traffic management and city-wide SCADA systems with redundant, multi-path connectivity designed for zero-downtime operations.',
+      subtitle: 'Reliable connectivity for smart grids, traffic systems and city-scale SCADA',
+      description: 'Power smart grids, traffic management and city-wide SCADA systems with redundant, multi-path connectivity designed for continuous operations.',
       useCases: [
         { icon: '💡', label: 'Smart Grid Management' },
         { icon: '🚦', label: 'Intelligent Traffic Control' },
@@ -230,73 +281,28 @@ window.CONTENT = {
       ],
       products: ['scada', 'outdoor', 'cwan'],
       cta: { label: 'See Smart City Deployments →', target: 'company', tab: 'stories' }
-    },
-    {
-      id: 'industrial-iot',
-      icon: '🏭',
-      title: 'Industrial IoT & Manufacturing',
-      subtitle: 'Cellular connectivity for factory automation, asset tracking, and predictive maintenance',
-      description: 'Enable Industry 4.0 with secure, always-on M2M connectivity across factory floors, warehouses and remote facilities. Real-time telemetry, predictive maintenance and centralized control.',
-      useCases: [
-        { icon: '⚙️', label: 'Factory Automation' },
-        { icon: '📊', label: 'Real-Time Asset Tracking' },
-        { icon: '🔧', label: 'Predictive Maintenance' },
-        { icon: '🌐', label: 'Multi-Site Coordination' }
-      ],
-      products: ['indoor', 'scada', 'cms'],
-      cta: { label: 'Read Industrial Case Studies →', target: 'company', tab: 'stories' }
-    },
-    {
-      id: 'enterprise-wan',
-      icon: '🌐',
-      title: 'Enterprise SD-WAN',
-      subtitle: 'Intelligent WAN for multi-branch offices, retail chains, and remote workforce',
-      description: 'Transform your network with intelligent, policy-driven SD-WAN. Seamlessly connect offices, stores and remote workers with centralized visibility and zero-touch deployment.',
-      useCases: [
-        { icon: '🏢', label: 'Multi-Branch Connectivity' },
-        { icon: '🛒', label: 'Retail Chain Networks' },
-        { icon: '🏦', label: 'Banking & Financial Services' },
-        { icon: '👥', label: 'Remote Workforce Access' }
-      ],
-      products: ['cwan', 'vpn', 'cms'],
-      cta: { label: 'View Enterprise Success Stories →', target: 'company', tab: 'stories' }
-    },
-    {
-      id: 'remote-monitoring',
-      icon: '📡',
-      title: 'Remote Site Monitoring',
-      subtitle: 'Ruggedized connectivity for surveillance, sensors, and field telemetry',
-      description: 'Deploy secure, weatherproof connectivity for remote installations, surveillance, environmental monitoring and field telemetry. Built for harsh conditions and inaccessible locations.',
-      useCases: [
-        { icon: '📹', label: 'Video Surveillance' },
-        { icon: '🌡️', label: 'Environmental Sensors' },
-        { icon: '⚡', label: 'Energy & Solar Monitoring' },
-        { icon: '🛰️', label: 'Remote Site Access' }
-      ],
-      products: ['outdoor', 'indoor', 'cms'],
-      cta: { label: 'Explore Remote Monitoring Stories →', target: 'company', tab: 'stories' }
     }
   ],
 
   /* ── STATS ── */
   stats: [
-    { n:"150K+",  l:"Devices Deployed Worldwide" },
-    { n:"200+",   l:"Happy Enterprise Customers" },
-    { n:"Global", l:"Reach from India to 3 Continents" },
-    { n:"150+",   l:"Years Leadership Experience" },
+    { n:"150K+",  l:"Devices Deployed" },
+    { n:"200+",   l:"Customers Served" },
+    { n:"3+",     l:"Continents Deployed" },
+    { n:"150+",   l:"Years Combined Leadership Experience" },
   ],
 
   /* ── PRODUCTS ── */
   products: {
     m2m_intro: {
-      heading:  "M2M Cellular Gateways",
-      subhead:  "Always-On Connectivity for Mission-Critical Operations",
+      heading:  "Enterprise & Industrial Edge Connectivity",
+      subhead:  "4G/5G Gateways for Branches, Industrial Sites and Remote Infrastructure",
       body:     "Empower seamless machine to machine communication across industrial sites, enterprises and remote deployments with our rugged, high-performance cellular gateway. Designed for real-world challenges, our gateway portfolio ensures Always-On Connectivity, secure data transport and centralized control.",
     },
     ces_intro: {
-      heading:  "Connectivity Evolution Platform (cWAN)",
-      subhead:  "Future-Proof SD-WAN Architecture for Modern Enterprises",
-      body:     "Leverage our modular, scalable platform—powered by a split-design architecture—to modernize legacy infrastructure, enhance flexibility and drive enterprise-wide digital transformation. Designed for service providers, industrial networks and enterprise WANs, our solution ensures agility, visibility and end-to-end control.",
+      heading:  "Enterprise SD-WAN (cWAN)",
+      subhead:  "Intelligent Multi-WAN Connectivity for Modern Enterprises",
+      body:     "Connect branches, offices, factories and remote sites across fiber, broadband, MPLS, 4G and 5G. cWAN combines intelligent traffic steering, WAN bonding, analytics, zero-touch provisioning and centralized orchestration for resilient distributed networks.",
     },
     indoor: {
       label:   "Credo Indoor Industrial Gateways",
@@ -321,7 +327,7 @@ window.CONTENT = {
       enables: [
         {
           title: "Deploy at Scale",
-          desc: "Provision and manage hundreds of devices remotely using Credo Management System. One-touch template-based activation gets sites online in minutes."
+          desc: "Provision and manage hundreds of devices remotely using Credo Cloud. One-touch template-based activation gets sites online in minutes."
         },
         {
           title: "Stay Online Always",
@@ -337,7 +343,7 @@ window.CONTENT = {
         },
         {
           title: "Manage Remotely",
-          desc: "Full control via Credo CMS, web interface or SMS commands, even in the most inaccessible locations. Real-time visibility and diagnostics."
+          desc: "Full control via Credo Cloud, web interface or SMS commands, even in the most inaccessible locations. Real-time visibility and diagnostics."
         },
         {
           title: "Secure Your Data",
@@ -357,7 +363,7 @@ window.CONTENT = {
         "Advanced routing protocols (OSPF, BGP, static routes)",
         "Enterprise firewall with stateful packet inspection",
         "Zero-touch deployment and remote provisioning",
-        "Integration with Credo Management System (CMS)",
+        "Integration with Credo Cloud (CMS)",
         "SNMP, TR069, SSH, and web-based management",
         "DIN-rail or wall-mountable compact enclosure",
         "Wide voltage input (9-36V DC) with reverse polarity protection"
@@ -368,7 +374,7 @@ window.CONTENT = {
         { k:"Connectivity",   v:"Dual-SIM Failover" },
         { k:"Routing",        v:"Enterprise-Grade (OSPF, BGP)" },
         { k:"Security",       v:"Multi-VPN, Firewall, Encryption" },
-        { k:"Management",     v:"Web, CLI, SNMP, Credo CMS, TR069" },
+        { k:"Management",     v:"Web, CLI, SNMP, Credo Cloud, TR069" },
         { k:"Form Factor",    v:"Compact DIN-Rail / Wall Mount" },
         { k:"Power",          v:"Wide Voltage Input (9-36V DC)" },
         { k:"Environment",    v:"Industrial Grade (-30°C to +70°C)" },
@@ -564,7 +570,7 @@ window.CONTENT = {
         },
         {
           title: "Deploy and Manage at Scale",
-          desc: "Credo CMS enables remote provisioning, firmware updates and visual monitoring across hundreds of distributed VPN gateways from a single dashboard."
+          desc: "Credo Cloud enables remote provisioning, firmware updates and visual monitoring across hundreds of distributed VPN gateways from a single dashboard."
         },
         {
           title: "Install Anywhere",
@@ -585,7 +591,7 @@ window.CONTENT = {
         "Enterprise firewall with stateful packet inspection",
         "VRRP for gateway redundancy and high availability",
         "Hardware watchdog for automatic recovery",
-        "Remote management via Credo CMS platform",
+        "Remote management via Credo Cloud platform",
         "Wide voltage input (9-48V DC) for flexible power",
         "Versatile connectivity (electrical copper and fiber options)"
       ],
@@ -595,20 +601,20 @@ window.CONTENT = {
         { k:"WAN",           v:"Dual WAN with Automatic Failover" },
         { k:"Routing",       v:"Full IPv4/IPv6, Firewall, NAT, VRRP" },
         { k:"Failover",      v:"Sub-Second Hardware-Level Switchover" },
-        { k:"Management",    v:"Credo CMS (Remote Provisioning & Monitoring)" },
+        { k:"Management",    v:"Credo Cloud (Remote Provisioning & Monitoring)" },
         { k:"Power",         v:"Rugged, Wide Input Voltage (9-48V)" },
         { k:"Connectivity",  v:"Electrical Copper & Fiber Options" },
         { k:"Environment",   v:"Industrial-Grade Components" },
       ],
     },
     cms: {
-      label:   "Credo Management System (CMS)",
-      badge:   "Management Platform",
+      label:   "Credo Cloud",
+      badge:   "Network Orchestration Platform",
       
       hero: {
-        headline: "Centralized Platform to Monitor, Configure, and Manage Devices at Scale",
-        subhead: "Built for industrial and enterprise networks managing thousands of distributed gateways and routers.",
-        description: "Powerful orchestration suite with deep visibility, automation and remote troubleshooting to ensure network uptime and SLA adherence.",
+        headline: "One Control Plane for Your Distributed Network",
+        subhead: "Cloud network management and orchestration for enterprise branches, industrial sites and remote gateways.",
+        description: "Deploy, configure, monitor, secure and optimize distributed networks with zero-touch provisioning, real-time visibility, automation and remote troubleshooting.",
       },
       
       useCases: [
@@ -677,91 +683,92 @@ window.CONTENT = {
       ],
     },
     cwan: {
-      label:   "cWAN – Complete SD-WAN Platform",
-      badge:   "Connectivity Evolution Platform",
+      label:   "cWAN – Enterprise SD-WAN Platform",
+      badge:   "Enterprise Networking",
       
       hero: {
-        headline: "Enterprise SD-WAN with Advanced Analytics and WAN Bonding",
-        subhead: "Built for enterprises and service providers demanding total visibility, performance optimization and multi-site resilience.",
-        description: "Split-plane architecture with bandwidth aggregation, comprehensive reporting dashboards and intent-based routing for complex multi-site networks.",
+        headline: "Connect Every Site. Make Every WAN Link Count.",
+        subhead: "Enterprise SD-WAN for branches, factories, utilities and distributed operations that need resilient connectivity and centralized control.",
+        description: "cWAN brings fiber, broadband, MPLS, Ethernet, LTE and 5G underlays together through intelligent traffic steering, per-packet WAN bonding, centralized orchestration and real-time network visibility.",
       },
       
       useCases: [
-        "Multi-site enterprise WAN optimization",
-        "ISP and MSP service delivery platforms",
-        "Bandwidth-critical applications requiring link aggregation",
-        "Networks requiring deep analytics and reporting",
-        "High-availability data center interconnects",
-        "Complex multi-tenant service provider networks"
+        "Multi-branch enterprise networks",
+        "Power, utilities and critical infrastructure",
+        "Industrial and manufacturing sites",
+        "Banking, retail and distributed service locations",
+        "Remote and bandwidth-constrained sites",
+        "ISP and MSP network deployments"
       ],
       
       enables: [
         {
-          title: "Aggregate Bandwidth Across Links",
-          desc: "Per-packet WAN bonding aggregates multiple links (LTE, MPLS, DSL, fiber) for maximum throughput. Eliminate bandwidth bottlenecks and boost performance without expensive infrastructure upgrades."
+          title: "Use Multiple WAN Links as One Resilient Network",
+          desc: "Per-packet WAN bonding can aggregate available links across LTE/5G, MPLS, DSL, Ethernet and fiber to improve bandwidth utilization and maintain connectivity when individual links degrade or fail."
         },
         {
-          title: "Get Deep Network Intelligence",
-          desc: "Advanced reporting dashboards reveal network performance, application usage, bandwidth trends and SLA compliance. Make data-driven decisions about network optimization and capacity planning."
+          title: "Steer Traffic Around Real-World Network Conditions",
+          desc: "Intent-based routing and dynamic traffic steering use business goals such as latency, jitter and cost to determine how traffic should move across available WAN paths."
         },
         {
-          title: "Route Traffic Intelligently",
-          desc: "Intent-based routing automatically steers traffic across WAN tunnels based on business goals (latency, jitter, cost). Define policies once and watch the network optimize itself dynamically."
+          title: "Keep Distributed Operations Connected",
+          desc: "Split-plane architecture separates control and data functions, supporting resilient operation and rapid recovery when network components or WAN links experience problems."
         },
         {
-          title: "Ensure Unbreakable Resilience",
-          desc: "Split-plane architecture decouples control and data planes for seamless failover without disruption. Your network stays up even when individual components fail."
+          title: "See the Network From One Place",
+          desc: "Centralized orchestration provides topology visibility, tunnel health, link quality, alerts, reporting and analytics so network teams can monitor and optimize distributed sites remotely."
         },
         {
-          title: "Visualize Everything in Real-Time",
-          desc: "Unified orchestration interface shows topology, tunnel health, link quality and alerts in one dashboard. Provision new sites, troubleshoot issues, and monitor performance from anywhere."
+          title: "Deploy Sites Without Sending IT Teams On-Site",
+          desc: "Zero-touch provisioning and remote firmware updates simplify rollout across distributed locations, while centralized policies reduce repetitive configuration work."
         },
         {
-          title: "Scale Across Any Infrastructure",
-          desc: "Works over LTE, MPLS, DSL, Ethernet, fiber — whatever underlay you have. Multi-tenant architecture built for ISPs and MSPs managing hundreds of customers from one platform."
+          title: "Connect Cloud and SaaS Applications More Directly",
+          desc: "Internet breakout and DNS offload support local access to cloud and SaaS applications, helping reduce unnecessary backhaul and improve application performance."
         }
       ],
       
       differentiator: {
-        title: "Why This Platform Stands Out",
-        content: "cWAN is Tenet's flagship SD-WAN platform combining enterprise-grade features typically found only in solutions costing 10x more. Per-packet WAN bonding, split-plane architecture, and comprehensive analytics deliver performance and visibility that standard SD-WAN solutions simply cannot match. Proven in production managing thousands of sites."
+        title: "Why cWAN",
+        content: "cWAN is designed around the realities of distributed networks: multiple WAN underlays, changing link conditions, remote sites and the need for centralized operational control. Its combination of split-plane architecture, per-packet WAN bonding, intelligent routing, analytics and visual orchestration gives network teams a single platform for operating complex WAN environments."
       },
       
       techCapabilities: [
+        "Split-plane architecture with independent control and data planes",
         "Per-packet WAN bonding for bandwidth aggregation",
-        "Split-plane architecture (independent control and data planes)",
-        "Advanced reporting and analytics dashboards",
-        "Intent-based routing with dynamic traffic steering",
-        "Visual orchestration with real-time topology monitoring",
-        "Multi-underlay support (LTE, MPLS, DSL, Ethernet, fiber)",
+        "Intent-based routing and dynamic traffic steering",
         "Weighted load balancing based on real-time conditions",
-        "Application-aware QoS with traffic prioritization",
-        "Multi-tenant architecture for ISPs and MSPs",
+        "Application-aware QoS and traffic prioritization",
+        "Multi-underlay support: LTE/5G, MPLS, DSL, Ethernet and fiber",
+        "Centralized visual orchestration and real-time topology monitoring",
+        "Advanced reporting and network analytics",
         "Zero-touch provisioning and remote firmware updates",
-        "Encrypted overlay tunnels with secure boot",
-        "Internet breakout and DNS offload for cloud/SaaS apps"
+        "Encrypted overlay tunnels and secure boot",
+        "Internet breakout and DNS offload for cloud/SaaS applications",
+        "Multi-tenant architecture for ISP and MSP deployments"
       ],
       
       specs: [
         { k:"Architecture",   v:"Split-Plane SD-WAN with Analytics" },
         { k:"WAN Bonding",    v:"Per-Packet Link Aggregation" },
-        { k:"Underlay",       v:"Ethernet, LTE/NR, DSL, MPLS, Fiber" },
-        { k:"Reporting",      v:"Advanced Analytics & Dashboards" },
-        { k:"Orchestration",  v:"Centralized Multi-Tenant Controller" },
+        { k:"Underlay",       v:"Ethernet, LTE/5G, DSL, MPLS, Fiber" },
+        { k:"Routing",        v:"Intent-Based Routing + Dynamic Traffic Steering" },
+        { k:"Load Balancing", v:"Weighted, Condition-Aware" },
+        { k:"Orchestration",  v:"Centralized Visual Controller" },
+        { k:"Visibility",     v:"Topology, Tunnel Health, Link Quality & Analytics" },
         { k:"Security",       v:"Encrypted Overlay + Secure Boot" },
-        { k:"Routing",        v:"Intent-Based + Weighted Load Balancing" },
-        { k:"Management",     v:"Visual Topology + Real-time Alerts" },
-        { k:"Target",         v:"Enterprises, ISPs, MSPs" },
+        { k:"Provisioning",   v:"Zero-Touch + Remote Firmware Updates" },
+        { k:"Target",         v:"Enterprises, Utilities, Industrial Networks, ISPs & MSPs" },
       ],
     },
     cwanexpress: {
       label:   "cWAN Express – Streamlined SD-WAN for the Edge",
-      badge:   "Connectivity Evolution Platform",
+      badge:   "Enterprise Networking",
       
       hero: {
-        headline: "Enterprise-Grade SD-WAN Without the Complexity",
-        subhead: "Built for branch offices, retail locations and distributed sites requiring fast, secure, intelligent routing.",
-        description: "Same proven split-plane architecture as full cWAN, streamlined for edge deployment without reporting overhead or WAN bonding complexity.",
+        headline: "SD-WAN for Branches & Distributed Sites",
+        subhead: "Fast deployment, intelligent routing and resilient multi-WAN connectivity for branches, retail locations and distributed enterprises.",
+        description: "A streamlined SD-WAN experience for edge locations, combining zero-touch deployment, intelligent routing, centralized orchestration and automatic failover without unnecessary operational complexity.",
       },
       
       useCases: [
@@ -837,7 +844,7 @@ window.CONTENT = {
   /* ── SERVICES ── */
   services: {
     custom: {
-      label:   "Custom Engineering",
+      label:   "Custom Hardware",
       badge:   "Services",
       
       hero: {
@@ -909,12 +916,12 @@ window.CONTENT = {
       ],
     },
     consulting: {
-      label:   "Consulting and Engineering Services",
+      label:   "RF, Wireless & Network Engineering",
       badge:   "Services",
       
       hero: {
         headline: "Expert Technical Guidance from Design to Deployment",
-        subhead: "Deep expertise in LTE/5G, IoT architecture, and industrial network deployments.",
+        subhead: "RF, wireless and network engineering for enterprise, industrial and distributed connectivity.",
         description: "Our consultants bring 150+ years of combined experience to help you design, optimize and future-proof your embedded and network systems.",
       },
       
@@ -981,12 +988,12 @@ window.CONTENT = {
       ],
     },
     software: {
-      label:   "Software & Embedded Systems Development",
+      label:   "Embedded Software",
       badge:   "Services",
       
       hero: {
         headline: "Secure, High-Performance Embedded Software from Silicon to Cloud",
-        subhead: "Full-stack firmware and software development optimized for performance, stability and long-term support.",
+        subhead: "Full-stack firmware and embedded software optimized for performance, stability and long-term support.",
         description: "From board bring-up and bootloaders to cloud-connected applications, we build embedded systems that power intelligent products across industries.",
       },
       
@@ -1058,21 +1065,21 @@ window.CONTENT = {
 
   /* ── ABOUT ── */
   about: {
-    who_title:  "Making Technology Work Seamlessly",
-    who_body:   "At Tenet Networks, we design connectivity solutions that thrive in the toughest environments, from factory floors to smart cities. Built by engineers for real-world deployments, our systems are trusted across 150,000+ installations worldwide.\n\nWith over 150 years of combined leadership experience, we build products that just work: secure, reliable and scalable. From concept to deployment and ongoing support, we're your long-term partner in connectivity and automation.",
+    who_title:  "Enterprise Networking Built for the Real World",
+    who_body:   "At Tenet Networks, we build connectivity platforms for distributed enterprises, industrial operations and critical infrastructure. Our portfolio combines enterprise SD-WAN, cloud-managed edge connectivity, 4G/5G gateways and deep RF, embedded and network engineering.\n\nOur systems are deployed across 150,000+ installations worldwide. From the cloud control plane to the cellular edge, we design networks around the conditions in which they actually have to operate.",
     offerings:  [
-      { icon:"🏭", h:"Industrial-Grade M2M & Edge Devices",       p:"Rugged gateways that keep operations running without interruption. Proven in mission-critical deployments across harsh industrial environments." },
-      { icon:"🔄", h:"Legacy-to-Digital Transformation",   p:"Upgrade without disruption. Bridge older systems with modern IoT platforms while maintaining operational continuity." },
-      { icon:"⚙️", h:"Custom Engineering & Firmware Development",  p:"Tailored hardware and software designed for your exact needs. From RF optimization to embedded firmware, we build what off-the-shelf can't deliver." },
-      { icon:"📡", h:"Consulting in LTE, 5G NR & IoT Systems",     p:"Expert guidance from design to deployment at scale. Our team has deployed connectivity in some of the world's most challenging environments." },
+      { icon:"🌐", h:"Enterprise SD-WAN & Branch Networking", p:"Intelligent WAN connectivity for distributed enterprises, branches and remote locations with centralized orchestration and resilient multi-WAN." },
+      { icon:"☁️", h:"Credo Cloud", p:"A centralized control plane for provisioning, configuration, monitoring, analytics, firmware and remote operations across distributed networks." },
+      { icon:"📡", h:"Industrial & Wireless Edge", p:"Rugged 4G/5G gateways and SCADA connectivity for factories, utilities, energy and remote infrastructure." },
+      { icon:"🔬", h:"RF, Embedded & Network Engineering", p:"Deep engineering across RF, custom hardware, embedded software and network architecture when standard solutions aren't enough." },
     ],
-    why_title:  "Why Choose Tenet Networks",
-    why_body:   "Your strategic partner in connectivity and automation. Here's what sets us apart:",
+    why_title:  "Enterprise-Ready. Field-Proven.",
+    why_body:   "A connectivity platform backed by real-world deployment experience and deep engineering expertise.",
     why_cards:  [
-      { icon:"🏆", h:"Proven Expertise",       p:"Trusted across 150K+ deployed systems in mission-critical environments. Our track record speaks for itself — from smart cities to industrial automation." },
-      { icon:"🎯", h:"Tailored Solutions",         p:"We don't believe in one-size-fits-all. Every solution is designed to fit your unique challenges, infrastructure constraints, and performance goals." },
-      { icon:"🤝", h:"End-to-End Partnership",    p:"From concept to deployment and ongoing support, we're with you every step. Our long-term engagement model ensures continuity and trust." },
-      { icon:"🚀", h:"Future-Ready Innovation",   p:"Harnessing LTE, 5G NR, IoT, and edge computing to prepare you for tomorrow. Built in India, trusted globally." },
+      { icon:"🏆", h:"Proven at Scale",       p:"150K+ deployed devices across enterprise, industrial and critical-infrastructure environments." },
+      { icon:"🎯", h:"Built for Real Networks",         p:"Multi-WAN, cellular, SD-WAN and industrial edge capabilities designed around real deployment constraints." },
+      { icon:"🤝", h:"Engineering Partnership",    p:"From architecture and deployment to custom hardware, firmware and long-term support, we can stay involved across the lifecycle." },
+      { icon:"🚀", h:"Engineered in India",   p:"Deep RF, embedded and networking expertise developed in India and deployed across global environments." },
     ],
   },
 
@@ -1189,4 +1196,3 @@ window.loadStoriesAsync = async function() {
     });
   }
 })();
-

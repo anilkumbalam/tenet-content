@@ -216,20 +216,6 @@ document.addEventListener('click', (e) => {
       closeDrawer();
     }
     
-    // Close mega menu if navigation is from within it (desktop)
-    const megaMenu = navElement.closest('.mega');
-    if (megaMenu) {
-      const navGroup = megaMenu.closest('.nav-group');
-      if (navGroup) {
-        // Force close mega menu by hiding it
-        megaMenu.style.display = 'none';
-        // Reset after navigation completes
-        setTimeout(() => {
-          megaMenu.style.display = '';
-        }, 100);
-      }
-    }
-    
     if (article && typeof nav === 'function') {
       // Article navigation
       nav('article', article);
@@ -243,3 +229,39 @@ document.addEventListener('click', (e) => {
     return;
   }
 });
+
+
+/* === MEGA MENU CLICK-CLOSE BEHAVIOR ===
+   Submenu navigation is handled by the site's existing delegated click
+   handler. This small layer closes the open mega menu immediately after a
+   submenu is selected, even when the cursor remains over the menu. The menu
+   becomes available again when the pointer leaves and re-enters the group. */
+(function initMegaMenuClickClose(){
+  const groups = () => document.querySelectorAll('#header .nav-group');
+
+  document.addEventListener('click', (e) => {
+    const item = e.target.closest('#header .mega .mega-item');
+    if (!item) return;
+    const group = item.closest('.nav-group');
+    if (!group) return;
+    group.classList.add('menu-closing');
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
+  }, true);
+
+  const bind = () => {
+    groups().forEach(group => {
+      if (group.dataset.megaCloseBound === '1') return;
+      group.dataset.megaCloseBound = '1';
+      group.addEventListener('mouseleave', () => group.classList.remove('menu-closing'));
+      group.addEventListener('mouseenter', () => group.classList.remove('menu-closing'));
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind, {once:true});
+  } else {
+    bind();
+  }
+})();
