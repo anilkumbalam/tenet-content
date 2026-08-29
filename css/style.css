@@ -2567,3 +2567,49 @@ footer { background:#1A1A2E; border-top:3px solid #F26500; padding:4rem 2rem 2re
     max-width: 1100px;
   }
 }
+
+/* Mobile layout for Edge / Network / Cloud */
+@media (max-width: 600px) {
+  .edge-network-cloud {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .enc-node {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .enc-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}
+
+/* Mobile refinement for About statistics */
+@media(max-width:600px) {
+  .about-stat-grid {
+    gap:1rem;
+  }
+
+  .about-stat-box {
+    padding:1.25rem .75rem;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-sizing:border-box;
+  }
+
+  .about-stat-box .n {
+    font-size:1.9rem;
+    line-height:1.15;
+  }
+
+  .about-stat-box .l {
+    line-height:1.5;
+    margin-top:.45rem;
+  }
+}
