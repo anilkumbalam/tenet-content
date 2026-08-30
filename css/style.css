@@ -150,11 +150,11 @@ h4 { font-size:1rem; font-weight:600; }
 .nav-group { position:relative; height:90px; display:flex; align-items:center; }
 /* Anchor each menu to its own navigation item. This keeps the parent and menu
    spatially connected so the cursor never has to cross a dead zone. */
-.mega { display:none; position:absolute; top:90px; left:50%; transform:translateX(-50%); width:min(1150px, calc(100vw - 32px)); z-index:999; padding-top:10px; }
-.mega-products { width:min(1150px, calc(100vw - 32px)); }
-.mega-services { width:min(900px, calc(100vw - 32px)); }
-.mega-company { width:min(760px, calc(100vw - 32px)); left:auto; right:-2px; transform:none; }
-.mega-partners { width:min(760px, calc(100vw - 32px)); left:auto; right:-2px; transform:none; }
+.mega { display:none; position:absolute; top:90px; left:50%; transform:translateX(-50%); width:min(1150px, calc(100% - 32px)); z-index:999; padding-top:10px; }
+.mega-products { width:min(1150px, calc(100% - 32px)); }
+.mega-services { width:min(900px, calc(100% - 32px)); }
+.mega-company { width:min(760px, calc(100% - 32px)); left:auto; right:-2px; transform:none; }
+.mega-partners { width:min(760px, calc(100% - 32px)); left:auto; right:-2px; transform:none; }
 .mega { pointer-events:auto; }
 /* Invisible hover bridge from the header to the visible card. */
 .mega::before { content:""; position:absolute; left:0; right:0; top:0; height:14px; background:transparent; }
@@ -2376,10 +2376,10 @@ footer { background:#1A1A2E; border-top:3px solid #F26500; padding:4rem 2rem 2re
 
 /* Keep widths appropriate to the amount of content, while using exactly the
    same right-edge alignment and interaction behavior for every menu. */
-.mega-products { width:min(1150px, calc(100vw - 32px)); }
-.mega-services { width:min(900px, calc(100vw - 32px)); }
+.mega-products { width:min(1150px, calc(100% - 32px)); }
+.mega-services { width:min(900px, calc(100% - 32px)); }
 .mega-company,
-.mega-partners { width:min(760px, calc(100vw - 32px)); }
+.mega-partners { width:min(760px, calc(100% - 32px)); }
 
 /* Transparent hover corridor overlaps the header and bridges the small visual
    gap above the card. The user can move the cursor normally without losing it. */
