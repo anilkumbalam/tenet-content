@@ -133,7 +133,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/logarithmic-thinking-decibel</loc>
+    <loc>https://www.tenetnetworks.com/article/logarithmic-thinking</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -151,7 +151,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/sun-earths-power-supply</loc>
+    <loc>https://www.tenetnetworks.com/article/sun-power-supply</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -163,19 +163,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/wp1-emergency-locator-transmitters</loc>
+    <loc>https://www.tenetnetworks.com/article/wp1-elt</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/wp2-doppler-time-geometry</loc>
+    <loc>https://www.tenetnetworks.com/article/wp2-doppler</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/wp3-gnss-positioning</loc>
+    <loc>https://www.tenetnetworks.com/article/wp3-gnss</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -187,13 +187,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/wp5-bursty-vs-continuous</loc>
+    <loc>https://www.tenetnetworks.com/article/wp5-bursty</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/article/wp6-ai-physical-layer</loc>
+    <loc>https://www.tenetnetworks.com/article/wp6-ai-physical</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -202,67 +202,67 @@
 
   <!-- Customer Stories -->
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#jal-jeevan-mission</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/jal-jeevan-mission</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#smart-cities</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/smart-cities</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#city-gas-distribution</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/city-gas-distribution</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#power-distribution-sdwan</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/power-distribution-sdwan</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#renewable-energy</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/renewable-energy</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#manufacturing-plc</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/manufacturing-plc</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#oil-gas-telemetry</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/oil-gas-telemetry</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#ev-charging</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/ev-charging</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#mobile-surveillance</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/mobile-surveillance</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#banking-infrastructure</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/banking-infrastructure</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tenetnetworks.com/company/stories#warehousing-logistics</loc>
+    <loc>https://www.tenetnetworks.com/company/stories/warehousing-logistics</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
