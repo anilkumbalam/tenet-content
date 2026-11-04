@@ -28,23 +28,31 @@ function safeName(str) {
 // ============================================
 // LAZY LOAD KaTeX — only when articles are opened
 // ============================================
+function loadScript(src, integrity) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src; s.integrity = integrity; s.crossOrigin = 'anonymous';
+    s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
 async function loadKaTeX() {
-  if (typeof katex !== 'undefined') return; // already loaded
-  await new Promise((resolve, reject) => {
+  const jobs = [];
+  if (typeof marked === 'undefined')
+    jobs.push(loadScript('https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js', 'sha384-odPBjvtXVM/5hOYIr3A1dB+flh0c3wAT3bSesIOqEGmyUA4JoKf/YTWy0XKOYAY7'));
+  if (typeof DOMPurify === 'undefined')
+    jobs.push(loadScript('https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js', 'sha384-cwS6YdhLI7XS60eoDiC+egV0qHp8zI+Cms46R0nbn8JrmoAzV9uFL60etMZhAnSu'));
+  if (typeof katex === 'undefined') {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css';
     link.integrity = 'sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM';
     link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js';
-    script.integrity = 'sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI';
-    script.crossOrigin = 'anonymous';
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
+    jobs.push(loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js', 'sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI'));
+  }
+  await Promise.all(jobs);
 }
 
 // ============================================
@@ -165,7 +173,7 @@ function buildTeamCards(members) {
   return members.map((m, index) => {
     const hasPhoto = m.photo && m.photo.trim();
     const photoEl  = hasPhoto
-      ? `<img class="team-photo" src="${GITHUB.url('team/photos/'+safeName(m.photo))}" width="400" height="400" alt="${safeName(m.name)}" data-fallback="true">`
+      ? `<img class="team-photo" src="${GITHUB.url('team/photos/'+safeName(m.photo))}" width="400" height="400" alt="${safeName(m.name)}" loading="lazy" decoding="async" data-fallback="true">`
       : '';
     const fallback = `<div class="team-photo-fallback" ${hasPhoto ? 'style="display:none"' : ''}>${m.icon||'👤'}</div>`;
     const linkedinOverlay = m.linkedin ? `
@@ -197,7 +205,7 @@ function buildTeamCards(members) {
   return members.map((m, index) => {
     const hasPhoto = m.photo && m.photo.trim();
     const photoEl  = hasPhoto
-      ? `<img class="team-photo" src="${GITHUB.url('team/photos/'+safeName(m.photo))}" width="400" height="400" alt="${escapeHtml(m.name)}" data-fallback="true">`
+      ? `<img class="team-photo" src="${GITHUB.url('team/photos/'+safeName(m.photo))}" width="400" height="400" alt="${escapeHtml(m.name)}" loading="lazy" decoding="async" data-fallback="true">`
       : '';
     const fallback = `<div class="team-photo-fallback" ${hasPhoto ? 'style="display:none"' : ''}>${escapeHtml(m.icon||'👤')}</div>`;
     const linkedinOverlay = m.linkedin ? `
@@ -827,7 +835,7 @@ function footerHTML() {
   return `<footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo" style="cursor:pointer" data-nav="home"><img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" /></a>
+        <a href="/" class="logo" style="cursor:pointer" data-nav="home"><img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" loading="lazy" /></a>
         <p>Engineering intelligent connectivity solutions for modern enterprises, industrial operations and critical infrastructure.</p>
         <div class="socials"><a href="${c.linkedin}" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn">in</a><a href="${c.youtube}" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube">▶</a></div>
       </div>
@@ -2642,6 +2650,7 @@ async function renderArticle(articleId) {
       bodyHTML = typeof marked !== 'undefined'
         ? (typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(marked.parse(mdTextFixed), purifyConfig) : `<pre>${mdTextFixed}</pre>`)
         : `<pre>${mdTextFixed}</pre>`;
+      bodyHTML = bodyHTML.replace(/<img /g, '<img loading="lazy" decoding="async" ');
       setCachedMarkdown(mdCacheKey, bodyHTML);
     }
     
@@ -4020,7 +4029,12 @@ async function collectAllCacheableUrls() {
 }
 
 /* Trigger preloading via service worker */
-async function preloadAllContent() {
+async function preloadAllContent(force) {
+  const c = navigator.connection;
+  if (!force && (c && (c.saveData || c.type === 'cellular' || /2g|3g/.test(c.effectiveType || '')))) return;
+  if (!force) {
+    try { if (sessionStorage.getItem('tenet_preloaded')) return; sessionStorage.setItem('tenet_preloaded', '1'); } catch (e) {}
+  }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     console.warn('⚠️ Service worker not available for preloading');
     return;
@@ -4276,7 +4290,7 @@ window.tenetCache = {
   // ✨ NEW: Manually trigger content preloading (images + articles)
   preload: async function() {
     console.log('🚀 Manually triggering content preload...');
-    await preloadAllContent();
+    await preloadAllContent(true);
   }
 };
 
