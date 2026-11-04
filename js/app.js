@@ -840,7 +840,7 @@ function footerHTML() {
       <div class="footer-col"><h5>Company</h5>
         <a href="/company/about" data-nav="company" data-tab="about">About Us</a><a href="/company/team" data-nav="company" data-tab="team">Team</a><a href="/company/careers" data-nav="company" data-tab="careers">Careers</a><a href="/company/stories" data-nav="company" data-tab="stories">Customer Stories</a><a href="/company/perspective" data-nav="company" data-tab="perspective">Engineering Insights</a></div>
       <div class="footer-col"><h5>Partners</h5>
-        <a href="/partner-enquiry" data-nav="partner-enquiry">Partner With Tenet</a><a href="/partner-enquiry" data-nav="partner-enquiry">Become a Partner</a><h5 style="margin-top:1rem">Contact</h5><a href="/contact" data-nav="contact">Get in Touch</a><a href="/request-quote" data-nav="request-quote">Request a Quote</a></div>
+        <a href="/partners" data-nav="partners">Partner With Tenet</a><a href="/partner-enquiry" data-nav="partner-enquiry">Become a Partner</a><h5 style="margin-top:1rem">Contact</h5><a href="/contact" data-nav="contact">Get in Touch</a><a href="/request-quote" data-nav="request-quote">Request a Quote</a></div>
     </div>
     <div class="footer-bottom"><p>© ${c.founded}–${new Date().getFullYear()} Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p></div>
   </footer>
