@@ -294,8 +294,8 @@ const SEO_META = {
                 desc:  'Purpose-built SCADA gateways enabling secure, reliable remote monitoring and control for critical industrial infrastructure.' },
     vpn:      { title: 'VPN Gateways – Secure Industrial Networking | Tenet Networks',
                 desc:  'Hardware VPN gateways providing encrypted, zero-trust connectivity for industrial networks and distributed enterprise sites.' },
-    cms:      { title: 'Credo CMS – Centralised Device Management | Tenet Networks',
-                desc:  'Credo CMS delivers centralised monitoring, configuration, and lifecycle management for your entire Tenet gateway fleet.' },
+    cms:      { title: 'Credo Cloud – Network Orchestration | Tenet Networks',
+                desc:  'Credo Cloud provides centralised provisioning, monitoring, configuration and lifecycle management for your entire Tenet device fleet.' },
     ces:      { title: 'Connectivity Evolution Platform (cWAN) – SD-WAN Platform | Tenet Networks',
                 desc:  'Modular Connectivity Evolution Platform (cWAN) for legacy-to-digital WAN transformation using split-design SD-WAN architecture.' },
     cwan:     { title: 'cWAN – Enterprise SD-WAN Solution | Tenet Networks',
@@ -521,7 +521,7 @@ function nav(page, tab) {
   if (prevPage) {
     const key = `scroll_${prevPage}_${prevTab}`;
     sessionStorage.setItem(key, scrollPos);
-    console.log(`[SCROLL] Saved ${key} = ${scrollPos}`);
+    void(`[SCROLL] Saved ${key} = ${scrollPos}`);
   }
   
   currentPage = page;
@@ -544,7 +544,7 @@ function nav(page, tab) {
       
       // If navigating to a specific tab OR to a form page, always go to top
       if (tab || alwaysScrollToTop.includes(page)) {
-        console.log(`[SCROLL] Navigating to ${page}${tab ? '/'+tab : ''} - scrolling to top`);
+        void(`[SCROLL] Navigating to ${page}${tab ? '/'+tab : ''} - scrolling to top`);
         window.scrollTo({ top: 0, behavior: 'instant' });
         return;
       }
@@ -552,7 +552,7 @@ function nav(page, tab) {
       // Otherwise, restore saved position
       const key = `scroll_${page}_${tab || ''}`;
       const savedScroll = sessionStorage.getItem(key);
-      console.log(`[SCROLL] Restoring ${key} = ${savedScroll}`);
+      void(`[SCROLL] Restoring ${key} = ${savedScroll}`);
       
       if (savedScroll !== null) {
         const targetScroll = parseInt(savedScroll, 10);
@@ -561,7 +561,7 @@ function nav(page, tab) {
         // Double-check after a bit longer (for async content like team photos)
         setTimeout(() => {
           if (Math.abs(window.scrollY - targetScroll) > 50) {
-            console.log(`[SCROLL] Re-adjusting to ${targetScroll}`);
+            void(`[SCROLL] Re-adjusting to ${targetScroll}`);
             window.scrollTo({ top: targetScroll, behavior: 'instant' });
           }
         }, 300);
@@ -617,7 +617,7 @@ window.addEventListener('popstate', e => {
     setTimeout(() => {
       const key = `scroll_${state.page}_${state.tab || ''}`;
       const savedScroll = sessionStorage.getItem(key);
-      console.log(`[SCROLL] Back/Forward restoring ${key} = ${savedScroll}`);
+      void(`[SCROLL] Back/Forward restoring ${key} = ${savedScroll}`);
       
       if (savedScroll !== null) {
         const targetScroll = parseInt(savedScroll, 10);
@@ -626,7 +626,7 @@ window.addEventListener('popstate', e => {
         // Double-check after async content loads (team photos, etc.)
         setTimeout(() => {
           if (Math.abs(window.scrollY - targetScroll) > 50) {
-            console.log(`[SCROLL] Re-adjusting to ${targetScroll}`);
+            void(`[SCROLL] Re-adjusting to ${targetScroll}`);
             window.scrollTo({ top: targetScroll, behavior: 'instant' });
           }
         }, 300);
@@ -1725,10 +1725,10 @@ async function loadTeamFromGitHub() {
     return;
   }
   try {
-    console.log('Fetching team from GitHub...');
+    void('Fetching team from GitHub...');
     const response = await fetchGH('team/team.json');
     const members = await response.json();
-    console.log('Team loaded:', members.length, 'members');
+    void('Team loaded:', members.length, 'members');
     window.TEAM_DATA = members; // Store for modal access
     grid.innerHTML = buildTeamCards(members);
   } catch(e) {
@@ -2560,7 +2560,7 @@ async function renderArticle(articleId) {
         fullUrl = GITHUB.url('articles/' + cleanPath);
       }
       
-      console.log('📷 Image path:', cleanPath, '→', fullUrl);
+      void('📷 Image path:', cleanPath, '→', fullUrl);
       
       // Return standard markdown without Pandoc attributes (marked.js doesn't support them)
       return `![${alt}](${fullUrl})`;
@@ -2619,7 +2619,7 @@ async function renderArticle(articleId) {
     mdTextFixed = mdTextFixed.replace(/\$\$([\s\S]+?)\$\$/g, (match, math) => {
       const placeholder = `XMATHDISPLAYX${mathCounter}XENDX`;
       mathPlaceholders.push({ placeholder, math: math.trim(), display: true });
-      console.log('📐 Display math found:', math.trim().substring(0, 50) + (math.trim().length > 50 ? '...' : ''));
+      void('📐 Display math found:', math.trim().substring(0, 50) + (math.trim().length > 50 ? '...' : ''));
       mathCounter++;
       return placeholder;
     });
@@ -2629,12 +2629,12 @@ async function renderArticle(articleId) {
     mdTextFixed = mdTextFixed.replace(/\$(?!\$)(.+?)\$/g, (match, math) => {
       const placeholder = `XMATHINLINEX${mathCounter}XENDX`;
       mathPlaceholders.push({ placeholder, math: math.trim(), display: false });
-      console.log('📐 Inline math found:', math.trim());
+      void('📐 Inline math found:', math.trim());
       mathCounter++;
       return placeholder;
     });
     
-    console.log(`📐 Total math expressions found: ${mathPlaceholders.length}`);
+    void(`📐 Total math expressions found: ${mathPlaceholders.length}`);
 
     /* Render markdown — sanitized for security (with KaTeX support) */
     const purifyConfig = {
@@ -2666,15 +2666,15 @@ async function renderArticle(articleId) {
           // Check if placeholder exists in HTML
           if (bodyHTML.includes(placeholder)) {
             bodyHTML = bodyHTML.split(placeholder).join(rendered);
-            console.log('✅ Replaced:', placeholder, '→ KaTeX HTML');
+            void('✅ Replaced:', placeholder, '→ KaTeX HTML');
           } else {
             console.warn('❌ Placeholder not found in HTML:', placeholder);
-            console.log('   Searching for variations...');
+            void('   Searching for variations...');
             // Try HTML-encoded version
             const encoded = placeholder.replace(/_/g, '&#95;');
             if (bodyHTML.includes(encoded)) {
               bodyHTML = bodyHTML.replace(new RegExp(encoded, 'g'), rendered);
-              console.log('✅ Replaced encoded version:', encoded);
+              void('✅ Replaced encoded version:', encoded);
             } else {
               console.warn('   Original math was:', math);
             }
@@ -3500,13 +3500,13 @@ window.addEventListener('storiesLoaded', () => {
     // caused a visible first-load flicker because the initial render was replaced
     // a moment later when stories.json finished loading.
     if (refreshFeaturedCustomerStories()) {
-      console.log('✅ Featured customer stories updated after async load');
+      void('✅ Featured customer stories updated after async load');
     }
   } else if (page === 'company' && tab === 'stories') {
     const scrollY = window.scrollY || window.pageYOffset || 0;
     renderCompany('stories');
     requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
-    console.log('✅ Customer Stories page rendered after async load');
+    void('✅ Customer Stories page rendered after async load');
   }
 });
 
@@ -3759,14 +3759,14 @@ function updateMetaTagsForStory(story) {
 }
 
 window.openStoryModal = function(index, options = {}) {
-  console.log('openStoryModal called with index:', index);
+  void('openStoryModal called with index:', index);
   const stories = CONTENT.stories || [];
   const story = stories[index];
   if (!story) {
     console.error('No story found at index:', index);
     return;
   }
-  console.log('Opening modal for:', story.title);
+  void('Opening modal for:', story.title);
 
   // Give every customer story a stable, copy/pasteable URL while retaining
   // the existing modal UX. Back/Forward therefore opens/closes the story.
@@ -3953,7 +3953,7 @@ async function collectAllCacheableUrls() {
   
   try {
     // 1. Collect team photos
-    console.log('📸 Collecting team photos...');
+    void('📸 Collecting team photos...');
     try {
       const teamResponse = await fetchGH('team/team.json');
       const teamData = await teamResponse.json();
@@ -3970,13 +3970,13 @@ async function collectAllCacheableUrls() {
         }
       });
       
-      console.log(`✅ Found ${imageUrls.size} team photos`);
+      void(`✅ Found ${imageUrls.size} team photos`);
     } catch (err) {
       console.warn('⚠️ Could not fetch team photos:', err);
     }
     
     // 2. Collect articles and their images
-    console.log('📸 Collecting articles and images...');
+    void('📸 Collecting articles and images...');
     try {
       const articlesResponse = await fetchGH('articles/articles.json');
       const articles = await articlesResponse.json();
@@ -4020,7 +4020,7 @@ async function collectAllCacheableUrls() {
       });
       
       await Promise.all(articlePromises);
-      console.log(`✅ Found ${imageUrls.size} images and ${contentUrls.size} content files`);
+      void(`✅ Found ${imageUrls.size} images and ${contentUrls.size} content files`);
     } catch (err) {
       console.warn('⚠️ Could not fetch articles:', err);
     }
@@ -4047,17 +4047,17 @@ async function preloadAllContent(force) {
     return;
   }
   
-  console.log('🚀 Starting content preload...');
+  void('🚀 Starting content preload...');
   const startTime = Date.now();
   
   const { images, content } = await collectAllCacheableUrls();
   
   if (images.length === 0 && content.length === 0) {
-    console.log('ℹ️ No content to preload');
+    void('ℹ️ No content to preload');
     return;
   }
   
-  console.log(`📦 Requesting cache for ${images.length} images and ${content.length} content files...`);
+  void(`📦 Requesting cache for ${images.length} images and ${content.length} content files...`);
   
   // Send to service worker for caching
   navigator.serviceWorker.controller.postMessage({
@@ -4071,7 +4071,7 @@ async function preloadAllContent(force) {
     if (event.data && event.data.action === 'preloadComplete') {
       navigator.serviceWorker.removeEventListener('message', handler);
       const duration = ((Date.now() - startTime) / 1000).toFixed(1);
-      console.log(
+      void(
         `✅ Content preload complete in ${duration}s:\n` +
         `   ${event.data.imagesSuccessful}/${event.data.imagesTotal} images cached ✓\n` +
         `   ${event.data.contentSuccessful}/${event.data.contentTotal} articles cached ✓\n` +
@@ -4087,7 +4087,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then(registration => {
-        console.log('✅ Service Worker registered:', registration.scope);
+        void('✅ Service Worker registered:', registration.scope);
         
         // Check for updates every 30 minutes
         setInterval(() => {
@@ -4124,7 +4124,7 @@ if ('serviceWorker' in navigator) {
     // Listen for messages from service worker
     navigator.serviceWorker.addEventListener('message', event => {
       if (event.data && event.data.action === 'cacheCleared') {
-        console.log('🗑️ Cache cleared by user');
+        void('🗑️ Cache cleared by user');
       }
     });
   });
@@ -4296,11 +4296,11 @@ window.tenetCache = {
   
   // ✨ NEW: Manually trigger content preloading (images + articles)
   preload: async function() {
-    console.log('🚀 Manually triggering content preload...');
+    void('🚀 Manually triggering content preload...');
     await preloadAllContent(true);
   }
 };
 
-console.log('💡 Cache management: Use tenetCache.clear(), tenetCache.info(), tenetCache.update(), tenetCache.preload(), tenetCache.unregister()');
+void('💡 Cache management: Use tenetCache.clear(), tenetCache.info(), tenetCache.update(), tenetCache.preload(), tenetCache.unregister()');
 
-console.log('✅ Tenet Networks website loaded');
+void('✅ Tenet Networks website loaded');

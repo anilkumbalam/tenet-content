@@ -1163,7 +1163,7 @@ window.loadStoriesAsync = async function() {
     // Update CONTENT.stories with loaded data
     if (Array.isArray(data)) {
       window.CONTENT.stories = data;
-      console.log('✅ Loaded', data.length, 'customer stories from /stories/stories.json');
+      void('✅ Loaded', data.length, 'customer stories from /stories/stories.json');
     } else {
       console.error('❌ Stories data is not an array');
       window.CONTENT.stories = [];

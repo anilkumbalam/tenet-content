@@ -31,7 +31,7 @@ waitForFunctions().then(() => {
   if (typeof window.loadArticlesFromGitHub === 'undefined' && typeof loadArticlesFromGitHub === 'function') window.loadArticlesFromGitHub = loadArticlesFromGitHub;
   if (typeof window.updateAndReload === 'undefined' && typeof updateAndReload === 'function') window.updateAndReload = updateAndReload;
   if (typeof window.dismissUpdate === 'undefined' && typeof dismissUpdate === 'function') window.dismissUpdate = dismissUpdate;
-  console.log('✅ Event delegation initialized');
+  void('✅ Event delegation initialized');
 });
 
 /* Image Error Handling - Replace onerror inline handlers */
