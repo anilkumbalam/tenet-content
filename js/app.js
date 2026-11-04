@@ -2458,7 +2458,7 @@ async function renderArticle(articleId) {
     // Also match legacy file-name URLs
     const a = articles.find(x => x.id === articleId)
            || articles.find(x => (x.file || '').replace(/\.md$/, '') === articleId);
-    if (!a) throw new Error('Article not found in index');
+    if (!a) { setRobots(false); throw new Error('Article not found in index'); }
     if (a.id !== articleId) {
       articleId = a.id;
       safeHistoryReplace({ page: 'article', tab: a.id, storyId: null }, `/article/${a.id}`);
@@ -3187,8 +3187,15 @@ window.submitQuoteRequest = async function(toEmail) {
 };
 
 /* ── MAIN RENDER ROUTER ── */
+const KNOWN_PAGES = ['home','products','services','company','partners','partner-enquiry','request-quote','contact','apply','article'];
+function setRobots(index) {
+  const m = document.querySelector('meta[name="robots"]');
+  if (m) m.setAttribute('content', index ? 'index, follow' : 'noindex');
+}
+
 function render(page, tab) {
   clearInterval(window._heroTimer);
+  setRobots(KNOWN_PAGES.includes(page));
   try {
     switch(page) {
       case 'home':     renderHome();                 break;
