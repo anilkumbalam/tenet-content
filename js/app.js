@@ -370,6 +370,11 @@ function loadRecaptcha() {
   });
 }
 
+function pagePath(page, tab) {
+  if (page === 'home' && !tab) return '/';
+  return tab ? `/${page}/${tab}` : `/${page}`;
+}
+
 function toUrl(path) {
   // On local file system, use hash-based URLs; on live site use clean URLs
   if (IS_LOCAL) {
@@ -397,7 +402,7 @@ function updateMeta(page, tab) {
 
   const title = m.title;
   const desc  = m.desc || '';
-  const url = tab ? `https://www.tenetnetworks.com/${page}/${tab}` : `https://www.tenetnetworks.com/${page}`;
+  const url = `https://www.tenetnetworks.com${pagePath(page, tab)}`;
 
   /* Primary */
   document.title = title;
@@ -406,6 +411,7 @@ function updateMeta(page, tab) {
 
   /* Open Graph */
   setMeta('#og-url',   'content', url);
+  setMeta('#tw-url',   'content', url);
   setMeta('#og-title', 'content', title);
   setMeta('#og-desc',  'content', desc);
 
@@ -513,7 +519,7 @@ function nav(page, tab) {
   currentPage = page;
   setState({ page, tab: tab || null });
   const state = { page, tab: tab || null };
-  const url = tab ? `/${page}/${tab}` : `/${page}`;
+  const url = pagePath(page, tab);
   safeHistoryPush(state, url);
   render(page, tab);
   updateMeta(page, tab);
@@ -3501,7 +3507,7 @@ function initFromHash() {
   const page = parts[0] || 'home';
   const tab = parts[1] || null;
   const storyId = (page === 'company' && tab === 'stories') ? (parts[2] || null) : null;
-  const url = storyId ? `/${page}/${tab}/${storyId}` : (tab ? `/${page}/${tab}` : `/${page}`);
+  const url = storyId ? `/${page}/${tab}/${storyId}` : pagePath(page, tab);
 
   safeHistoryReplace({ page, tab, storyId }, url);
   currentPage = page;
