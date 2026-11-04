@@ -2441,8 +2441,14 @@ async function renderArticle(articleId) {
   try {
     /* First get the articles list to find the file name */
     const articles = await getArticles();
-    const a = articles.find(x => x.id === articleId);
+    // Also match legacy file-name URLs
+    const a = articles.find(x => x.id === articleId)
+           || articles.find(x => (x.file || '').replace(/\.md$/, '') === articleId);
     if (!a) throw new Error('Article not found in index');
+    if (a.id !== articleId) {
+      articleId = a.id;
+      safeHistoryReplace({ page: 'article', tab: a.id, storyId: null }, `/article/${a.id}`);
+    }
     
     /* Use file field if available, otherwise fall back to id.md */
     const mdFile = a.file || `${articleId}.md`;
