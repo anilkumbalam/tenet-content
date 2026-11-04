@@ -827,20 +827,20 @@ function footerHTML() {
   return `<footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="cursor:pointer" data-nav="home"><img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" /></div>
+        <a href="/" class="logo" style="cursor:pointer" data-nav="home"><img src="/images/icons/logo.png" class="logo-img" alt="Tenet Networks" width="208" height="60" /></a>
         <p>Engineering intelligent connectivity solutions for modern enterprises, industrial operations and critical infrastructure.</p>
         <div class="socials"><a href="${c.linkedin}" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn">in</a><a href="${c.youtube}" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube">▶</a></div>
       </div>
       <div class="footer-col"><h5>Platform</h5>
-        <a data-nav="products" data-tab="cwan">cWAN (Enterprise SD-WAN)</a><a data-nav="products" data-tab="cwanexpress">cWAN Express (SD-Branch)</a><a data-nav="products" data-tab="cms">Credo Cloud (Network Orchestration)</a></div>
+        <a href="/products/cwan" data-nav="products" data-tab="cwan">cWAN (Enterprise SD-WAN)</a><a href="/products/cwanexpress" data-nav="products" data-tab="cwanexpress">cWAN Express (SD-Branch)</a><a href="/products/cms" data-nav="products" data-tab="cms">Credo Cloud (Network Orchestration)</a></div>
       <div class="footer-col"><h5>Edge Connectivity</h5>
-        <a data-nav="products" data-tab="indoor">Indoor Industrial 4G/5G Gateways</a><a data-nav="products" data-tab="outdoor">Outdoor Industrial 4G/5G Gateways</a><a data-nav="products" data-tab="scada">Industrial 4G/5G SCADA Gateways</a><a data-nav="products" data-tab="vpn">Enterprise VPN Gateways</a></div>
+        <a href="/products/indoor" data-nav="products" data-tab="indoor">Indoor Industrial 4G/5G Gateways</a><a href="/products/outdoor" data-nav="products" data-tab="outdoor">Outdoor Industrial 4G/5G Gateways</a><a href="/products/scada" data-nav="products" data-tab="scada">Industrial 4G/5G SCADA Gateways</a><a href="/products/vpn" data-nav="products" data-tab="vpn">Enterprise VPN Gateways</a></div>
       <div class="footer-col"><h5>Services</h5>
-        <a data-nav="services" data-tab="consulting">RF, Wireless &amp; Network Engineering</a><a data-nav="services" data-tab="custom">Custom Hardware</a><a data-nav="services" data-tab="software">Embedded Software</a></div>
+        <a href="/services/consulting" data-nav="services" data-tab="consulting">RF, Wireless &amp; Network Engineering</a><a href="/services/custom" data-nav="services" data-tab="custom">Custom Hardware</a><a href="/services/software" data-nav="services" data-tab="software">Embedded Software</a></div>
       <div class="footer-col"><h5>Company</h5>
-        <a data-nav="company" data-tab="about">About Us</a><a data-nav="company" data-tab="team">Team</a><a data-nav="company" data-tab="careers">Careers</a><a data-nav="company" data-tab="stories">Customer Stories</a><a data-nav="company" data-tab="perspective">Engineering Insights</a></div>
+        <a href="/company/about" data-nav="company" data-tab="about">About Us</a><a href="/company/team" data-nav="company" data-tab="team">Team</a><a href="/company/careers" data-nav="company" data-tab="careers">Careers</a><a href="/company/stories" data-nav="company" data-tab="stories">Customer Stories</a><a href="/company/perspective" data-nav="company" data-tab="perspective">Engineering Insights</a></div>
       <div class="footer-col"><h5>Partners</h5>
-        <a data-nav="partner-enquiry">Partner With Tenet</a><a data-nav="partner-enquiry">Become a Partner</a><h5 style="margin-top:1rem">Contact</h5><a data-nav="contact">Get in Touch</a><a data-nav="request-quote">Request a Quote</a></div>
+        <a href="/partner-enquiry" data-nav="partner-enquiry">Partner With Tenet</a><a href="/partner-enquiry" data-nav="partner-enquiry">Become a Partner</a><h5 style="margin-top:1rem">Contact</h5><a href="/contact" data-nav="contact">Get in Touch</a><a href="/request-quote" data-nav="request-quote">Request a Quote</a></div>
     </div>
     <div class="footer-bottom"><p>© ${c.founded}–${new Date().getFullYear()} Tenet Networks Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; ${c.address}</p></div>
   </footer>
@@ -951,20 +951,20 @@ function renderHome() {
     {id:'cwan',      icon:'🌐', h:'cWAN (SD-WAN)',                p:'Flagship modular SD-WAN for scalable, intelligent multi-site connectivity.'},
     {id:'cms',       icon:'🖥️', h:'Credo Management System',     p:'Centralized orchestration for thousands of deployed gateways and modems.'},
   ].map(c=>`
-    <div class="card" data-nav="products" data-tab="${c.id}">
+    <a href="/products/${c.id}" class="card" data-nav="products" data-tab="${c.id}">
       <div class="card-icon">${c.icon}</div>
       <h3>${c.h}</h3><p>${c.p}</p>
       <span class="card-link">Learn more</span>
-    </div>`).join('');
+    </a>`).join('');
 
   const svcCards = ['custom','consulting','software'].map(id=>{
     const s = CONTENT.services[id];
     const icons = {custom:'🛠️',consulting:'🎯',software:'💡'};
-    return `<div class="card" data-nav="services" data-tab="${id}">
+    return `<a href="/services/${id}" class="card" data-nav="services" data-tab="${id}">
       <div class="card-icon">${icons[id]}</div>
       <h3>${s.label}</h3><p>${s.hero.subhead}</p>
       <span class="card-link">Learn more</span>
-    </div>`;
+    </a>`;
   }).join('');
 
   // Build Solutions cards
@@ -1029,7 +1029,7 @@ function renderHome() {
           </div>
         </div>
         <div class="feat-prod-grid">
-          <div class="feat-prod-card" data-nav="products" data-tab="m2m">
+          <a href="/products/m2m" class="feat-prod-card" data-nav="products" data-tab="m2m">
             <div class="feat-prod-thumb">📡</div>
             <div class="feat-prod-body">
               <div class="t-overline" style="margin-bottom:.5rem">Industrial Cellular Gateways</div>
@@ -1037,8 +1037,8 @@ function renderHome() {
               <p>Reliable 4G/5G connectivity for industrial systems, remote sites, SCADA applications, and enterprise deployments. Built for demanding environments with secure data transport, multi-WAN capabilities, and centralized management.</p>
               <span class="card-link">Explore Industrial Cellular Gateways →</span>
             </div>
-          </div>
-          <div class="feat-prod-card" data-nav="products" data-tab="ces">
+          </a>
+          <a href="/products/ces" class="feat-prod-card" data-nav="products" data-tab="ces">
             <div class="feat-prod-thumb">🌐</div>
             <div class="feat-prod-body">
               <div class="t-overline" style="margin-bottom:.5rem">Enterprise Networking</div>
@@ -1046,7 +1046,7 @@ function renderHome() {
               <p>An enterprise SD-WAN platform that connects branches, remote sites, factories, and distributed operations over multiple WAN links. Centralized orchestration, intelligent traffic management, and zero-touch deployment simplify network operations at scale.</p>
               <span class="card-link">Explore Enterprise Networking →</span>
             </div>
-          </div>
+          </a>
         </div>
         <div style="text-align:center;margin-top:2rem">
           <button class="btn btn-ghost" data-nav="products" data-tab="portfolio">View Full Product Portfolio →</button>
@@ -1862,7 +1862,7 @@ function articleCard(a) {
   const seriesLabel = (a.series_part && a.series_part > 0 && a.series_total) ? `Part ${a.series_part} of ${a.series_total}` : '';
   const authorLine = a.author ? `by ${a.author}${a.credential ? ', '+a.credential : ''}` : '';
   return `
-    <div class="article-card" data-nav="article" data-article="${a.id}">
+    <a href="/article/${a.id}" class="article-card" data-nav="article" data-article="${a.id}">
       <div class="article-meta">
         ${date ? `<span class="article-date">${date}</span>` : '<span>&nbsp;</span>'}
       </div>
@@ -1870,14 +1870,14 @@ function articleCard(a) {
       <h3>${a.title}</h3>
       <p class="article-summary">${a.summary || ''}</p>
       <span class="article-read">Read article →</span>
-    </div>`;
+    </a>`;
 }
 
 /* Compact article card for category sections */
 function articleCardCompact(a) {
   const date = a.date ? new Date(a.date).toLocaleDateString('en-IN',{year:'numeric',month:'short'}) : '';
   return `
-    <div class="article-card-compact" data-nav="article" data-article="${a.id}" style="
+    <a href="/article/${a.id}" class="article-card-compact" data-nav="article" data-article="${a.id}" style="
       padding: 1rem;
       border: 1px solid var(--border2);
       border-radius: 8px;
@@ -1893,7 +1893,7 @@ function articleCardCompact(a) {
       <p style="font-size: .85rem; color: var(--muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
         ${a.summary || ''}
       </p>
-    </div>`;
+    </a>`;
 }
 
 function renderPartners() {
@@ -2435,7 +2435,7 @@ async function renderArticle(articleId) {
       <div class="section" style="padding-top:6rem;min-height:calc(100vh - 90px)">
         <div class="section-inner">
           <div class="article-reader">
-            <div class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</div>
+            <a href="/company/perspective" class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</a>
             ${skelCards(1,false).replace('skel-grid','').replace('skel-card','skel-article')}
           </div>
         </div>
@@ -2524,8 +2524,8 @@ async function renderArticle(articleId) {
     const canonical = document.getElementById('canonical-url');
     if (canonical) canonical.setAttribute('href', `https://www.tenetnetworks.com/article/${a.id}`);
 
-    const prevBtn = prev ? `<div class="art-nav-btn" data-nav="article" data-article="${prev.id}"><div class="art-nav-label">← Previous</div><div class="art-nav-title">${prev.title}</div></div>` : `<div></div>`;
-    const nextBtn = next ? `<div class="art-nav-btn next" data-nav="article" data-article="${next.id}"><div class="art-nav-label">Next →</div><div class="art-nav-title">${next.title}</div></div>` : `<div></div>`;
+    const prevBtn = prev ? `<a href="/article/${prev.id}" class="art-nav-btn" data-nav="article" data-article="${prev.id}"><div class="art-nav-label">← Previous</div><div class="art-nav-title">${prev.title}</div></a>` : `<div></div>`;
+    const nextBtn = next ? `<a href="/article/${next.id}" class="art-nav-btn next" data-nav="article" data-article="${next.id}"><div class="art-nav-label">Next →</div><div class="art-nav-title">${next.title}</div></a>` : `<div></div>`;
 
     /* Fix relative image URLs in markdown to use GitHub raw URLs */
     /* This handles both standard markdown: ![alt](path) and Pandoc-style: ![alt](path){width="..." height="..."} */
@@ -2707,7 +2707,7 @@ async function renderArticle(articleId) {
       /* Build new content in a temporary container */
       const newContent = document.createElement('div');
       newContent.innerHTML = `
-            <div class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</div>
+            <a href="/company/perspective" class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</a>
 
             <div class="article-reader-hd">
               ${seriesBadge}
@@ -2753,7 +2753,7 @@ async function renderArticle(articleId) {
     <div class="page active">
       <div class="section" style="padding-top:6rem">
         <div class="section-inner">
-          <div class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</div>
+          <a href="/company/perspective" class="article-back" data-nav="company" data-tab="perspective">← Back to Perspective</a>
           <p style="color:var(--muted);margin-top:2rem">Article could not be loaded. <small>(${e.message})</small></p>
         </div>
       </div>

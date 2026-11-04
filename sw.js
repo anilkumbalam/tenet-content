@@ -18,7 +18,7 @@ const warn = (...args) => {
 };
 
 /* Bump this on every deploy */
-const BUILD_TIMESTAMP = '20261104SEOFIX2';
+const BUILD_TIMESTAMP = '20261104SEOFIX3';
 const DEPLOY_VERSION = BUILD_TIMESTAMP;
 
 const CACHE_VERSION =

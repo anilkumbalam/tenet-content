@@ -34,6 +34,7 @@ body { font-family:var(--font-b); background:var(--bg); color:var(--text-primary
 .recaptcha-notice { font-size:.72rem; color:var(--muted); text-align:center; margin-top:.7rem; line-height:1.5; }
 .recaptcha-notice a { color:var(--secondary); text-decoration:underline; }
 a { text-decoration:none; color:inherit; }
+:where(a.card, a.feat-prod-card, a.article-card, a.article-card-compact, a.art-nav-btn, a.drawer-item) { display:block; }
 img { max-width:100%; display:block; }
 button { cursor:pointer; font-family:var(--font-h); border:none; }
 

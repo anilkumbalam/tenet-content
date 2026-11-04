@@ -202,6 +202,7 @@ document.addEventListener('click', (e) => {
   // Navigation with nav and optional tab or article
   const navElement = target.closest('[data-nav]');
   if (navElement && navElement.dataset.nav) {
+    if (navElement.tagName === 'A' && (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0)) return;
     e.preventDefault();
     const navTarget = navElement.dataset.nav;
     const tab = navElement.dataset.tab;
