@@ -1521,7 +1521,7 @@ function renderCompany(defaultTab='about') {
       name:'Anil Joseph',    
       role:'Managing Director',          
       bio:'Over two decades of experience in designing and engineering critical solutions for India and Asia-Pacific. Former Solution Architect at Lucent Technologies and researcher at premier organisations like DRDO and C-DOT.', 
-      photo:'anil-joseph.jpg',
+      photo:'anil-joseph.webp',
       icon:'🏛️',
       tagline: 'Engineering that works in reality, not just in theory',
       linkedin: 'https://linkedin.com/in/anilijoseph',

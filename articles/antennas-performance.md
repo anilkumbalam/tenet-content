@@ -72,7 +72,7 @@ In a simple wire antenna (dipole), current forms a standing wave, meaning:
 
 This standing wave occurs when the antenna is resonant, which happens at specific fractions of the wavelength.
 
-![](images/media/image10.png){width="5.642877296587926in" height="2.1518700787401577in"}
+![](images/media/image10.webp){width="5.642877296587926in" height="2.1518700787401577in"}
 
 This standing wave enables efficient radiation by allowing energy to be transferred into space. A half-wave dipole has a length of approximately λ/2. A monopole antenna is half of a dipole, using the ground plane as the other half. Therefore, the monopole length is approximately λ/4.
 
@@ -104,11 +104,11 @@ The most common antenna in IoT devices is the monopole. It appears to be a singl
 
 A monopole is electrically half of a dipole. The ground plane completes the other half.
 
-![](images/media/image11.png){width="5.555811461067367in" height="2.2996358267716537in"}
+![](images/media/image11.webp){width="5.555811461067367in" height="2.2996358267716537in"}
 
 As shown above, the radiating element together with the ground plane forms the complete current path that enables electromagnetic radiation.
 
-![](images/media/image12.png){width="7.472077865266842in" height="1.5257086614173228in"}
+![](images/media/image12.webp){width="7.472077865266842in" height="1.5257086614173228in"}
 
 As shown above, the ground plane acts as a mirror, creating an image of the monopole below it.  The real antenna and its image together form an equivalent half-wave dipole. As a result, a quarter-wave monopole radiates like a dipole, but only into half-space.
 
@@ -342,7 +342,7 @@ Antennas do not create power. They redistribute it.
 
 Gain is focusing, not amplification. A higher-gain antenna increases signal strength in a particular direction by concentrating energy, but this comes at the cost of reduced coverage elsewhere.
 
-![](images/media/image13.png){width="6.268055555555556in" height="4.128472222222222in"}
+![](images/media/image13.webp){width="6.268055555555556in" height="4.128472222222222in"}
 
 **Why High Gain Can Be Problematic**
 

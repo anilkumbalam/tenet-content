@@ -150,7 +150,7 @@ transmission tower, count the discs. You can often estimate the voltage
 level just from that one detail. Each **porcelain or polymer insulator
 disc typically withstands 11--15 kV** under normal operating conditions.
 
-![](images/media/image1.png){width="8.239583333333334in"
+![](images/media/image1.webp){width="8.239583333333334in"
 height="5.493055555555555in"}
 
 ## Why Are Some Towers so Tall?
@@ -160,7 +160,7 @@ about clearance. As voltage increases, the electric field around the
 conductor becomes stronger. To prevent arcing to the ground or to nearby
 structures, the conductor must be kept at a safe distance.
 
-![](images/media/image2.png){width="7.583333333333333in"
+![](images/media/image2.webp){width="7.583333333333333in"
 height="5.055555555555555in"}
 
 But electrical clearance is only part of the story.
@@ -200,7 +200,7 @@ At high voltage levels, you may notice that each phase does not consist
 of a single conductor. Instead, there may be two, four, or even six
 conductors spaced slightly apart but electrically connected.
 
-![](images/media/image3.jpeg){width="5.989583333333333in"
+![](images/media/image3.webp){width="5.989583333333333in"
 height="3.9930555555555554in"}
 
 These are bundled conductors.
@@ -259,7 +259,7 @@ Damper → energy absorption → longer life.
 
 Mechanical engineering quietly protects electrical infrastructure.
 
-![](images/media/image4.jpeg){width="6.447916666666667in"
+![](images/media/image4.webp){width="6.447916666666667in"
 height="4.298611111111111in"}
 
 ## Why Are There Circular Rings Near Insulators?
@@ -281,7 +281,7 @@ These rings are not structural supports. They are field-shaping devices.
 
 They are Maxwell's equations implemented in steel.
 
-![](images/media/image5.jpeg){width="6.145833333333333in"
+![](images/media/image5.webp){width="6.145833333333333in"
 height="4.097222222222222in"}
 
 ## Lightning, Shield Wires and Surge Protection
@@ -305,7 +305,7 @@ equipment.
 Nature introduces high-energy events. Engineers introduce controlled
 conduction paths to manage them.
 
-![](images/media/image6.jpeg){width="3.0520833333333335in"
+![](images/media/image6.webp){width="3.0520833333333335in"
 height="4.578125546806649in"}
 
 ## The Sound of Electric Fields
