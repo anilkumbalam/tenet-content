@@ -46,35 +46,61 @@
 /insights/*               /company/stories  301
 /wp-content/*             /  301
 
-# App routes: serve the single-page app with 200.
+# App routes: serve the single-page app (root page) with 200.
 # Any path not listed above or below gets 404.html with a real 404 status.
-# When you add a new page, add its route here.
-/products                 /index.html  200
-/products/portfolio       /index.html  200
-/products/m2m             /index.html  200
-/products/ces             /index.html  200
-/products/indoor          /index.html  200
-/products/outdoor         /index.html  200
-/products/scada           /index.html  200
-/products/vpn             /index.html  200
-/products/cwan            /index.html  200
-/products/cwanexpress     /index.html  200
-/products/cms             /index.html  200
-/services                 /index.html  200
-/services/custom          /index.html  200
-/services/consulting      /index.html  200
-/services/software        /index.html  200
-/company                  /index.html  200
-/company/about            /index.html  200
-/company/team             /index.html  200
-/company/careers          /index.html  200
-/company/perspective      /index.html  200
-/company/stories          /index.html  200
-/partners                 /index.html  200
-/partner-enquiry          /index.html  200
-/request-quote            /index.html  200
-/contact                  /index.html  200
-/apply                    /index.html  200
-# Articles and customer stories come from JSON, so new ones work without editing this file
-/article/*                /index.html  200
-/company/stories/*        /index.html  200
+# When you add a new page, article or story, add its route here.
+/products                                     /  200
+/products/portfolio                           /  200
+/products/m2m                                 /  200
+/products/ces                                 /  200
+/products/indoor                              /  200
+/products/outdoor                             /  200
+/products/scada                               /  200
+/products/vpn                                 /  200
+/products/cwan                                /  200
+/products/cwanexpress                         /  200
+/products/cms                                 /  200
+/services                                     /  200
+/services/custom                              /  200
+/services/consulting                          /  200
+/services/software                            /  200
+/company                                      /  200
+/company/about                                /  200
+/company/team                                 /  200
+/company/careers                              /  200
+/company/perspective                          /  200
+/company/stories                              /  200
+/partners                                     /  200
+/partner-enquiry                              /  200
+/request-quote                                /  200
+/contact                                      /  200
+/apply                                        /  200
+# Articles
+/article/series-intro                         /  200
+/article/wp1-elt                              /  200
+/article/wp2-doppler                          /  200
+/article/wp3-gnss                             /  200
+/article/wp4-link-budgets                     /  200
+/article/wp5-bursty                           /  200
+/article/wp6-ai-physical                      /  200
+/article/antennas-performance                 /  200
+/article/logarithmic-thinking                 /  200
+/article/shannon-capacity                     /  200
+/article/wavelength-range                     /  200
+/article/power-grid-india                     /  200
+/article/sun-power-supply                     /  200
+# Customer stories
+/company/stories/jal-jeevan-mission           /  200
+/company/stories/smart-cities                 /  200
+/company/stories/city-gas-distribution        /  200
+/company/stories/power-distribution-sdwan     /  200
+/company/stories/renewable-energy             /  200
+/company/stories/manufacturing-plc            /  200
+/company/stories/oil-gas-telemetry            /  200
+/company/stories/ev-charging                  /  200
+/company/stories/mobile-surveillance          /  200
+/company/stories/banking-infrastructure       /  200
+/company/stories/warehousing-logistics        /  200
+# Fallback for new articles and stories
+/article/*                                    /  200
+/company/stories/*                            /  200
