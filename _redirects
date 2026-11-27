@@ -46,6 +46,58 @@
 /insights/*               /company/stories  301
 /wp-content/*             /  301
 
+# Trailing-slash versions of app routes: send to the address without the slash
+/products/                                     /products  301
+/products/portfolio/                           /products/portfolio  301
+/products/m2m/                                 /products/m2m  301
+/products/ces/                                 /products/ces  301
+/products/indoor/                              /products/indoor  301
+/products/outdoor/                             /products/outdoor  301
+/products/scada/                               /products/scada  301
+/products/vpn/                                 /products/vpn  301
+/products/cwan/                                /products/cwan  301
+/products/cwanexpress/                         /products/cwanexpress  301
+/products/cms/                                 /products/cms  301
+/services/                                     /services  301
+/services/custom/                              /services/custom  301
+/services/consulting/                          /services/consulting  301
+/services/software/                            /services/software  301
+/company/                                      /company  301
+/company/about/                                /company/about  301
+/company/team/                                 /company/team  301
+/company/careers/                              /company/careers  301
+/company/perspective/                          /company/perspective  301
+/company/stories/                              /company/stories  301
+/partners/                                     /partners  301
+/partner-enquiry/                              /partner-enquiry  301
+/request-quote/                                /request-quote  301
+/contact/                                      /contact  301
+/apply/                                        /apply  301
+/article/series-intro/                         /article/series-intro  301
+/article/wp1-elt/                              /article/wp1-elt  301
+/article/wp2-doppler/                          /article/wp2-doppler  301
+/article/wp3-gnss/                             /article/wp3-gnss  301
+/article/wp4-link-budgets/                     /article/wp4-link-budgets  301
+/article/wp5-bursty/                           /article/wp5-bursty  301
+/article/wp6-ai-physical/                      /article/wp6-ai-physical  301
+/article/antennas-performance/                 /article/antennas-performance  301
+/article/logarithmic-thinking/                 /article/logarithmic-thinking  301
+/article/shannon-capacity/                     /article/shannon-capacity  301
+/article/wavelength-range/                     /article/wavelength-range  301
+/article/power-grid-india/                     /article/power-grid-india  301
+/article/sun-power-supply/                     /article/sun-power-supply  301
+/company/stories/jal-jeevan-mission/           /company/stories/jal-jeevan-mission  301
+/company/stories/smart-cities/                 /company/stories/smart-cities  301
+/company/stories/city-gas-distribution/        /company/stories/city-gas-distribution  301
+/company/stories/power-distribution-sdwan/     /company/stories/power-distribution-sdwan  301
+/company/stories/renewable-energy/             /company/stories/renewable-energy  301
+/company/stories/manufacturing-plc/            /company/stories/manufacturing-plc  301
+/company/stories/oil-gas-telemetry/            /company/stories/oil-gas-telemetry  301
+/company/stories/ev-charging/                  /company/stories/ev-charging  301
+/company/stories/mobile-surveillance/          /company/stories/mobile-surveillance  301
+/company/stories/banking-infrastructure/       /company/stories/banking-infrastructure  301
+/company/stories/warehousing-logistics/        /company/stories/warehousing-logistics  301
+
 # App routes: serve the single-page app (root page) with 200.
 # Any path not listed above or below gets 404.html with a real 404 status.
 # When you add a new page, article or story, add its route here.
