@@ -3186,6 +3186,27 @@ window.submitQuoteRequest = async function(toEmail) {
   }
 };
 
+/* ── NOT FOUND ── shown for unrecognised routes (server also returns 404.html) */
+function renderNotFound() {
+  setRobots(false);
+  document.title = 'Page not found | Tenet Networks';
+  app.innerHTML = `
+  <div class="page active">
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <div class="t-overline">404</div>
+        <h1>We couldn't find that page</h1>
+        <p class="body-l">The page may have moved or no longer exists.</p>
+        <div class="btn-group" style="margin-top:2rem">
+          <button class="btn btn-primary" data-nav="home">Go to Home</button>
+          <button class="btn btn-ghost" data-nav="products">View Products</button>
+          <button class="btn btn-ghost" data-nav="contact">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
 /* ── MAIN RENDER ROUTER ── */
 const KNOWN_PAGES = ['home','products','services','company','partners','partner-enquiry','request-quote','contact','apply','article'];
 function setRobots(index) {
@@ -3208,7 +3229,7 @@ function render(page, tab) {
       case 'contact':         renderContact();               break;
       case 'apply':    renderApply();                 break;
       case 'article':  renderArticle(tab);            break;
-      default:         renderHome();
+      default:         renderNotFound();
     }
   } catch(err) {
     console.error('[render] Unhandled error on page:', page, tab, err);

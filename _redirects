@@ -45,3 +45,36 @@
 /insights/enabling-mobile-surveillance-and-connectivity-for-infrastructure-projects-and-field-operations/ /company/stories/mobile-surveillance 301
 /insights/*               /company/stories  301
 /wp-content/*             /  301
+
+# App routes: serve the single-page app with 200.
+# Any path not listed above or below gets 404.html with a real 404 status.
+# When you add a new page, add its route here.
+/products                 /index.html  200
+/products/portfolio       /index.html  200
+/products/m2m             /index.html  200
+/products/ces             /index.html  200
+/products/indoor          /index.html  200
+/products/outdoor         /index.html  200
+/products/scada           /index.html  200
+/products/vpn             /index.html  200
+/products/cwan            /index.html  200
+/products/cwanexpress     /index.html  200
+/products/cms             /index.html  200
+/services                 /index.html  200
+/services/custom          /index.html  200
+/services/consulting      /index.html  200
+/services/software        /index.html  200
+/company                  /index.html  200
+/company/about            /index.html  200
+/company/team             /index.html  200
+/company/careers          /index.html  200
+/company/perspective      /index.html  200
+/company/stories          /index.html  200
+/partners                 /index.html  200
+/partner-enquiry          /index.html  200
+/request-quote            /index.html  200
+/contact                  /index.html  200
+/apply                    /index.html  200
+# Articles and customer stories come from JSON, so new ones work without editing this file
+/article/*                /index.html  200
+/company/stories/*        /index.html  200
